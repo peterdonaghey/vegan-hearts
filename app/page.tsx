@@ -5,7 +5,7 @@ import EmailSignupForm from "./components/EmailSignupForm";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
       {/* Featured Course */}
-      <section className="px-6 py-16 bg-white">
+      <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl">
           <div className="bg-gradient-to-r from-vh-green/10 to-vh-orange/10 rounded-2xl p-8 border-2 border-vh-green/30">
             <BookOpen className="h-12 w-12 text-vh-green mb-4" />

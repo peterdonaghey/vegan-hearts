@@ -12,6 +12,7 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.916.0",
     "@aws-sdk/client-ses": "^3.916.0",
+    "@aws-sdk/client-sesv2": "^3.916.0",
     "@aws-sdk/lib-dynamodb": "^3.916.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.263.1",
