@@ -15,8 +15,8 @@ gh repo create peterdonaghey/vegan-hearts \
 
 echo "✅ Repository created!"
 
-# Add remote
-git remote add origin git@github.com:peterdonaghey/vegan-hearts.git
+# Add remote (using HTTPS)
+git remote add origin https://github.com/peterdonaghey/vegan-hearts.git
 
 # Rename branch to main
 git branch -M main

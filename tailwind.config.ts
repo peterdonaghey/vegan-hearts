@@ -14,6 +14,11 @@ const config: Config = {
         border: "hsl(var(--border))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Official VeganHearts brand colors
+        'vh-orange': '#f0822a',
+        'vh-green': '#346c39',
+        'vh-green-dark': '#2a5530',
+        // Legacy colors (deprecated)
         'earth-brown': '#8B7355',
         'forest-green': '#2D5016',
         'leaf-green': '#7CB342',

@@ -1,19 +1,24 @@
 import Link from "next/link";
-import { Heart, Users, BookOpen, Sprout } from "lucide-react";
+import Image from "next/image";
+import { Users, BookOpen, Sprout } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-warm-cream to-white">
+    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
       <section className="relative px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="flex justify-center mb-6">
-            <Heart className="h-16 w-16 text-leaf-green fill-leaf-green animate-pulse" />
+          <div className="flex justify-center mb-8">
+            <Image 
+              src="/logo.png" 
+              alt="VeganHearts Logo" 
+              width={200} 
+              height={200}
+              className="animate-pulse"
+              priority
+            />
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-forest-green sm:text-7xl mb-6">
-            VeganHearts
-          </h1>
-          <p className="text-xl text-earth-brown leading-relaxed mb-4">
+          <p className="text-xl text-vh-green-dark leading-relaxed mb-4">
             Building a compassionate world through vegan education, community, and advocacy
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
@@ -27,12 +32,12 @@ export default function Home() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg border-2 border-leaf-green/30 focus:border-leaf-green focus:outline-none focus:ring-2 focus:ring-leaf-green/20 transition-colors"
+                className="flex-1 px-4 py-3 rounded-lg border-2 border-vh-orange/30 focus:border-vh-orange focus:outline-none focus:ring-2 focus:ring-vh-orange/20 transition-colors"
                 required
               />
               <button
                 type="submit"
-                className="px-8 py-3 bg-leaf-green text-white rounded-lg font-medium hover:bg-forest-green transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                className="px-8 py-3 bg-vh-orange text-white rounded-lg font-medium hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
               >
                 Join Our Journey
               </button>
@@ -47,16 +52,16 @@ export default function Home() {
       {/* Featured Course */}
       <section className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-4xl">
-          <div className="bg-gradient-to-r from-leaf-green/10 to-forest-green/10 rounded-2xl p-8 border-2 border-leaf-green/20">
-            <BookOpen className="h-12 w-12 text-leaf-green mb-4" />
-            <h2 className="text-3xl font-bold text-forest-green mb-4">
+          <div className="bg-gradient-to-r from-vh-green/10 to-vh-orange/10 rounded-2xl p-8 border-2 border-vh-green/30">
+            <BookOpen className="h-12 w-12 text-vh-green mb-4" />
+            <h2 className="text-3xl font-bold text-vh-green mb-4">
               Opening Your Vegan Heart in 21 Days
             </h2>
             <p className="text-lg text-gray-700 mb-4">
               Our foundational course guiding you through a transformative journey 
               toward compassionate living. Learn, grow, and connect with a supportive community.
             </p>
-            <p className="text-forest-green font-medium">
+            <p className="text-vh-orange font-medium">
               Coming soon
             </p>
           </div>
@@ -66,15 +71,15 @@ export default function Home() {
       {/* Three Pillars */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center text-forest-green mb-16">
+          <h2 className="text-4xl font-bold text-center text-vh-green mb-16">
             Our Mission
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-xl hover:bg-warm-cream transition-colors">
+            <div className="text-center p-8 rounded-xl hover:bg-vh-orange/5 transition-colors">
               <div className="flex justify-center mb-4">
-                <BookOpen className="h-12 w-12 text-leaf-green" />
+                <BookOpen className="h-12 w-12 text-vh-orange" />
               </div>
-              <h3 className="text-2xl font-semibold text-forest-green mb-4">
+              <h3 className="text-2xl font-semibold text-vh-green mb-4">
                 Education
               </h3>
               <p className="text-gray-600">
@@ -83,11 +88,11 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-xl hover:bg-warm-cream transition-colors">
+            <div className="text-center p-8 rounded-xl hover:bg-vh-orange/5 transition-colors">
               <div className="flex justify-center mb-4">
-                <Users className="h-12 w-12 text-leaf-green" />
+                <Users className="h-12 w-12 text-vh-orange" />
               </div>
-              <h3 className="text-2xl font-semibold text-forest-green mb-4">
+              <h3 className="text-2xl font-semibold text-vh-green mb-4">
                 Community
               </h3>
               <p className="text-gray-600">
@@ -96,11 +101,11 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-xl hover:bg-warm-cream transition-colors">
+            <div className="text-center p-8 rounded-xl hover:bg-vh-orange/5 transition-colors">
               <div className="flex justify-center mb-4">
-                <Sprout className="h-12 w-12 text-leaf-green" />
+                <Sprout className="h-12 w-12 text-vh-orange" />
               </div>
-              <h3 className="text-2xl font-semibold text-forest-green mb-4">
+              <h3 className="text-2xl font-semibold text-vh-green mb-4">
                 Advocacy
               </h3>
               <p className="text-gray-600">
@@ -113,26 +118,26 @@ export default function Home() {
       </section>
 
       {/* Coming Soon Features */}
-      <section className="px-6 py-16 bg-forest-green/5">
+      <section className="px-6 py-16 bg-vh-green/5">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center text-forest-green mb-12">
+          <h2 className="text-3xl font-bold text-center text-vh-green mb-12">
             What We're Building
           </h2>
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-leaf-green/10">
-              <h3 className="font-semibold text-lg text-forest-green mb-2">Member Profiles & Chat</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-vh-orange/20">
+              <h3 className="font-semibold text-lg text-vh-green mb-2">Member Profiles & Chat</h3>
               <p className="text-gray-600 text-sm">Connect with like-minded people worldwide</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-leaf-green/10">
-              <h3 className="font-semibold text-lg text-forest-green mb-2">Resource Library</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-vh-orange/20">
+              <h3 className="font-semibold text-lg text-vh-green mb-2">Resource Library</h3>
               <p className="text-gray-600 text-sm">Recipes, guides, articles, and educational content</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-leaf-green/10">
-              <h3 className="font-semibold text-lg text-forest-green mb-2">Events & Retreats</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-vh-orange/20">
+              <h3 className="font-semibold text-lg text-vh-green mb-2">Events & Retreats</h3>
               <p className="text-gray-600 text-sm">Discover and organize vegan events globally</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-leaf-green/10">
-              <h3 className="font-semibold text-lg text-forest-green mb-2">Vegan Network Hub</h3>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-vh-orange/20">
+              <h3 className="font-semibold text-lg text-vh-green mb-2">Vegan Network Hub</h3>
               <p className="text-gray-600 text-sm">Directory of vegan businesses and organizations</p>
             </div>
           </div>
@@ -140,9 +145,15 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 bg-forest-green text-white">
+      <footer className="px-6 py-12 bg-vh-green text-white">
         <div className="mx-auto max-w-4xl text-center">
-          <Heart className="h-8 w-8 mx-auto mb-4 fill-white" />
+          <Image 
+            src="/logo.png" 
+            alt="VeganHearts" 
+            width={60} 
+            height={60}
+            className="mx-auto mb-4 brightness-0 invert"
+          />
           <p className="text-lg mb-4">
             VeganHearts is a volunteer-led NGO building a more compassionate world
           </p>
