@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Users, BookOpen, Sprout } from "lucide-react";
+import EmailSignupForm from "./components/EmailSignupForm";
 
 export default function Home() {
   return (
@@ -27,25 +28,7 @@ export default function Home() {
           </p>
           
           {/* Email Signup Form */}
-          <div className="max-w-md mx-auto">
-            <form className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg border-2 border-vh-orange/30 focus:border-vh-orange focus:outline-none focus:ring-2 focus:ring-vh-orange/20 transition-colors"
-                required
-              />
-              <button
-                type="submit"
-                className="px-8 py-3 bg-vh-orange text-white rounded-lg font-medium hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
-              >
-                Join Our Journey
-              </button>
-            </form>
-            <p className="text-sm text-gray-500 mt-3">
-              Be the first to know when we launch
-            </p>
-          </div>
+          <EmailSignupForm />
         </div>
       </section>
 
