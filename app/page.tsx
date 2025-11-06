@@ -165,22 +165,27 @@ export default function Home() {
       <section className="relative px-6 py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image 
-            src="/sunrise-hope.jpg" 
-            alt="Sunrise bringing hope" 
+            src="/sunrise-mountains-golden.jpg" 
+            alt="Golden sunrise over mountains" 
             fill
             className="object-cover"
             quality={85}
           />
-          <div className="absolute inset-0 bg-white/85"></div>
+          <div className="absolute inset-0 bg-white/70"></div>
         </div>
         
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-vh-green mb-8">
             Our Vision
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-vh-green to-vh-orange rounded-full mx-auto mb-8"></div>
-          <p className="text-lg md:text-2xl text-gray-800 leading-relaxed max-w-3xl mx-auto font-medium">
-            We envision a world awakened by compassion — where humans, animals, and nature thrive together in harmony. We seek to open hearts, inspire transformation and unite changemakers to co-create a kinder, more conscious and sustainable world.
+          <div className="h-1 w-20 bg-gradient-to-r from-vh-green to-vh-orange rounded-full mx-auto mb-10"></div>
+          
+          <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6">
+            We envision a world <span className="text-vh-green font-semibold">awakened by compassion</span> — where humans, animals, and nature thrive together in harmony.
+          </p>
+          
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            We seek to open hearts, inspire transformation and unite changemakers to co-create a kinder, more conscious and sustainable world.
           </p>
         </div>
       </section>
@@ -188,17 +193,17 @@ export default function Home() {
       {/* Values Section - Organic Alternating Layout */}
       <section className="px-6 py-20 bg-[#FFFAF1]">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-center text-vh-green mb-6">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center text-vh-green mb-4">
             Our Values
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">
+          <p className="text-center text-gray-600 mb-12 text-xl">
             What guides us in everything we do
           </p>
           
-          <div className="space-y-16">
+          <div className="space-y-12">
             {/* Compassion - Image Right */}
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-3">
                 <div className="flex items-center gap-4">
                   <div className="p-4 bg-vh-orange rounded-2xl rotate-3 shadow-lg flex-shrink-0">
                     <Heart className="h-10 w-10 text-white" />
@@ -207,7 +212,7 @@ export default function Home() {
                     Compassion
                   </h3>
                 </div>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
                   Loving communication, actions and understanding through empathy for all living beings
                 </p>
               </div>
@@ -224,7 +229,7 @@ export default function Home() {
 
             {/* Authenticity - Image Left */}
             <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-3">
                 <div className="flex items-center gap-4">
                   <div className="p-4 bg-vh-green rounded-2xl -rotate-3 shadow-lg flex-shrink-0">
                     <Sparkles className="h-10 w-10 text-white" />
@@ -233,7 +238,7 @@ export default function Home() {
                     Authenticity
                   </h3>
                 </div>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
                   Living and creating from truth, love and higher purpose
                 </p>
               </div>
@@ -250,7 +255,7 @@ export default function Home() {
 
             {/* Joy - Image Right */}
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-3">
                 <div className="flex items-center gap-4">
                   <div className="p-4 bg-gradient-to-br from-vh-orange to-vh-green rounded-2xl rotate-2 shadow-lg flex-shrink-0">
                     <Smile className="h-10 w-10 text-white" />
@@ -259,7 +264,7 @@ export default function Home() {
                     Joy
                   </h3>
                 </div>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
                   Thriving together with joy toward our shared vision of peaceful, happy and healthy life for all
                 </p>
               </div>

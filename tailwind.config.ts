@@ -25,10 +25,10 @@ const config: Config = {
         'warm-cream': '#F5F1E8',
         'sunset-orange': '#FF7043',
       },
-          fontFamily: {
-            sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
             display: ['var(--font-quicksand)', 'system-ui', 'sans-serif'],
-          },
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
