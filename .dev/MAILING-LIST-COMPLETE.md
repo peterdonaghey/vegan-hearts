@@ -147,3 +147,5 @@ added to iam user `vegan-hearts-api`:
 
 **everything is working and compliant. you have a proper mailing list now.**
 
+
+

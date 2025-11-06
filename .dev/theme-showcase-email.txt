@@ -1,0 +1,35 @@
+hey team,
+
+i've created three completely different layout approaches for our website so we can choose together..
+
+each has a different structure and vibe:
+
+**theme 1: joyful mosaic**
+- card-based layout with colorful scattered blocks
+- playful nunito fonts
+- everything's a card with different sizes - like a pinterest board
+- vibe: bouncy, fun, like walking into a festival
+- preview: https://vegan-hearts-git-theme-playful-peterdonaghey.vercel.app
+
+**theme 2: elegant magazine**
+- classic centered column, tons of whitespace
+- serif lora headings, editorial style
+- reads like a high-end magazine article
+- vibe: refined, calm, intentional - like reading kinfolk
+- preview: https://vegan-hearts-git-theme-elegant-peterdonaghey.vercel.app
+
+**theme 3: bold modern**
+- split-screen hero, asymmetric grid
+- dm sans, bold sections, full-width color blocks
+- dynamic layout with different sized sections
+- vibe: confident, contemporary - like a tech company with heart
+- preview: https://vegan-hearts-git-theme-modern-peterdonaghey.vercel.app
+
+these are ACTUALLY different layouts now (not just font changes 😅)..
+
+check them out and let me know which structure feels right.. we can refine or blend too..
+
+~ peter
+
+
+

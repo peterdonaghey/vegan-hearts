@@ -30,6 +30,7 @@
 @layer base {
   body {
     @apply bg-[#FFFAF1] text-gray-900;
+    letter-spacing: 0.015em;
   }
 }
 

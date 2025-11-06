@@ -14,10 +14,10 @@ const config: Config = {
         border: "hsl(var(--border))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        // Official VeganHearts brand colors
-        'vh-orange': '#f0822a',
-        'vh-green': '#346c39',
-        'vh-green-dark': '#2a5530',
+        // Official VeganHearts brand colors (from logo)
+        'vh-orange': '#ed8329',
+        'vh-green': '#39713b',
+        'vh-green-dark': '#2d5a30',
         // Legacy colors (deprecated)
         'earth-brown': '#8B7355',
         'forest-green': '#2D5016',
@@ -25,9 +25,10 @@ const config: Config = {
         'warm-cream': '#F5F1E8',
         'sunset-orange': '#FF7043',
       },
-      fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-      },
+          fontFamily: {
+            sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+            display: ['var(--font-quicksand)', 'system-ui', 'sans-serif'],
+          },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -210,3 +210,5 @@ curl https://vegan-hearts.org/api/subscribe \
 
 *You now have a solid foundation to build VeganHearts and change the world!*
 
+
+

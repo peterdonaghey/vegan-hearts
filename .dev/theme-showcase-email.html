@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeganHearts Theme Options</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #346c39 0%, #f0822a 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        .intro {
+            padding: 30px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .intro p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .theme-section {
+            padding: 30px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .theme-section:last-child {
+            border-bottom: none;
+        }
+        .theme-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .theme-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .playful-color { background: linear-gradient(135deg, #9b59b6, #f0822a); }
+        .elegant-color { background: linear-gradient(135deg, #346c39, #7CB342); }
+        .modern-color { background: linear-gradient(135deg, #2c3e50, #f0822a); }
+        .theme-title {
+            flex: 1;
+        }
+        .theme-title h2 {
+            color: #346c39;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .theme-title .subtitle {
+            color: #888;
+            font-size: 14px;
+        }
+        .theme-details {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .theme-details h3 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .theme-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .theme-details li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+        .theme-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #346c39;
+            font-weight: bold;
+        }
+        .preview-link {
+            display: inline-block;
+            background: #346c39;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-right: 10px;
+        }
+        .preview-link:hover {
+            background: #2a5530;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .preview-link.secondary {
+            background: #f0822a;
+        }
+        .preview-link.secondary:hover {
+            background: #d67424;
+        }
+        .footer {
+            padding: 30px;
+            background: #fafafa;
+            text-align: center;
+            color: #666;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .vibe-description {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-left: 3px solid #f0822a;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 0;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .preview-link {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌱 VeganHearts Theme Showcase</h1>
+            <p>three distinctive design directions for our website</p>
+        </div>
+
+        <div class="intro">
+            <p>hey team,</p>
+            <p>i've created three completely different layout approaches for our veganhearts website. these aren't just styling variations - each has a genuinely different structure and way of presenting our content..</p>
+            <p>each theme has:</p>
+            <ul style="list-style: none; padding-left: 20px; margin: 15px 0;">
+                <li style="padding: 5px 0;">✨ unique page layout and structure</li>
+                <li style="padding: 5px 0;">🎨 different way of organizing content</li>
+                <li style="padding: 5px 0;">💚 distinct personality and vibe</li>
+            </ul>
+            <p>take a look at the live previews below and let me know which structure feels right. we can also blend elements if you love parts of different approaches!</p>
+        </div>
+
+        <div class="theme-section">
+            <div class="theme-header">
+                <div class="theme-number playful-color">1</div>
+                <div class="theme-title">
+                    <h2>Joyful Mosaic</h2>
+                    <div class="subtitle">Card-Based Layout</div>
+                </div>
+            </div>
+            <div class="vibe-description">
+                "Like walking into a festival — colorful, bouncy, everything's a delightful card you want to explore"
+            </div>
+            <div class="theme-details">
+                <h3>Layout Features:</h3>
+                <ul>
+                    <li><strong>Structure:</strong> Card-based mosaic with scattered colorful blocks</li>
+                    <li><strong>Typography:</strong> Nunito — rounded, warm, playful</li>
+                    <li><strong>Content Flow:</strong> Pinterest-style grid with different sized cards</li>
+                    <li><strong>Best For:</strong> Creating immediate joy and encouraging exploration</li>
+                </ul>
+            </div>
+            <a href="https://vegan-hearts-git-theme-playful-peterdonaghey.vercel.app" class="preview-link" target="_blank">View Live Preview →</a>
+        </div>
+
+        <div class="theme-section">
+            <div class="theme-header">
+                <div class="theme-number elegant-color">2</div>
+                <div class="theme-title">
+                    <h2>Elegant Magazine</h2>
+                    <div class="subtitle">Centered Column Layout</div>
+                </div>
+            </div>
+            <div class="vibe-description">
+                "Like reading Kinfolk magazine — calm, intentional, sophisticated. Every word and space matters"
+            </div>
+            <div class="theme-details">
+                <h3>Layout Features:</h3>
+                <ul>
+                    <li><strong>Structure:</strong> Classic centered column with generous whitespace</li>
+                    <li><strong>Typography:</strong> Lora serif headings + Inter body — editorial elegance</li>
+                    <li><strong>Content Flow:</strong> Magazine-style article format with breathing room</li>
+                    <li><strong>Best For:</strong> Conveying depth, thoughtfulness, and refined authenticity</li>
+                </ul>
+            </div>
+            <a href="https://vegan-hearts-git-theme-elegant-peterdonaghey.vercel.app" class="preview-link" target="_blank">View Live Preview →</a>
+        </div>
+
+        <div class="theme-section">
+            <div class="theme-header">
+                <div class="theme-number modern-color">3</div>
+                <div class="theme-title">
+                    <h2>Bold Modern</h2>
+                    <div class="subtitle">Asymmetric Grid Layout</div>
+                </div>
+            </div>
+            <div class="vibe-description">
+                "Like a tech company with heart — confident, dynamic, contemporary but still warm and welcoming"
+            </div>
+            <div class="theme-details">
+                <h3>Layout Features:</h3>
+                <ul>
+                    <li><strong>Structure:</strong> Split-screen hero with asymmetric grid sections</li>
+                    <li><strong>Typography:</strong> DM Sans — clean, confident, friendly</li>
+                    <li><strong>Content Flow:</strong> Bold full-width color blocks with varied section sizes</li>
+                    <li><strong>Best For:</strong> Making a strong statement while staying approachable</li>
+                </ul>
+            </div>
+            <a href="https://vegan-hearts-git-theme-modern-peterdonaghey.vercel.app" class="preview-link" target="_blank">View Live Preview →</a>
+        </div>
+
+        <div class="footer">
+            <p><strong>what's next?</strong></p>
+            <p>explore each theme on your own device, share with the team, and let me know your thoughts. we can refine the winner or blend ideas from multiple themes..</p>
+            <p style="margin-top: 20px; color: #999; font-size: 14px;">made with 💚 by the veganhearts team</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
