@@ -45,6 +45,31 @@ Hosted on AWS Amplify with automatic deployments from the `main` branch.
 
 **Production URL:** https://vegan-hearts.org
 
+## Email Forwarding
+
+To set up or update email forwarding (e.g., `education@vegan-hearts.org` → your personal email):
+
+```bash
+.dev/scripts/setup-email-forwarding.sh <forward-to-email> [<source-email>]
+```
+
+Examples:
+```bash
+# Forward education@ to your email
+.dev/scripts/setup-email-forwarding.sh donagheypeter@googlemail.com education@vegan-hearts.org
+
+# Forward ALL @vegan-hearts.org emails
+.dev/scripts/setup-email-forwarding.sh donagheypeter@googlemail.com
+```
+
+The script handles everything via AWS CLI:
+- Verifies recipient email in SES
+- Creates Lambda forwarder function
+- Sets up SES receipt rules
+- Configures MX records in Route 53
+
+**Note:** You'll need to verify the recipient email (check inbox for AWS verification link).
+
 ## Documentation
 
 See `.dev/docs/` for:

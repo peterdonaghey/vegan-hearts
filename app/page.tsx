@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { Heart, Sparkles, Smile } from "lucide-react";
-import EmailSignupForm from "./components/EmailSignupForm";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
+      <Navigation />
+      <main className="min-h-screen pt-16">
       {/* Hero Section with Forest Background */}
       <section className="relative px-6 pt-8 pb-16 overflow-hidden">
         <div className="absolute inset-0">
@@ -282,44 +285,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Email Signup Section */}
-      <section className="px-6 py-20 bg-gradient-to-br from-vh-orange/10 to-vh-green/10">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-vh-green mb-6">
-            Join Our Journey
-          </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Be part of the movement to awaken compassion in the world
-          </p>
-          <EmailSignupForm />
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="px-6 py-12 bg-vh-green text-white">
-        <div className="mx-auto max-w-4xl text-center">
-          <Image 
-            src="/logo.png" 
-            alt="VeganHearts" 
-            width={70} 
-            height={70}
-            className="mx-auto mb-6 brightness-0 invert opacity-90 "
-          />
-          <p className="text-xl mb-4 font-display font-medium">
-            Vegan Hearts
-          </p>
-          <p className="text-lg mb-6 text-white/90">
-            A non-profit organization awakening compassion worldwide
-          </p>
-          <p className="text-sm text-white/70">
-            For the animals. For the planet. For each other.
-          </p>
-          <div className="mt-8 pt-8 border-t border-white/20 text-sm text-white/60">
-            <p>© 2025 VeganHearts. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
+    </>
   );
 }
 
