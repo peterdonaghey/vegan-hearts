@@ -1,15 +1,34 @@
 # 🌱 VeganHearts - Session Summary
 
 **Date:** October 24, 2025  
+**Last Updated:** November 8, 2025  
 **Duration:** ~3 hours  
 **Domain:** vegan-hearts.org (with hyphen) ✅
 
 ---
 
-## ✅ What's Live and Working
+## ⚠️ CURRENT STATUS: PRODUCTION TAKEN DOWN
+
+**Takedown Date:** November 8, 2025  
+**Status:** Production site (vegan-hearts.org) is OFFLINE  
+**Reason:** Temporary takedown per request  
+
+**What's Still Running:**
+- ✅ Vercel project (dev deployments work)
+- ✅ AWS infrastructure (DynamoDB, SES, IAM)
+- ✅ DNS records in Route53 (ready to reconnect)
+
+**To Restore Production:**
+```bash
+./.dev/scripts/11_restore_production.sh
+```
+
+---
+
+## ✅ What Was Live and Working (Before Takedown)
 
 ###  1. Website
-- **URL:** https://vegan-hearts.org
+- **URL:** https://vegan-hearts.org (CURRENTLY OFFLINE)
 - **Platform:** Vercel (deployed)
 - **Framework:** Next.js 15, TypeScript, Tailwind CSS
 - **Branding:** Official colors (#f0822a orange, #346c39 green) + logo
@@ -35,6 +54,8 @@ Located in `.dev/scripts/` - fully reproducible:
 7. `07_setup_ses.sh` - SES setup ✅
 8. `08_create_iam_user.sh` - IAM credentials ✅
 9. `09_fix_iam_permissions.sh` - Permission fixes ✅
+10. `10_takedown_production.sh` - **Take down production site** ✅
+11. `11_restore_production.sh` - **Restore production site** ✅
 
 ---
 
@@ -209,6 +230,7 @@ curl https://vegan-hearts.org/api/subscribe \
 - ⚠️ Email API needs runtime debugging
 
 *You now have a solid foundation to build VeganHearts and change the world!*
+
 
 
 

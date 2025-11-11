@@ -1,0 +1,87 @@
+=== Production Takedown ===
+Date: Sáb  8 Nov 2025 19:05:42 WET
+
+=== Vercel Domains ===
+Vercel CLI 48.6.0
+Fetching Domains under peterdonagheys-projects
+> 1 Domain found under peterdonagheys-projects [295ms]
+ 
+  Domain              Registrar           Nameservers         Expiration Date    Creator             Age    
+  vegan-hearts.org    Third Party         Third Party         -                  peterdonaghey       15d    
+ 
+
+
+=== Route53 DNS Records ===
+Hosted Zone ID: Z07021562WUGHHTUXDBG
+[
+    {
+        "Name": "vegan-hearts.org.",
+        "Type": "A",
+        "TTL": 300,
+        "ResourceRecords": [
+            {
+                "Value": "76.76.21.21"
+            }
+        ]
+    },
+    {
+        "Name": "vegan-hearts.org.",
+        "Type": "MX",
+        "TTL": 300,
+        "ResourceRecords": [
+            {
+                "Value": "10 inbound-smtp.us-east-1.amazonaws.com"
+            }
+        ]
+    },
+    {
+        "Name": "vegan-hearts.org.",
+        "Type": "NS",
+        "TTL": 172800,
+        "ResourceRecords": [
+            {
+                "Value": "ns-1579.awsdns-05.co.uk."
+            },
+            {
+                "Value": "ns-14.awsdns-01.com."
+            },
+            {
+                "Value": "ns-1350.awsdns-40.org."
+            },
+            {
+                "Value": "ns-770.awsdns-32.net."
+            }
+        ]
+    },
+    {
+        "Name": "vegan-hearts.org.",
+        "Type": "SOA",
+        "TTL": 900,
+        "ResourceRecords": [
+            {
+                "Value": "ns-1579.awsdns-05.co.uk. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
+            }
+        ]
+    },
+    {
+        "Name": "vegan-hearts.org.",
+        "Type": "TXT",
+        "TTL": 300,
+        "ResourceRecords": [
+            {
+                "Value": "\"v=spf1 include:amazonses.com ~all\""
+            }
+        ]
+    },
+    {
+        "Name": "www.vegan-hearts.org.",
+        "Type": "CNAME",
+        "TTL": 300,
+        "ResourceRecords": [
+            {
+                "Value": "cname.vercel-dns.com"
+            }
+        ]
+    }
+]
+
