@@ -3,9 +3,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useAuth } from '@/lib/useAuth';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const { isAdmin, isLoading } = useAuth();
   
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFFAF1]/80 backdrop-blur-sm border-b border-vh-green/10">
@@ -53,6 +55,20 @@ export default function Navigation() {
             >
               Education
             </Link>
+            
+            {/* Admin button - only visible when logged in */}
+            {!isLoading && isAdmin && (
+              <Link 
+                href="/admin" 
+                className={`px-5 py-2 rounded-full transition-colors font-medium border-2 ${
+                  pathname?.startsWith('/admin')
+                    ? 'bg-vh-green text-white border-vh-green' 
+                    : 'text-vh-green border-vh-green hover:bg-vh-green hover:text-white'
+                }`}
+              >
+                Admin
+              </Link>
+            )}
           </div>
         </div>
       </div>

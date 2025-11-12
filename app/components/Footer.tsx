@@ -1,7 +1,36 @@
+'use client';
+
+import { useState, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import EmailSignupForm from "./EmailSignupForm";
 
 export default function Footer() {
+  const [clickCount, setClickCount] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const router = useRouter();
+
+  const handleLogoClick = () => {
+    setClickCount(prev => prev + 1);
+
+    // Clear existing timer
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+
+    // Check if we've reached 7 clicks
+    if (clickCount + 1 >= 7) {
+      setClickCount(0);
+      router.push('/admin');
+      return;
+    }
+
+    // Reset counter after 2 seconds of no clicks
+    timerRef.current = setTimeout(() => {
+      setClickCount(0);
+    }, 2000);
+  };
+
   return (
     <>
       {/* Email Signup Section */}
@@ -25,7 +54,8 @@ export default function Footer() {
             alt="VeganHearts" 
             width={60} 
             height={60}
-            className="mx-auto mb-4 brightness-0 invert opacity-90"
+            className="mx-auto mb-4 brightness-0 invert opacity-90 cursor-pointer select-none"
+            onClick={handleLogoClick}
           />
           <p className="text-lg mb-2 font-display font-medium">
             Vegan Hearts

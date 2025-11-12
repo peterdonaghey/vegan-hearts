@@ -1,17 +1,10 @@
 import { NextResponse } from 'next/server';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { PutCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
+import { PutCommand, QueryCommand, UpdateCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
 import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 import { SESv2Client, CreateContactCommand } from '@aws-sdk/client-sesv2';
 
 export async function POST(request: Request) {
-  console.log('API called - Environment check:', {
-    hasAccessKey: !!process.env.AWS_ACCESS_KEY_ID,
-    hasSecretKey: !!process.env.AWS_SECRET_ACCESS_KEY,
-    hasRegion: !!process.env.AWS_REGION,
-    region: process.env.AWS_REGION,
-  });
-  
   // Initialize AWS clients inside the function
   // Trim all environment variables to remove newlines
   const region = (process.env.AWS_REGION || 'us-east-1').trim();
@@ -47,7 +40,6 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { email } = body;
-    console.log('Processing email:', email);
 
     // Validate email
     if (!email || !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
@@ -57,21 +49,59 @@ export async function POST(request: Request) {
       );
     }
 
-    const timestamp = Date.now();
-
-    // Save to DynamoDB
-    await docClient.send(
-      new PutCommand({
+    // Check if email already exists
+    const existingRecords = await docClient.send(
+      new QueryCommand({
         TableName: 'vegan-hearts-email-signups',
-        Item: {
-          email,
-          timestamp,
-          signupDate: new Date().toISOString(),
-          source: 'landing-page',
-          unsubscribed: false,
+        KeyConditionExpression: 'email = :email',
+        ExpressionAttributeValues: {
+          ':email': email,
         },
+        ScanIndexForward: false, // Get most recent first
+        Limit: 1,
       })
     );
+
+    const timestamp = Date.now();
+    let isNewSubscriber = false;
+
+    if (existingRecords.Items && existingRecords.Items.length > 0) {
+      const existingRecord = existingRecords.Items[0];
+      
+      // If they're currently unsubscribed, reactivate them
+      if (existingRecord.unsubscribed) {
+        await docClient.send(
+          new UpdateCommand({
+            TableName: 'vegan-hearts-email-signups',
+            Key: {
+              email: existingRecord.email,
+              timestamp: existingRecord.timestamp,
+            },
+            UpdateExpression: 'SET unsubscribed = :false REMOVE unsubscribedAt',
+            ExpressionAttributeValues: {
+              ':false': false,
+            },
+          })
+        );
+        isNewSubscriber = true; // Treat as new for welcome email
+      }
+      // If already active, just send welcome email, don't create duplicate
+    } else {
+      // New subscriber - create record
+      await docClient.send(
+        new PutCommand({
+          TableName: 'vegan-hearts-email-signups',
+          Item: {
+            email,
+            timestamp,
+            signupDate: new Date().toISOString(),
+            source: 'landing-page',
+            unsubscribed: false,
+          },
+        })
+      );
+      isNewSubscriber = true;
+    }
 
     // Add to SES contact list
     try {

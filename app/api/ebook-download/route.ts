@@ -1,12 +1,10 @@
 import { NextResponse } from 'next/server';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { PutCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
+import { PutCommand, QueryCommand, UpdateCommand, DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
 import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 import { SESv2Client, CreateContactCommand } from '@aws-sdk/client-sesv2';
 
 export async function POST(request: Request) {
-  console.log('Ebook download API called');
-  
   const region = (process.env.AWS_REGION || 'us-east-1').trim();
   const accessKeyId = (process.env.AWS_ACCESS_KEY_ID || '').trim();
   const secretAccessKey = (process.env.AWS_SECRET_ACCESS_KEY || '').trim();
@@ -40,7 +38,6 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { name, email } = body;
-    console.log('Processing ebook download:', { name, email });
 
     // Validate inputs
     if (!name || name.trim().length === 0) {
@@ -57,22 +54,64 @@ export async function POST(request: Request) {
       );
     }
 
-    const timestamp = Date.now();
-
-    // Save to DynamoDB
-    await docClient.send(
-      new PutCommand({
+    // Check if email already exists
+    const existingRecords = await docClient.send(
+      new QueryCommand({
         TableName: 'vegan-hearts-email-signups',
-        Item: {
-          email,
-          name,
-          timestamp,
-          signupDate: new Date().toISOString(),
-          source: 'ebook-download',
-          unsubscribed: false,
+        KeyConditionExpression: 'email = :email',
+        ExpressionAttributeValues: {
+          ':email': email,
         },
+        ScanIndexForward: false, // Get most recent first
+        Limit: 1,
       })
     );
+
+    const timestamp = Date.now();
+    let isNewSubscriber = false;
+
+    if (existingRecords.Items && existingRecords.Items.length > 0) {
+      const existingRecord = existingRecords.Items[0];
+      
+      // If they're currently unsubscribed, reactivate them
+      if (existingRecord.unsubscribed) {
+        await docClient.send(
+          new UpdateCommand({
+            TableName: 'vegan-hearts-email-signups',
+            Key: {
+              email: existingRecord.email,
+              timestamp: existingRecord.timestamp,
+            },
+            UpdateExpression: 'SET unsubscribed = :false, #name = :name REMOVE unsubscribedAt',
+            ExpressionAttributeNames: {
+              '#name': 'name',
+            },
+            ExpressionAttributeValues: {
+              ':false': false,
+              ':name': name,
+            },
+          })
+        );
+        isNewSubscriber = true; // Treat as new for welcome email
+      }
+      // If already active, just send ebook email, don't create duplicate
+    } else {
+      // New subscriber - create record
+      await docClient.send(
+        new PutCommand({
+          TableName: 'vegan-hearts-email-signups',
+          Item: {
+            email,
+            name,
+            timestamp,
+            signupDate: new Date().toISOString(),
+            source: 'ebook-download',
+            unsubscribed: false,
+          },
+        })
+      );
+      isNewSubscriber = true;
+    }
 
     // Add to SES contact list
     try {

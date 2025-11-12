@@ -1,17 +1,29 @@
 'use client';
 
 import { useState, useEffect, ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowLeft } from 'lucide-react';
 import { CognitoUser, AuthenticationDetails, CognitoUserPool } from 'amazon-cognito-identity-js';
 
 interface AdminLayoutProps {
   children: ReactNode;
 }
 
-const userPool = new CognitoUserPool({
-  UserPoolId: process.env.NEXT_PUBLIC_COGNITO_USER_POOL_ID!,
-  ClientId: process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID!,
-});
+function getUserPool() {
+  const userPoolId = process.env.NEXT_PUBLIC_COGNITO_USER_POOL_ID;
+  const clientId = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID;
+  
+  if (!userPoolId || !clientId) {
+    return null;
+  }
+
+  return new CognitoUserPool({
+    UserPoolId: userPoolId,
+    ClientId: clientId,
+  });
+}
 
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -23,12 +35,19 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
   const [needsPasswordChange, setNeedsPasswordChange] = useState(false);
   const [currentUser, setCurrentUser] = useState<CognitoUser | null>(null);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     checkAuth();
   }, []);
 
   const checkAuth = () => {
+    const userPool = getUserPool();
+    if (!userPool) {
+      setIsLoading(false);
+      return;
+    }
+
     const user = userPool.getCurrentUser();
     if (user) {
       user.getSession((err: any, session: any) => {
@@ -52,6 +71,12 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    const userPool = getUserPool();
+    if (!userPool) {
+      setError('Cognito configuration is missing');
+      return;
+    }
 
     const authenticationDetails = new AuthenticationDetails({
       Username: email,
@@ -106,9 +131,12 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
   };
 
   const handleLogout = () => {
-    const user = userPool.getCurrentUser();
-    if (user) {
-      user.signOut();
+    const userPool = getUserPool();
+    if (userPool) {
+      const user = userPool.getCurrentUser();
+      if (user) {
+        user.signOut();
+      }
     }
     localStorage.removeItem('accessToken');
     setIsAuthenticated(false);
@@ -119,6 +147,26 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#FFFAF1] to-white">
         <div className="text-2xl text-vh-green font-display">Loading...</div>
+      </div>
+    );
+  }
+
+  // Check if Cognito is configured
+  const userPool = getUserPool();
+  if (!userPool) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#FFFAF1] to-white px-6">
+        <div className="bg-white p-8 rounded-3xl shadow-2xl max-w-md text-center">
+          <h2 className="text-2xl font-display font-bold text-red-600 mb-4">
+            Configuration Error
+          </h2>
+          <p className="text-gray-700 mb-4">
+            The admin authentication system is not properly configured.
+          </p>
+          <p className="text-sm text-gray-600">
+            Missing Cognito environment variables. Please contact the administrator.
+          </p>
+        </div>
       </div>
     );
   }
@@ -226,15 +274,42 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     <div className="min-h-screen bg-gradient-to-b from-[#FFFAF1] to-white">
       <nav className="bg-white shadow-md px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-display font-bold text-vh-green">
-            VeganHearts Admin
-          </h1>
-          <button
-            onClick={handleLogout}
-            className="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors"
-          >
-            Logout
-          </button>
+          <div className="flex items-center gap-6">
+            <Link href="/admin" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <Image 
+                src="/logo.png" 
+                alt="VeganHearts Logo" 
+                width={40} 
+                height={40}
+                className="rounded-full"
+              />
+              <span className="text-xl font-display font-semibold text-vh-green">VeganHearts</span>
+            </Link>
+            <span className="text-sm text-gray-500 font-medium">Admin Panel</span>
+          </div>
+          <div className="flex items-center gap-3">
+            {pathname !== '/admin' && (
+              <Link
+                href="/admin"
+                className="px-4 py-2 text-gray-700 hover:text-vh-green font-medium transition-colors flex items-center gap-2"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Dashboard
+              </Link>
+            )}
+            <Link
+              href="/"
+              className="px-4 py-2 text-gray-700 hover:text-vh-green font-medium transition-colors"
+            >
+              View Website
+            </Link>
+            <button
+              onClick={handleLogout}
+              className="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-colors"
+            >
+              Logout
+            </button>
+          </div>
         </div>
       </nav>
 
