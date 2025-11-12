@@ -34,6 +34,16 @@ export default function Navigation() {
               Home
             </Link>
             <Link 
+              href="/events" 
+              className={`px-5 py-2 rounded-full transition-colors font-medium ${
+                pathname === '/events' || pathname?.startsWith('/admin/events')
+                  ? 'bg-vh-orange text-white' 
+                  : 'text-gray-700 hover:text-vh-green'
+              }`}
+            >
+              Events
+            </Link>
+            <Link 
               href="/education" 
               className={`px-5 py-2 rounded-full transition-colors font-medium ${
                 pathname === '/education' 
