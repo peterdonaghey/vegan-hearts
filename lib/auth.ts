@@ -26,7 +26,7 @@ export async function verifyAuthToken(authHeader: string | null): Promise<{ sub:
     const payload = await verifier.verify(token);
     return {
       sub: payload.sub,
-      email: payload.email || payload.username || '',
+      email: (payload.email as string) || (payload.username as string) || '',
     };
   } catch (error) {
     console.error('Token verification failed:', error);
