@@ -71,3 +71,4 @@ echo "   2. DNS settings: vercel domains ls"
 echo "   3. Route53 records in AWS Console"
 
 
+
