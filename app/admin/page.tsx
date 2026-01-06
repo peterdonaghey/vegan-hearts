@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import AdminLayout from '../components/AdminLayout';
-import { Calendar, Users } from 'lucide-react';
+import { Calendar, Users, Newspaper } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AdminDashboard() {
@@ -35,6 +35,23 @@ export default function AdminDashboard() {
               </div>
               <p className="text-gray-600">
                 Create and manage events, upload posters, and track registrations
+              </p>
+            </div>
+          </Link>
+
+          {/* News Management */}
+          <Link href="/admin/news">
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-purple-500">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-4 bg-purple-500/10 rounded-xl group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                  <Newspaper className="h-8 w-8 text-purple-600 group-hover:text-white" />
+                </div>
+                <h2 className="text-2xl font-display font-bold text-purple-600">
+                  News
+                </h2>
+              </div>
+              <p className="text-gray-600">
+                Write and publish news articles with rich text editor
               </p>
             </div>
           </Link>

@@ -1,9 +1,43 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { Heart, Sparkles, Smile } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import NewsList from "../components/NewsList";
+
+interface NewsArticle {
+  newsId: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  author: string;
+  publishDate: string;
+  imageUrl?: string;
+  tags: string[];
+}
 
 export default function MainSite() {
+  const [newsArticles, setNewsArticles] = useState<NewsArticle[]>([]);
+  const [loadingNews, setLoadingNews] = useState(true);
+
+  useEffect(() => {
+    fetchNews();
+  }, []);
+
+  const fetchNews = async () => {
+    try {
+      const response = await fetch('/api/news?limit=3');
+      const data = await response.json();
+      setNewsArticles(data.articles || []);
+    } catch (error) {
+      console.error('Failed to fetch news:', error);
+    } finally {
+      setLoadingNews(false);
+    }
+  };
+
   return (
     <>
       <Navigation />
@@ -193,6 +227,31 @@ export default function MainSite() {
         </div>
       </section>
 
+      {/* Latest News Section */}
+      {newsArticles.length > 0 && (
+        <section className="px-6 py-20 bg-white">
+          <div className="mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-vh-green mb-4">
+                Latest News
+              </h2>
+              <div className="h-1 w-20 bg-gradient-to-r from-vh-orange to-vh-green rounded-full mx-auto mb-6"></div>
+              <p className="text-xl text-gray-600">
+                Stay connected with our journey and updates from the field
+              </p>
+            </div>
+            
+            <NewsList
+              articles={newsArticles}
+              limit={3}
+              showViewAll={true}
+              variant="full"
+              loading={loadingNews}
+            />
+          </div>
+        </section>
+      )}
+
       {/* Values Section - Organic Alternating Layout */}
       <section className="px-6 py-20 bg-[#FFFAF1]">
         <div className="mx-auto max-w-6xl">
@@ -290,5 +349,6 @@ export default function MainSite() {
     </>
   );
 }
+
 
 

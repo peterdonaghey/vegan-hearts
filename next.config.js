@@ -9,8 +9,16 @@ const nextConfig = {
         port: '',
         pathname: '/events/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'vegan-hearts-assets.s3.us-east-1.amazonaws.com',
+        port: '',
+        pathname: '/news/**',
+      },
     ],
   },
+  // Fix workspace root detection warning
+  outputFileTracingRoot: require('path').join(__dirname),
 }
 
 module.exports = nextConfig

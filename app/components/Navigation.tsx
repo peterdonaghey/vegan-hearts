@@ -51,6 +51,16 @@ export default function Navigation() {
               Events
             </Link>
             <Link 
+              href="/news" 
+              className={`px-5 py-2 rounded-full transition-colors font-medium ${
+                pathname === '/news' || pathname?.startsWith('/news/') || pathname?.startsWith('/admin/news')
+                  ? 'bg-vh-orange text-white' 
+                  : 'text-gray-700 hover:text-vh-green'
+              }`}
+            >
+              News
+            </Link>
+            <Link 
               href="/education" 
               className={`px-5 py-2 rounded-full transition-colors font-medium ${
                 pathname === '/education' 
@@ -114,6 +124,17 @@ export default function Navigation() {
               }`}
             >
               Events
+            </Link>
+            <Link 
+              href="/news" 
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-4 py-3 rounded-lg transition-colors font-medium ${
+                pathname === '/news' || pathname?.startsWith('/news/') || pathname?.startsWith('/admin/news')
+                  ? 'bg-vh-orange text-white' 
+                  : 'text-gray-700 hover:bg-vh-green/10'
+              }`}
+            >
+              News
             </Link>
             <Link 
               href="/education" 
