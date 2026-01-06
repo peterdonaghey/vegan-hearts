@@ -1,0 +1,944 @@
+{
+  "total_images": 35,
+  "processed_date": "2026-01-06",
+  "images": [
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 12.31.14.jpeg",
+      "new_filename": "india-2026-01-03-at-12.31.14.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-12.31.14.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-12.31.14.jpg",
+      "description": "A playful brown dog lounges in a lush green meadow, gazing intently at a colorful rubber toy nearby. The dog's relaxed posture and the serene natural setting evoke a sense of tranquility and simple pleasures.",
+      "alt_text": "A playful dog resting in a lush green meadow",
+      "primary_subject": "animal",
+      "mood": "peaceful",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": true,
+      "dimensions": {
+        "width": 960,
+        "height": 540,
+        "orientation": "landscape",
+        "aspect_ratio": 1.78,
+        "megapixels": 0.5
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 12.31.16.jpeg",
+      "new_filename": "india-2026-01-03-at-12.31.16.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-12.31.16.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-12.31.16.jpg",
+      "description": "The image depicts a winding, rocky path through a lush, moss-covered forest, with gnarled tree branches casting dramatic shadows across the trail. The scene exudes a sense of mystery and wonder, inviting the viewer to embark on a journey through this verdant, otherworldly landscape.",
+      "alt_text": "A winding, moss-covered forest trail leading through a dramatic, shadowy landscape.",
+      "primary_subject": "landscape",
+      "mood": "majestic",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 1200,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.75,
+        "megapixels": 1.9
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.19.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.19.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.19.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.19.jpg",
+      "description": "The image depicts a lush, mountainous landscape in the background, with a vibrant and colorful plant in the foreground. The plant features bright red berries or fruits, surrounded by green leaves, creating a visually striking contrast. The overall composition and the serene atmosphere evoke a sense of natural abundance and harmony.",
+      "alt_text": "Lush, mountainous landscape with a vibrant plant in the foreground.",
+      "primary_subject": "nature-detail",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.38.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.38.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.38.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.38.jpg",
+      "description": "The image depicts a serene, lush landscape with a tranquil pond reflecting the surrounding natural beauty. Towering rock formations and verdant pine trees create an intimate, peaceful atmosphere, inviting a sense of calm and connection to the natural world.",
+      "alt_text": "Serene landscape with a peaceful pond and surrounding nature.",
+      "primary_subject": "landscape",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.40.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.40.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.40.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.40.jpg",
+      "description": "The image captures a breathtaking landscape of rolling hills and lush pine forests, with a clear blue sky dotted with fluffy white clouds. The scene exudes a sense of tranquility and connection to the natural world, inviting the viewer to pause and appreciate the beauty of the environment.",
+      "alt_text": "Serene mountain landscape with pine forests under a cloudy sky",
+      "primary_subject": "landscape",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.41.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.41.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.41.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.41.jpg",
+      "description": "The image depicts a stunning mountain landscape at sunset, with dramatic clouds and vibrant colors casting a warm glow over the rugged terrain. The scene evokes a sense of awe and tranquility, inviting the viewer to pause and connect with the beauty of the natural world.",
+      "alt_text": "Dramatic mountain landscape at sunset in India",
+      "primary_subject": "landscape",
+      "mood": "majestic",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "background",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 1455,
+        "height": 579,
+        "orientation": "landscape",
+        "aspect_ratio": 2.51,
+        "megapixels": 0.8
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.43.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.43.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.43.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.43.jpg",
+      "description": "The image depicts a vibrant cluster of delicate, purple-blue plumbago flowers against a backdrop of lush, green foliage. The soft, ethereal blooms create a sense of tranquility and natural beauty, inviting the viewer to pause and appreciate the delicate details of this floral arrangement.",
+      "alt_text": "A serene, close-up view of a cluster of plumbago flowers.",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "nature-connection",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 923,
+        "height": 2048,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.9
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.44.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.44.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.44.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.44.jpg",
+      "description": "The image captures a lush, verdant forest canopy, with vibrant shades of green leaves and branches intertwining overhead. Sunlight filters through the foliage, creating a serene and tranquil atmosphere, inviting the viewer to pause and appreciate the beauty of the natural world.",
+      "alt_text": "Lush, verdant forest canopy with filtered sunlight creating a serene atmosphere.",
+      "primary_subject": "forest",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 720,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.45.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.45.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.45.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.45.jpg",
+      "description": "The image captures a lush and vibrant jungle scene, with a canopy of green palm leaves and branches intertwined, creating a serene and intimate atmosphere. Bursts of colorful flowers and foliage add to the natural beauty, inviting the viewer to immerse themselves in the tranquility of the natural world.",
+      "alt_text": "Lush jungle scene with vibrant foliage and colorful flowers.",
+      "primary_subject": "nature-detail",
+      "mood": "peaceful",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.47.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.47.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.47.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.47.jpg",
+      "description": "The image depicts a dramatic natural landscape, with a dark rocky cave opening framing a tranquil ocean vista at sunset. The serene, moody atmosphere evokes a sense of contemplation and wonder.",
+      "alt_text": "Dramatic rock cave framing peaceful ocean sunset",
+      "primary_subject": "landscape",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 720,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.48.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.48.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.48.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.48.jpg",
+      "description": "The image captures the intricate details of a vibrant pink flower, its soft petals unfurling to reveal a mesmerizing burst of orange and yellow stamens at the center. The composition draws the viewer inward, inviting a closer look at the natural beauty and complexity within.",
+      "alt_text": "Vibrant pink flower with intricate orange and yellow stamens",
+      "primary_subject": "flower",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 580,
+        "height": 1288,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 0.7
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.52.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.52.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.52.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.52.jpg",
+      "description": "A vibrant, close-up photograph of a beautiful pink lotus flower floating in a pond, surrounded by lush green leaves. The flower's intricate petals and striking color create a sense of tranquility and natural beauty.",
+      "alt_text": "A stunning pink lotus flower floating in a serene pond.",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 1600,
+        "height": 721,
+        "orientation": "landscape",
+        "aspect_ratio": 2.22,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.16.54.jpeg",
+      "new_filename": "india-2026-01-03-at-13.16.54.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.54.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.16.54.jpg",
+      "description": "The image depicts a stunning white lotus flower in full bloom, its delicate petals surrounding a vibrant yellow center. The flower is submerged in a serene pond, surrounded by lush green foliage. The lighting and composition create a sense of tranquility and natural harmony.",
+      "alt_text": "A beautiful white lotus flower in a serene pond setting.",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.17.01.jpeg",
+      "new_filename": "india-2026-01-03-at-13.17.01.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.17.01.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.17.01.jpg",
+      "description": "The image captures a radiant sunlight shining through the lush green foliage, creating a warm and serene atmosphere. The dappled light and vibrant colors evoke a sense of tranquility and connection with the natural world.",
+      "alt_text": "Sunlight filtering through verdant foliage in a peaceful, natural setting.",
+      "primary_subject": "nature-detail",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 863,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.54,
+        "megapixels": 1.4
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.17.02.jpeg",
+      "new_filename": "india-2026-01-03-at-13.17.02.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.17.02.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.17.02.jpg",
+      "description": "The image depicts a lush, verdant forest landscape with a tranquil stream flowing through it. The dense foliage and overhanging branches create a sense of immersion and shelter, inviting the viewer to pause and appreciate the serene beauty of the natural world.",
+      "alt_text": "Lush, verdant forest with a tranquil stream flowing through it.",
+      "primary_subject": "landscape",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 923,
+        "height": 2048,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.9
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.27.43.jpeg",
+      "new_filename": "india-2026-01-03-at-13.27.43.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.27.43.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.27.43.jpg",
+      "description": "The image captures the delicate beauty of a white flower with vibrant yellow stamens, set against a lush, verdant backdrop. The flower's intricate details and soft, velvety petals evoke a sense of tranquility and natural wonder.",
+      "alt_text": "Close-up of a delicate white flower with yellow stamens",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 580,
+        "height": 1288,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 0.7
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.27.44 (1).jpeg",
+      "new_filename": "india-2026-01-03-at-13.27.44-(1).jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.27.44-(1).jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.27.44-(1).jpg",
+      "description": "A close-up image of a vibrant yellow rose bloom, its delicate petals gently unfurling and revealing a serene, intimate beauty. The soft focus and warm hues create a peaceful, calming atmosphere.",
+      "alt_text": "A close-up of a beautiful yellow rose bloom.",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 580,
+        "height": 1288,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 0.7
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.27.44.jpeg",
+      "new_filename": "india-2026-01-03-at-13.27.44.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.27.44.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.27.44.jpg",
+      "description": "A close-up view of a vibrant blue iris flower, its petals unfurling to reveal a delicate, fringed center. The image is bathed in a soft, ethereal purple hue, creating a serene and contemplative mood.",
+      "alt_text": "A close-up of a blue iris flower in soft, ethereal light",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 580,
+        "height": 1288,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 0.7
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.27.45 (1).jpeg",
+      "new_filename": "india-2026-01-03-at-13.27.45-(1).jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.27.45-(1).jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.27.45-(1).jpg",
+      "description": "The image depicts a close-up view of a vibrant yellow flower, with its delicate petals unfolding in a serene and inviting manner. The soft, muted tones and the blurred background create a sense of intimacy and focus on the natural beauty of the flower.",
+      "alt_text": "Close-up of a beautiful yellow flower with soft, muted tones.",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 580,
+        "height": 1288,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 0.7
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.27.45 (2).jpeg",
+      "new_filename": "india-2026-01-03-at-13.27.45-(2).jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.27.45-(2).jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.27.45-(2).jpg",
+      "description": "The image captures the vibrant yellow petals of a flower in close-up, filling the frame with its delicate and intricate details. The soft, hazy background and the gentle curves of the petals create a serene and contemplative atmosphere, inviting the viewer to pause and appreciate the beauty of nature.",
+      "alt_text": "Vibrant yellow flower petals in close-up, creating a serene and contemplative mood.",
+      "primary_subject": "flower",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 580,
+        "height": 1288,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 0.7
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.27.45.jpeg",
+      "new_filename": "india-2026-01-03-at-13.27.45.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.27.45.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.27.45.jpg",
+      "description": "A close-up photograph of a vibrant yellow tulip blossom, its delicate petals unfurling and revealing the intricate details of its center. The image captures the flower's inherent beauty and radiance, inviting the viewer to appreciate the wonders of the natural world.",
+      "alt_text": "A stunning close-up of a vibrant yellow tulip blossom",
+      "primary_subject": "flower",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 580,
+        "height": 1288,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 0.7
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.58.12.jpeg",
+      "new_filename": "india-2026-01-03-at-13.58.12.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.58.12.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.58.12.jpg",
+      "description": "The image captures a serene and tranquil landscape, with a large, gnarled tree casting its verdant canopy over a lush, grassy field bathed in warm, golden sunlight. The sun's rays filter through the leaves, creating a gentle, ethereal glow that adds a sense of peace and wonder to the scene.",
+      "alt_text": "A peaceful, sun-dappled landscape with a majestic tree",
+      "primary_subject": "landscape",
+      "mood": "peaceful",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.58.24.jpeg",
+      "new_filename": "india-2026-01-03-at-13.58.24.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.58.24.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.58.24.jpg",
+      "description": "The image depicts a serene landscape with a lush, green meadow in the foreground and a towering, snow-capped mountain range in the background. A black and white dog sits in the grass, gazing out at the majestic scenery, creating a sense of tranquility and connection with the natural world.",
+      "alt_text": "A dog sitting in a meadow, surrounded by a mountain landscape.",
+      "primary_subject": "landscape",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "background",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": true,
+      "dimensions": {
+        "width": 900,
+        "height": 2000,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.8
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 13.58.43.jpeg",
+      "new_filename": "india-2026-01-03-at-13.58.43.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.58.43.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-13.58.43.jpg",
+      "description": "The image depicts a vibrant, close-up view of a striking purple iris flower. The delicate petals unfurl, revealing a captivating pattern of stripes and a central stamen. A small bee can be seen perched on the flower, adding a sense of movement and interconnectedness with the natural world.",
+      "alt_text": "A mesmerizing close-up of a lush purple iris flower with a visiting bee.",
+      "primary_subject": "flower",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": true,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.34.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.34.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.34.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.34.jpg",
+      "description": "The image depicts a vibrant display of fuchsia-colored fuchsia flowers nestled among lush green foliage. The delicate, dangling blooms create a sense of whimsical beauty, inviting the viewer to pause and appreciate the natural wonder on display.",
+      "alt_text": "Vibrant fuchsia flowers in a lush, green setting",
+      "primary_subject": "flower",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 721,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.36.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.36.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.36.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.36.jpg",
+      "description": "The image depicts a serene pastoral scene in a lush, verdant landscape. In the foreground, a group of elephants are peacefully grazing, their massive forms contrasted against the vibrant green grass and the dramatic cloudy sky above. The composition and lighting create a sense of tranquility and a connection to the natural world.",
+      "alt_text": "Elephants grazing in a peaceful, green landscape under a dramatic sky",
+      "primary_subject": "animal",
+      "mood": "peaceful",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": true,
+      "dimensions": {
+        "width": 1200,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.75,
+        "megapixels": 1.9
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.37.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.37.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.37.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.37.jpg",
+      "description": "A stunning rainbow arches across the lush, green landscape, with towering mountains in the distance and a winding road leading through the verdant forest. The scene conveys a sense of tranquility, wonder, and a deep connection to the natural world.",
+      "alt_text": "A vibrant rainbow over a serene mountain landscape",
+      "primary_subject": "landscape",
+      "mood": "majestic",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "background",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 1600,
+        "height": 721,
+        "orientation": "landscape",
+        "aspect_ratio": 2.22,
+        "megapixels": 1.2
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.40.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.40.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.40.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.40.jpg",
+      "description": "The image showcases a breathtaking display of pink cherry blossoms in full bloom, set against the backdrop of majestic snow-capped mountains. The vibrant colors and serene atmosphere create a sense of natural wonder and tranquility.",
+      "alt_text": "Blooming cherry blossoms framing snow-capped mountains",
+      "primary_subject": "landscape",
+      "mood": "majestic",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "background",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 901,
+        "height": 1600,
+        "orientation": "portrait",
+        "aspect_ratio": 0.56,
+        "megapixels": 1.4
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.46.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.46.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.46.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.46.jpg",
+      "description": "The image depicts the intricate and textured bark of a large tree, with deep grooves, ridges, and patterns that create a captivating visual symphony. The overall composition evokes a sense of natural wonder and the enduring resilience of the natural world.",
+      "alt_text": "Detailed texture of a tree bark, evoking natural wonder",
+      "primary_subject": "nature-detail",
+      "mood": "contemplative",
+      "suggested_uses": [
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 2604,
+        "height": 4624,
+        "orientation": "portrait",
+        "aspect_ratio": 0.56,
+        "megapixels": 12.0
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.48.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.48.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.48.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.48.jpg",
+      "description": "A breathtaking landscape with a vibrant sunset over the mountains, creating a warm and serene atmosphere. The silhouettes of trees in the foreground add depth and contrast to the stunning sky.",
+      "alt_text": "Majestic mountain sunset with silhouetted trees in the foreground.",
+      "primary_subject": "landscape",
+      "mood": "majestic",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "background",
+        "nature-connection",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 4624,
+        "height": 2604,
+        "orientation": "landscape",
+        "aspect_ratio": 1.78,
+        "megapixels": 12.0
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.50.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.50.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.50.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.50.jpg",
+      "description": "This image depicts a close-up view of lush, vibrant succulents growing on a weathered, textured wooden surface. The composition draws the viewer's attention to the intricate details and rich coloration of the plant life, creating a sense of intimacy and connection with the natural world.",
+      "alt_text": "Close-up of thriving succulent plants on weathered wood",
+      "primary_subject": "nature-detail",
+      "mood": "serene",
+      "suggested_uses": [
+        "homepage-hero",
+        "nature-connection",
+        "decorative-accent",
+        "article-break"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 2604,
+        "height": 4624,
+        "orientation": "portrait",
+        "aspect_ratio": 0.56,
+        "megapixels": 12.0
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.51.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.51.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.51.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.51.jpg",
+      "description": "The image is a stunning close-up of vibrant, deep pink chrysanthemum flowers. The petals are delicate and intricate, creating a sense of softness and intimacy. The overall composition is lush and immersive, drawing the viewer into the beauty and detail of the natural world.",
+      "alt_text": "Lush, close-up of deep pink chrysanthemum flowers",
+      "primary_subject": "flower",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 2084,
+        "height": 4624,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 9.6
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.54.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.54.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.54.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.54.jpg",
+      "description": "The image captures a vibrant, orange dahlia flower in full bloom against a clear blue sky. The flower's intricate petals radiate outward, creating a sense of warmth and energy. The lush, green foliage surrounding the flower adds depth and a natural, calming backdrop to the scene.",
+      "alt_text": "A vibrant orange dahlia flower blooming against a clear blue sky",
+      "primary_subject": "flower",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 2084,
+        "height": 4624,
+        "orientation": "portrait",
+        "aspect_ratio": 0.45,
+        "megapixels": 9.6
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.00.58.jpeg",
+      "new_filename": "india-2026-01-03-at-14.00.58.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.58.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.00.58.jpg",
+      "description": "The image is filled with a vibrant display of lush, fuchsia-colored bougainvillea blossoms cascading across the frame. The dense, overlapping foliage and petals create a sense of abundant, almost overwhelming natural beauty, evoking a feeling of joyful, vibrant serenity.",
+      "alt_text": "Lush, fuchsia-colored bougainvillea blossoms in a vibrant, natural display.",
+      "primary_subject": "flower",
+      "mood": "vibrant",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "background",
+        "nature-connection",
+        "decorative-accent",
+        "article-break",
+        "emotional-anchor",
+        "wide-banner"
+      ],
+      "has_people": false,
+      "has_animals": false,
+      "dimensions": {
+        "width": 3468,
+        "height": 4624,
+        "orientation": "portrait",
+        "aspect_ratio": 0.75,
+        "megapixels": 16.0
+      }
+    },
+    {
+      "original_filename": "WhatsApp Image 2026-01-03 at 14.05.22.jpeg",
+      "new_filename": "india-2026-01-03-at-14.05.22.jpg",
+      "s3_url": "https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.05.22.jpg",
+      "s3_key": "india-documentary/india-2026-01-03-at-14.05.22.jpg",
+      "description": "A close-up portrait of a donkey's face, with its large ears and expressive eyes peering curiously through a wooden fence. The donkey's worn leather harness stands out against its fuzzy, gray fur, giving a sense of both ruggedness and gentleness.",
+      "alt_text": "A curious donkey peering through a wooden fence",
+      "primary_subject": "animal",
+      "mood": "peaceful",
+      "suggested_uses": [
+        "homepage-hero",
+        "documentary-article",
+        "nature-connection",
+        "emotional-anchor"
+      ],
+      "has_people": false,
+      "has_animals": true,
+      "dimensions": {
+        "width": 1692,
+        "height": 2619,
+        "orientation": "portrait",
+        "aspect_ratio": 0.65,
+        "megapixels": 4.4
+      }
+    }
+  ]
+}

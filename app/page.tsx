@@ -42,14 +42,14 @@ export default function Home() {
     <>
       <Navigation />
       <main className="min-h-screen pt-16">
-      {/* Hero Section with Forest Background */}
+      {/* Hero Section with India Mountain Sunset */}
       <section className="relative px-6 pt-8 pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <Image 
-            src="/forest-light.jpg" 
-            alt="Peaceful forest with sunlight" 
+            src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.48.jpg" 
+            alt="Majestic mountain sunset with silhouetted trees in the foreground" 
             fill
-            className="object-cover object-top"
+            className="object-cover object-center"
             priority
             quality={90}
           />
@@ -144,8 +144,8 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-default">
                 <Image 
-                  src="/veggie-bowl.jpg" 
-                  alt="Colorful vegan food" 
+                  src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.52.jpg" 
+                  alt="A stunning pink lotus flower floating in a serene pond" 
                   fill
                   className="object-cover hover:scale-110 transition-transform duration-300"
                   quality={90}
@@ -157,8 +157,8 @@ export default function Home() {
 
               <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-default">
                 <Image 
-                  src="/vegan-festival.jpg" 
-                  alt="Community events" 
+                  src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.37.jpg" 
+                  alt="A vibrant rainbow over a serene mountain landscape" 
                   fill
                   className="object-cover hover:scale-110 transition-transform duration-300"
                   quality={90}
@@ -170,8 +170,8 @@ export default function Home() {
 
               <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-default">
                 <Image 
-                  src="/yoga-nature.jpg" 
-                  alt="Wellness and lifestyle" 
+                  src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.41.jpg" 
+                  alt="Dramatic mountain landscape at sunset in India" 
                   fill
                   className="object-cover hover:scale-110 transition-transform duration-300"
                   quality={90}
@@ -183,8 +183,8 @@ export default function Home() {
 
               <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-default">
                 <Image 
-                  src="/happy-animals.jpg" 
-                  alt="Happy animals in sanctuary" 
+                  src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-12.31.14.jpg" 
+                  alt="A playful dog resting in a lush green meadow" 
                   fill
                   className="object-cover hover:scale-110 transition-transform duration-300"
                   quality={90}
@@ -202,8 +202,8 @@ export default function Home() {
       <section className="relative px-6 py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image 
-            src="/sunrise-mountains-golden.jpg" 
-            alt="Golden sunrise over mountains" 
+            src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.41.jpg" 
+            alt="Dramatic mountain landscape at sunset in India" 
             fill
             className="object-cover"
             quality={85}
@@ -280,8 +280,8 @@ export default function Home() {
               </div>
               <div className="relative w-full md:w-80 h-64 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
                 <Image 
-                  src="/horse_eye.jpg" 
-                  alt="Compassion in the eyes of all beings" 
+                  src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-13.16.52.jpg" 
+                  alt="Vibrant pink lotus flower floating on calm water" 
                   fill
                   className="object-cover"
                   quality={90}

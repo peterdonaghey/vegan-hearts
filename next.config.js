@@ -15,6 +15,12 @@ const nextConfig = {
         port: '',
         pathname: '/news/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'vegan-hearts-assets.s3.us-east-1.amazonaws.com',
+        port: '',
+        pathname: '/india-documentary/**',
+      },
     ],
   },
   // Fix workspace root detection warning
