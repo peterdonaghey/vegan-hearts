@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, PutCommand, QueryCommand, UpdateCommand, GetCommand } from '@aws-sdk/lib-dynamodb';
+import { S3Client, DeleteObjectCommand } from '@aws-sdk/client-s3';
 import { verifyAuthToken } from '@/lib/auth';
 import { randomUUID } from 'crypto';
 
@@ -18,6 +19,10 @@ const dynamoClient = new DynamoDBClient({
 });
 
 const docClient = DynamoDBDocumentClient.from(dynamoClient);
+
+// S3 configuration
+const S3_BUCKET = 'vegan-hearts-assets';
+const AWS_REGION = region;
 const TABLE_NAME = 'vegan-hearts-news';
 
 interface NewsArticle {
@@ -273,6 +278,70 @@ export async function DELETE(request: Request) {
       );
     }
 
+    // First, get the article to find all associated S3 assets
+    const getResult = await docClient.send(
+      new GetCommand({
+        TableName: TABLE_NAME,
+        Key: { newsId },
+      })
+    );
+
+    const article = getResult.Item as NewsArticle | undefined;
+
+    if (article) {
+      // Collect all S3 URLs to delete
+      const urlsToDelete: string[] = [];
+
+      // Add featured image if exists
+      if (article.imageUrl) {
+        urlsToDelete.push(article.imageUrl);
+      }
+
+      // Add video if exists
+      if (article.videoUrl) {
+        urlsToDelete.push(article.videoUrl);
+      }
+
+      // Extract inline images from content (images uploaded via rich text editor)
+      if (article.content) {
+        const imgRegex = /<img[^>]+src="(https:\/\/vegan-hearts-assets\.s3\.us-east-1\.amazonaws\.com\/[^"]+)"/g;
+        let match;
+        while ((match = imgRegex.exec(article.content)) !== null) {
+          urlsToDelete.push(match[1]);
+        }
+      }
+
+      // Delete all S3 objects
+      if (urlsToDelete.length > 0) {
+        const s3Client = new S3Client({
+          region: AWS_REGION,
+          credentials: {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+          },
+        });
+
+        // Delete each object from S3
+        for (const url of urlsToDelete) {
+          try {
+            // Extract the key from the URL
+            const urlObj = new URL(url);
+            const key = urlObj.pathname.substring(1); // Remove leading slash
+
+            await s3Client.send(
+              new DeleteObjectCommand({
+                Bucket: S3_BUCKET,
+                Key: key,
+              })
+            );
+          } catch (s3Error) {
+            console.error(`Failed to delete S3 object ${url}:`, s3Error);
+            // Continue with other deletions even if one fails
+          }
+        }
+      }
+    }
+
     // Soft delete by setting isActive to false
     await docClient.send(
       new UpdateCommand({
@@ -288,7 +357,7 @@ export async function DELETE(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: 'News article deleted',
+      message: 'News article and associated assets deleted',
     });
   } catch (error) {
     console.error('Error deleting news article:', error);
