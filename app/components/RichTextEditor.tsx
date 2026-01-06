@@ -116,7 +116,7 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
       // Add loading overlay to the image
       setTimeout(() => {
         const images = quill.root.querySelectorAll('img');
-        const insertedImage = Array.from(images).find((img: any) => img.src === imageDataUrl);
+        const insertedImage = Array.from(images).find((img) => (img as HTMLImageElement).src === imageDataUrl) as HTMLImageElement | undefined;
         
         if (insertedImage) {
           // Wrap image in a container for the overlay
