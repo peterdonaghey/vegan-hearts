@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { DynamoDBDocumentClient, QueryCommand } from '@aws-sdk/lib-dynamodb';
+import { DynamoDBDocumentClient, ScanCommand } from '@aws-sdk/lib-dynamodb';
 
 const region = (process.env.AWS_REGION || 'us-east-1').trim();
 const accessKeyId = (process.env.AWS_ACCESS_KEY_ID || '').trim();
@@ -42,18 +42,15 @@ export async function GET(
   try {
     const { slug } = await params;
 
-    // Query using GSI with filter on slug
+    // Scan table to find article by slug
     const result = await docClient.send(
-      new QueryCommand({
+      new ScanCommand({
         TableName: TABLE_NAME,
-        IndexName: 'PublishDateIndex',
-        KeyConditionExpression: 'isActive = :isActive',
-        FilterExpression: 'slug = :slug',
+        FilterExpression: 'slug = :slug AND isActive = :isActive',
         ExpressionAttributeValues: {
-          ':isActive': 'true',
           ':slug': slug,
+          ':isActive': 'true',
         },
-        Limit: 1,
       })
     );
 
