@@ -81,6 +81,21 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
     };
   };
 
+  // Video handler for click to upload
+  const videoHandler = async () => {
+    const input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'video/*');
+    input.click();
+
+    input.onchange = async () => {
+      const file = input.files?.[0];
+      if (!file) return;
+
+      await uploadVideoWithPreview(file);
+    };
+  };
+
   // Upload image to S3 with instant preview
   const uploadImageWithPreview = async (file: File, base64?: string) => {
     const quill = quillRef.current?.getEditor();
@@ -133,6 +148,72 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
       reader.onerror = reject;
       reader.readAsDataURL(file);
     });
+  };
+
+  // Upload video with preview
+  const uploadVideoWithPreview = async (file: File) => {
+    const quill = quillRef.current?.getEditor();
+    if (!quill) return;
+
+    try {
+      // Insert a placeholder while uploading
+      const range = quill.getSelection(true);
+      const placeholder = '<div class="video-upload-placeholder" style="background: #f3f4f6; border: 2px dashed #d1d5db; border-radius: 8px; padding: 32px; text-align: center; color: #6b7280;">Uploading video...</div>';
+      quill.clipboard.dangerouslyPasteHTML(range.index, placeholder);
+      quill.setSelection(range.index + 1);
+
+      // Upload to S3
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const token = localStorage.getItem('accessToken');
+      if (!token) {
+        throw new Error('Not authenticated');
+      }
+
+      console.log('Uploading video to S3...');
+      const response = await fetch('/api/news/upload-video', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to upload video');
+      }
+
+      const { url } = await response.json();
+      console.log('Video uploaded successfully:', url);
+
+      // Replace placeholder with actual video HTML
+      const currentContent = quill.root.innerHTML;
+      const videoHtml = `<video controls style="max-width: 100%; border-radius: 8px;"><source src="${url}" type="${file.type}"></video>`;
+      const newContent = currentContent.replace(
+        /<div class="video-upload-placeholder"[^>]*>.*?<\/div>/,
+        videoHtml
+      );
+      quill.root.innerHTML = newContent;
+
+    } catch (error) {
+      console.error('Error uploading video:', error);
+      
+      // Replace placeholder with error message
+      const quill = quillRef.current?.getEditor();
+      if (quill) {
+        const currentContent = quill.root.innerHTML;
+        const errorHtml = '<div style="background: #fee2e2; border: 2px dashed #ef4444; border-radius: 8px; padding: 16px; text-align: center; color: #dc2626;">Video upload failed. Please try again.</div>';
+        const newContent = currentContent.replace(
+          /<div class="video-upload-placeholder"[^>]*>.*?<\/div>/,
+          errorHtml
+        );
+        quill.root.innerHTML = newContent;
+      }
+      
+      alert('Failed to upload video. Please try again.');
+    }
   };
 
   // Upload to S3 and replace base64 with S3 URL
@@ -257,12 +338,13 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
         ['bold', 'italic', 'underline', 'strike'],
         [{ list: 'ordered' }, { list: 'bullet' }],
         ['blockquote', 'code-block'],
-        ['link', 'image'],
+        ['link', 'image', 'video'],
         [{ align: [] }],
         ['clean'],
       ],
       handlers: {
         image: imageHandler,
+        video: videoHandler,
       },
     },
     history: {
@@ -283,6 +365,7 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
     'code-block',
     'link',
     'image',
+    'video',
     'align',
   ];
 

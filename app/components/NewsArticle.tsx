@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import DOMPurify from 'dompurify';
 import { Calendar, User, Tag } from 'lucide-react';
-import VideoPlayer from './VideoPlayer';
+import 'react-quill-new/dist/quill.snow.css';
 
 interface NewsArticleProps {
   article: {
@@ -27,9 +27,9 @@ export default function NewsArticle({ article }: NewsArticleProps) {
         ALLOWED_TAGS: [
           'p', 'br', 'strong', 'em', 'u', 's', 'h1', 'h2', 'h3',
           'ul', 'ol', 'li', 'blockquote', 'code', 'pre',
-          'a', 'img',
+          'a', 'img', 'video', 'source',
         ],
-        ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'class'],
+        ALLOWED_ATTR: ['href', 'target', 'rel', 'src', 'alt', 'class', 'controls', 'poster', 'type', 'width', 'height'],
       });
       setSanitizedContent(clean);
     }
@@ -76,27 +76,9 @@ export default function NewsArticle({ article }: NewsArticleProps) {
         )}
       </header>
 
-      {/* Featured Image */}
-      {article.imageUrl && (
-        <div className="mb-8 rounded-2xl overflow-hidden">
-          <img
-            src={article.imageUrl}
-            alt={article.title}
-            className="w-full h-auto"
-          />
-        </div>
-      )}
-
-      {/* Video */}
-      {article.videoUrl && (
-        <div className="mb-8">
-          <VideoPlayer src={article.videoUrl} poster={article.imageUrl} />
-        </div>
-      )}
-
       {/* Article Content */}
       <div
-        className="prose prose-lg max-w-none prose-headings:font-display prose-headings:text-vh-green prose-p:text-gray-700 prose-a:text-vh-orange prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-img:shadow-lg"
+        className="ql-editor prose prose-lg max-w-none prose-headings:font-display prose-headings:text-vh-green prose-p:text-gray-700 prose-a:text-vh-orange prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-img:shadow-lg"
         dangerouslySetInnerHTML={{ __html: sanitizedContent }}
       />
     </article>
