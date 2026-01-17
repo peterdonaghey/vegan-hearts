@@ -35,7 +35,7 @@ Matches existing VeganHearts branding with gradient header, clean layout, and mo
 
 ## Testing
 
-1. Go to `http://localhost:3001/admin/users`
+1. Go to `http://localhost:3000/admin/users`
 2. Click "Add User"
 3. Enter email and name
 4. Check email inbox

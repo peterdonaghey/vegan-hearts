@@ -228,7 +228,7 @@ export async function POST(request: Request) {
     );
 
     // Send invitation email via SES
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3001';
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
     const setupUrl = `${baseUrl}/admin/setup-password?token=${token}`;
     
     try {

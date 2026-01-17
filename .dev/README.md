@@ -25,7 +25,7 @@ Project documentation and planning
 
 ## Quick Reference
 
-**Start Dev Server**: `PORT=3001 npm run dev`
+**Start Dev Server**: `PORT=3000 npm run dev`
 **Deploy**: User handles manually
 **AWS Profile**: Always use `--profile peterdonaghey`
 

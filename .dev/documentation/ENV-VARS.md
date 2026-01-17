@@ -5,7 +5,7 @@
 ### Development
 ```bash
 # App URL for password reset links
-NEXT_PUBLIC_APP_URL=http://localhost:3001
+NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
 ### Production
@@ -26,7 +26,7 @@ vercel env add NEXT_PUBLIC_APP_URL preview
 # Enter: https://yourdomain.com (or preview domain)
 
 vercel env add NEXT_PUBLIC_APP_URL development
-# Enter: http://localhost:3001
+# Enter: http://localhost:3000
 ```
 
 ## Usage
@@ -37,5 +37,5 @@ This variable is used in:
 
 ## Fallback
 
-If not set, defaults to `http://localhost:3001` for development safety.
+If not set, defaults to `http://localhost:3000` for development safety.
 

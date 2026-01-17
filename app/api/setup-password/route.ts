@@ -110,11 +110,12 @@ export async function POST(request: Request) {
 
     const { userId, email } = tokenData.Item;
 
-    // Set password in Cognito
+    // Set password in Cognito using email as Username
+    // (Cognito users are created with email as Username)
     await cognitoClient.send(
       new AdminSetUserPasswordCommand({
         UserPoolId: USER_POOL_ID,
-        Username: userId,
+        Username: email,
         Password: password,
         Permanent: true,
       })

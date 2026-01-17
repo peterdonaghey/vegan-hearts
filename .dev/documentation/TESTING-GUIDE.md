@@ -9,7 +9,7 @@ The homepage hasn't changed - the new features are on separate routes!
 ## 📍 New Routes
 
 ### 1. Public Events Page
-**URL:** `http://localhost:3001/events`
+**URL:** `http://localhost:3000/events`
 
 **What you'll see (when empty):**
 - Hero section with "Events" title
@@ -24,7 +24,7 @@ The homepage hasn't changed - the new features are on separate routes!
 ---
 
 ### 2. Admin Dashboard
-**URL:** `http://localhost:3001/admin/events`
+**URL:** `http://localhost:3000/admin/events`
 
 **What happens:**
 - You'll see a login screen
@@ -53,7 +53,7 @@ cd /Users/peterdonaghey/Projects/vegan-hearts
 
 ### Step 2: Login to Admin
 
-1. Go to: `http://localhost:3001/admin/events`
+1. Go to: `http://localhost:3000/admin/events`
 2. Enter your email and temporary password
 3. You'll be prompted to set a new password
 4. Enter new password (same requirements)
@@ -79,7 +79,7 @@ cd /Users/peterdonaghey/Projects/vegan-hearts
 
 ### Step 4: View on Public Page
 
-1. Go to: `http://localhost:3001/events`
+1. Go to: `http://localhost:3000/events`
 2. You should see your event in the "Upcoming Events" section!
 3. Try the location filters
 4. Click the event card to see details

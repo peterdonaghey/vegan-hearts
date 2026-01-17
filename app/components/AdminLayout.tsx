@@ -91,9 +91,23 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     const cognitoUser = new CognitoUser(userData);
 
     cognitoUser.authenticateUser(authenticationDetails, {
-      onSuccess: (session) => {
+      onSuccess: async (session) => {
         const accessToken = session.getAccessToken().getJwtToken();
         localStorage.setItem('accessToken', accessToken);
+        
+        // Update last login timestamp in DynamoDB
+        try {
+          await fetch('/api/admin-users/update-login', {
+            method: 'POST',
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          });
+        } catch (error) {
+          console.error('Error updating last login:', error);
+          // Don't block login on failure
+        }
+        
         setIsAuthenticated(true);
       },
       onFailure: (err) => {
@@ -117,9 +131,23 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       newPassword,
       {},
       {
-        onSuccess: (session) => {
+        onSuccess: async (session) => {
           const accessToken = session.getAccessToken().getJwtToken();
           localStorage.setItem('accessToken', accessToken);
+          
+          // Update last login timestamp in DynamoDB
+          try {
+            await fetch('/api/admin-users/update-login', {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            });
+          } catch (error) {
+            console.error('Error updating last login:', error);
+            // Don't block login on failure
+          }
+          
           setIsAuthenticated(true);
           setNeedsPasswordChange(false);
         },

@@ -165,37 +165,33 @@ export default function UsersTable({
                         <Edit2 className="h-4 w-4" />
                       </button>
                       
-                      {!isCurrentUser && (
-                        <>
-                          <button
-                            onClick={() => onToggleStatus(user)}
-                            className="p-2 text-gray-600 hover:text-vh-orange hover:bg-vh-orange/10 rounded-lg transition-colors"
-                            title={user.status === 'active' ? 'Disable' : 'Enable'}
-                          >
-                            {user.status === 'active' ? (
-                              <ToggleRight className="h-4 w-4" />
-                            ) : (
-                              <ToggleLeft className="h-4 w-4" />
-                            )}
-                          </button>
-                          
-                          <button
-                            onClick={() => onResetPassword(user)}
-                            className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-                            title="Reset Password"
-                          >
-                            <RotateCcw className="h-4 w-4" />
-                          </button>
-                          
-                          <button
-                            onClick={() => onDelete(user)}
-                            className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                            title="Delete"
-                          >
-                            <Trash2 className="h-4 w-4" />
-                          </button>
-                        </>
-                      )}
+                      <button
+                        onClick={() => onToggleStatus(user)}
+                        className="p-2 text-gray-600 hover:text-vh-orange hover:bg-vh-orange/10 rounded-lg transition-colors"
+                        title={user.status === 'active' ? 'Disable' : 'Enable'}
+                      >
+                        {user.status === 'active' ? (
+                          <ToggleRight className="h-4 w-4" />
+                        ) : (
+                          <ToggleLeft className="h-4 w-4" />
+                        )}
+                      </button>
+                      
+                      <button
+                        onClick={() => onResetPassword(user)}
+                        className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                        title="Reset Password"
+                      >
+                        <RotateCcw className="h-4 w-4" />
+                      </button>
+                      
+                      <button
+                        onClick={() => onDelete(user)}
+                        className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                        title="Delete"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </button>
                     </div>
                   </td>
                 </tr>

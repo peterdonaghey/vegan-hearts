@@ -56,7 +56,7 @@ vercel env add NEXT_PUBLIC_APP_URL production
 # Enter: https://yourdomain.com
 ```
 
-This is used for password setup email links. Currently defaults to `http://localhost:3001`.
+This is used for password setup email links. Currently defaults to `http://localhost:3000`.
 
 ### Features Deployed
 1. ✅ Events management (public + admin)

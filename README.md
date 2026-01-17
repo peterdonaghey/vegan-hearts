@@ -50,8 +50,8 @@ VeganHearts is an early-stage NGO creating digital infrastructure to support the
 # Install dependencies
 npm install
 
-# Run development server (port 3001)
-PORT=3001 npm run dev
+# Run development server (port 3000)
+PORT=3000 npm run dev
 
 # Build for production
 npm run build
@@ -60,7 +60,7 @@ npm run build
 npm run lint
 ```
 
-Visit [http://localhost:3001](http://localhost:3001) to see the site.
+Visit [http://localhost:3000](http://localhost:3000) to see the site.
 
 ## Environment Variables
 
@@ -77,7 +77,7 @@ NEXT_PUBLIC_COGNITO_USER_POOL_ID=
 NEXT_PUBLIC_COGNITO_CLIENT_ID=
 
 # App URL (for email links)
-NEXT_PUBLIC_APP_URL=http://localhost:3001  # dev
+NEXT_PUBLIC_APP_URL=http://localhost:3000  # dev
 NEXT_PUBLIC_APP_URL=https://yourdomain.com # prod
 ```
 
