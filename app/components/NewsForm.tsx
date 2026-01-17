@@ -130,7 +130,7 @@ export default function NewsForm({ article, onSubmit, onCancel }: NewsFormProps)
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
+    <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8 max-w-3xl mx-auto">
       <h2 className="text-3xl font-display font-bold text-vh-green mb-6">
         {article ? 'Edit Article' : 'Create News Article'}
       </h2>

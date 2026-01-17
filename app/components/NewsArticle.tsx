@@ -5,6 +5,54 @@ import DOMPurify from 'dompurify';
 import { Calendar, User, Tag } from 'lucide-react';
 import 'react-quill-new/dist/quill.snow.css';
 
+// Add styles to ensure paragraph spacing (override Tailwind reset)
+const articleStyles = `
+  .article-content p {
+    margin-bottom: 1em;
+  }
+  .article-content p:last-child {
+    margin-bottom: 0;
+  }
+  .article-content ul, .article-content ol {
+    margin-bottom: 1em;
+  }
+  .article-content li {
+    margin-bottom: 0.5em;
+  }
+  .article-content h1, .article-content h2, .article-content h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .article-content h1:first-child, 
+  .article-content h2:first-child, 
+  .article-content h3:first-child {
+    margin-top: 0;
+  }
+  .article-content br {
+    display: block;
+    content: "";
+    margin-top: 1em;
+  }
+  .article-content img {
+    max-width: 800px;
+    max-height: 800px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .article-content video {
+    max-width: 800px;
+    max-height: 800px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
+
 interface NewsArticleProps {
   article: {
     title: string;
@@ -43,7 +91,11 @@ export default function NewsArticle({ article }: NewsArticleProps) {
   });
 
   return (
-    <article className="max-w-4xl mx-auto">
+    <>
+      {/* Inject custom styles for article content */}
+      <style dangerouslySetInnerHTML={{ __html: articleStyles }} />
+      
+      <article className="max-w-3xl mx-auto">
       {/* Header */}
       <header className="mb-8">
         <h1 className="text-4xl md:text-5xl font-display font-bold text-vh-green mb-6">
@@ -76,12 +128,24 @@ export default function NewsArticle({ article }: NewsArticleProps) {
         )}
       </header>
 
-      {/* Article Content */}
+      {/* Article Content - Restore default browser styles that Tailwind resets */}
       <div
-        className="ql-editor prose prose-lg max-w-none prose-headings:font-display prose-headings:text-vh-green prose-p:text-gray-700 prose-a:text-vh-orange prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-img:shadow-lg"
-        dangerouslySetInnerHTML={{ __html: sanitizedContent }}
-      />
+        className="ql-container ql-snow article-content"
+        style={{
+          border: 'none',
+          fontSize: '16px',
+        }}
+      >
+        <div
+          className="ql-editor"
+          style={{
+            padding: 0,
+          }}
+          dangerouslySetInnerHTML={{ __html: sanitizedContent }}
+        />
+      </div>
     </article>
+    </>
   );
 }
 

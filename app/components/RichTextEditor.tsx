@@ -381,18 +381,50 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
   }
 
   return (
-    <div className="rich-text-editor">
-      <ReactQuill
-        ref={quillRef}
-        theme="snow"
-        value={value}
-        onChange={onChange}
-        modules={modules}
-        formats={formats}
-        placeholder={placeholder}
-        className="bg-white"
-      />
-    </div>
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
+        .rich-text-editor .ql-editor {
+          font-size: 16px;
+          line-height: 1.6;
+          min-height: 300px;
+        }
+        .rich-text-editor .ql-editor img {
+          max-width: 800px;
+          max-height: 800px;
+          width: auto;
+          height: auto;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .rich-text-editor .ql-editor video {
+          max-width: 800px;
+          max-height: 800px;
+          width: auto;
+          height: auto;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .rich-text-editor .ql-container {
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      `}} />
+      <div className="rich-text-editor">
+        <ReactQuill
+          ref={quillRef}
+          theme="snow"
+          value={value}
+          onChange={onChange}
+          modules={modules}
+          formats={formats}
+          placeholder={placeholder}
+          className="bg-white"
+        />
+      </div>
+    </>
   );
 }
 

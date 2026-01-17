@@ -131,7 +131,7 @@ export async function POST(request: Request) {
     try {
       await sesClient.send(
         new SendEmailCommand({
-          Source: 'hello@vegan-hearts.org',
+          Source: 'info@veganhearts.org',
           Destination: {
             ToAddresses: [email],
           },
@@ -303,7 +303,7 @@ export async function POST(request: Request) {
     <div class="container">
       <div class="header">
         <div class="logo-wrapper">
-          <img src="https://vegan-hearts.org/logo.png" alt="VeganHearts Logo" class="logo" width="150" height="150">
+          <img src="https://vegan-hearts-public-files.s3.us-east-1.amazonaws.com/vegan-hearts-logo.png" alt="VeganHearts Logo" class="logo" width="150" height="150">
         </div>
         <h1>Your Journey Begins! 🌱</h1>
       </div>
