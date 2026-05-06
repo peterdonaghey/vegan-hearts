@@ -2,6 +2,8 @@
 
 All infrastructure setup commands, logged for transparency and reproducibility.
 
+**veganhearts.org mail (WorkMail, Vercel DNS, SES):** see [../docs/veganhearts-org-email.md](../docs/veganhearts-org-email.md).
+
 ## Scripts
 
 ### 01_create_github_repo.sh

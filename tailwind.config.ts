@@ -27,7 +27,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-            display: ['var(--font-quicksand)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-quicksand)', 'system-ui', 'sans-serif'],
+        lora: ['var(--font-lora)', 'Georgia', 'serif'],
+        typewriter: ['var(--font-special-elite)', 'Courier New', 'monospace'],
       },
       borderRadius: {
         lg: "var(--radius)",

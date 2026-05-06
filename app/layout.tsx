@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Quicksand } from "next/font/google";
+import { Inter, Quicksand, Lora, Special_Elite } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const quicksand = Quicksand({ subsets: ["latin"], variable: '--font-quicksand', weight: ['300', '400', '500', '600', '700'] });
+const lora = Lora({ subsets: ["latin"], variable: '--font-lora', style: ['normal', 'italic'] });
+const specialElite = Special_Elite({ subsets: ["latin"], variable: '--font-special-elite', weight: '400' });
 
 export const metadata: Metadata = {
   title: "VeganHearts - Awakening Compassion",
@@ -27,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${quicksand.variable}`} suppressHydrationWarning>{children}</body>
+      <body className={`${inter.variable} ${quicksand.variable} ${lora.variable} ${specialElite.variable}`} suppressHydrationWarning>{children}</body>
     </html>
   );
 }

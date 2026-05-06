@@ -34,3 +34,18 @@
   }
 }
 
+@layer utilities {
+  .animate-fadein {
+    animation: fadein 0.35s ease-out both;
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .bg-white\/18 {
+    background-color: rgb(255 255 255 / 0.18);
+  }
+}
+
