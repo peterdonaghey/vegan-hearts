@@ -122,12 +122,12 @@ export const defaultGoodNews: GoodNewsItem[] = [
     category: "Price Win"
   },
   {
-    id: 'europe-plant-based-boom',
+    id: 'europe-plant-based-16bn',
     title: "Europe's Plant-Based Market Hits €16.3 Billion",
-    summary: "The European plant-based market is booming, but the growth is coming from whole foods like nuts, seeds, and dairy alternatives — not fake meat. Flexitarians are driving the shift.",
-    sourceUrl: "https://vegoutmag.com/food-and-drink/vo-fd-europes-plant-based-boom-isnt-about-fake-meat-anymore/",
-    sourceName: "VegOut Magazine",
-    imageUrl: "https://vegoutmag.com/wp-content/uploads/2021/01/vegout-website-cover-1.jpg",
+    summary: "The plant-based food market across six European countries reached €16.3 billion in 2025, growing 5.1% year-on-year. But meat alternatives are only 4% of this — nuts, seeds, and dairy alternatives dominate, driven by flexitarians.",
+    sourceUrl: "https://www.foodnavigator.com/Article/2026/04/21/plant-based-meat-only-4-of-plant-based-market/",
+    sourceName: "FoodNavigator",
+    imageUrl: "https://www.foodnavigator.com/resizer/v2/GTZLOL7BUVBO7FZV75YR24U3DM.jpg?auth=9ad2d6f67a35c9e542c0449880eb515170618e4bf0951678423085658c4b2c94&smart=true",
     date: "April 2026",
     category: "Market Growth"
   },
@@ -137,7 +137,7 @@ export const defaultGoodNews: GoodNewsItem[] = [
     summary: "Forty years after Farm Sanctuary's founding, animal advocates worldwide celebrated the first-ever Global Sanctuary Day, honouring the rescue and care of farmed animals across hundreds of sanctuaries.",
     sourceUrl: "https://www.npr.org/2026/04/17/nx-s1-5775921/animal-activists-are-celebrating-their-first-global-sanctuary-day",
     sourceName: "NPR",
-    imageUrl: "https://media.npr.org/include/images/facebook-default-wide-s1400-c85.jpg",
+    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2026/03/10093855/2024_05-20_FSNY_Mustard_hat_and_Eat_Plants_long_sleeve_with_Ayla_and_Hayes_steer_LH_6610-1-1600x1065.jpg",
     date: "April 2026",
     category: "Sanctuary"
   },
@@ -157,7 +157,7 @@ export const defaultGoodNews: GoodNewsItem[] = [
     summary: "Driven by food-tech innovation and rising vegan adoption, the EU plant-based eggs market is forecast to grow at 17.5% annually, reaching over $200 million within a decade.",
     sourceUrl: "https://www.morningstar.com/news/accesswire/1157381msn/eu-plant-based-eggs-market-outlook-2026-2036-vegan-adoption-and-food-tech-innovation-drive-usd-211-million-opportunity",
     sourceName: "Morningstar",
-    imageUrl: "https://images.contentstack.io/v3/assets/blt4eb669caa7dc65b2/blta7dd42ebdd7b93b8/61899b34a3c7df383578294c/morningstar-og.png",
+    imageUrl: "https://app.accessnewswire.com/imagelibrary/8971f4da-a587-4c4c-93b4-d636b976ceb3/image.png",
     date: "April 2026",
     category: "Innovation"
   }
