@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
 
-      {/* Latest News & Events Section */}
+      {/* Latest News & Events Section
       <section className="px-6 py-20 bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
@@ -81,11 +81,22 @@ export default function Home() {
             showViewAll={true}
           />
         </div>
-      </section>
+      </section>*/}
 
       {/* <ValuesSection /> */}
-
-      {/*<Footer />*/}
+      {/* Email Signup Section */}
+      {/*<section className="px-6 py-8 ">
+        <div className="mx-auto max-w-lg text-center">
+          <h2 className="text-xl md:text-2xl font-display font-bold text-vh-green mb-2">
+            Join Our Journey
+          </h2>
+          <p className="text-sm md:text-base text-gray-600 mb-5 leading-relaxed max-w-md mx-auto">
+            Receive inspiring updates, course announcements, and community news.
+          </p>
+          <EmailSignupForm />
+        </div>
+      </section>*/}
+      <Footer />
     </main>
     </>
   );
