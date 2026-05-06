@@ -4,7 +4,8 @@ import Image from "next/image";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import UnifiedFeed from "./components/UnifiedFeed";
-import EbookDownloadForm from "./components/EbookDownloadForm";
+import GoodNews, { defaultGoodNews } from "./components/GoodNews";
+
 
 export default function Home() {
   return (
@@ -51,13 +52,32 @@ export default function Home() {
 
           {/* Ebook Download Card */}
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl border-2 border-vh-orange/40 max-w-lg mx-auto">
+            {/* Book Cover Thumbnail */}
+
             <p className="text-xl md:text-2xl font-display font-semibold text-vh-green mb-2">
               🌱 Free Ebook
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
               Download <strong className="text-vh-orange">Awakening Your Vegan Heart in 21 Days</strong> — a gentle, inspiring guide to compassionate living.
             </p>
-            <EbookDownloadForm />
+            <a
+              href="https://vegan-hearts-public-files.s3.us-east-1.amazonaws.com/ebooks/awakening-your-vegan-heart-21-days.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full px-8 py-3 bg-vh-green text-white rounded-lg font-medium hover:bg-vh-green-dark transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              Download Free Ebook
+              </a>
+              <div className="flex justify-center mt-6">
+              <Image
+                src="/book-cover.png"
+                alt="Awakening Your Vegan Heart in 21 Days book cover"
+                width={300}
+                height={400}
+                className="rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500 ease-out"
+                priority
+              />
+              </div>
           </div>
         </div>
       </section>
@@ -96,6 +116,8 @@ export default function Home() {
           <EmailSignupForm />
         </div>
       </section>*/}
+      <GoodNews items={defaultGoodNews} />
+
       <Footer />
     </main>
     </>
