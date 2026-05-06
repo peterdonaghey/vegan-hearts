@@ -1,0 +1,128 @@
+==============================================
+pipeline start 2026-04-08T104453Z (UTC)
+log: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/pipeline-run-2026-04-08T104453Z.log
+cwd: /Users/peterdonaghey/Projects/vegan-hearts
+==============================================
+
+--- 0) vercel whoami ---
+Vercel CLI 48.6.0
+peterdonaghey
+
+--- 1) vercel dns ls veganhearts.org (before) ---
+Vercel CLI 48.6.0
+> Records found under peterdonagheys-projects [230ms]
+
+veganhearts.org
+     id    name    type     value                                       created    
+                   CAA      0 issue "pki.goog"                          default    
+                   CAA      0 issue "sectigo.com"                       default    
+           *       ALIAS    cname.vercel-dns-016.com.                   default    
+                   ALIAS    ed0e29f376d0fa24.vercel-dns-017.com         default    
+                   CAA      0 issue "letsencrypt.org"                   default    
+
+--- 2) APPLY=1 vercel-dns-apply-workmail-records.sh ---
+Records: 8 | Domain: veganhearts.org | APPLY=1 | JSON=/Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_d94410363ce52a36e50e011a) created under peterdonagheys-projects [1s]
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_9d381b6e70e6c4df8ca50193) created under peterdonagheys-projects [1s]
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_6ac76761fd83c5a08f3e565b) created under peterdonagheys-projects [1s]
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_7c69e8271a6c0fd9b1fefe37) created under peterdonagheys-projects [1s]
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_2cafb8617df330f517f6e3a8) created under peterdonagheys-projects [1s]
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_7424867d449d06f980293420) created under peterdonagheys-projects [1s]
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_6c782f9814ef3a08819d05b0) created under peterdonagheys-projects [1s]
+Vercel CLI 48.6.0
+> Success! DNS record for domain veganhearts.org (rec_d2de74ee91f77a26b8f622bd) created under peterdonagheys-projects [1s]
+
+Done. Verify: vercel dns ls veganhearts.org --limit 100
+
+--- 3) vercel dns ls veganhearts.org (after) ---
+Vercel CLI 48.6.0
+> Records found under peterdonagheys-projects [217ms]
+
+veganhearts.org
+                                   id    name                                                type     value                                                       created    
+         rec_d2de74ee91f77a26b8f622bd    _dmarc                                              TXT      v=DMARC1;p=quarantine;pct=100;fo=1                          2s ago     
+         rec_6c782f9814ef3a08819d05b0                                                        TXT      v=spf1 include:amazonses.com ~all                           3s ago     
+         rec_7424867d449d06f980293420    pfjuux25tywev4okue7fbcle2riybf2s._domainkey         CNAME    pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com.        5s ago     
+         rec_2cafb8617df330f517f6e3a8    lczjptcbmal64xweq7gviy4hor23vfve._domainkey         CNAME    lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com.        7s ago     
+         rec_7c69e8271a6c0fd9b1fefe37    vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey         CNAME    vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com.        8s ago     
+         rec_6ac76761fd83c5a08f3e565b    autodiscover                                        CNAME    autodiscover.mail.us-east-1.awsapps.com.                    10s ago    
+         rec_9d381b6e70e6c4df8ca50193    _amazonses                                          TXT      3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw=                12s ago    
+         rec_d94410363ce52a36e50e011a                                                        MX       10 inbound-smtp.us-east-1.amazonaws.com.                    13s ago    
+                                                                                             CAA      0 issue "pki.goog"                                          default    
+                                                                                             CAA      0 issue "sectigo.com"                                       default    
+                                         *                                                   ALIAS    cname.vercel-dns-016.com.                                   default    
+                                                                                             ALIAS    ed0e29f376d0fa24.vercel-dns-017.com                         default    
+                                                                                             CAA      0 issue "letsencrypt.org"                                   default    
+
+--- 4) workmail-setup-veganhearts-org.sh (AWS verify + optional SES) ---
+=== workmail-setup-veganhearts-org.sh 2026-04-08T10:45:11Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+Domain already registered on org; skipping register-mail-domain.
+--- Step 2: get-mail-domain (save DNS for your NS host, e.g. Vercel) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "PENDING",
+    "DkimVerificationStatus": "PENDING"
+}
+OwnershipVerificationStatus=PENDING DkimVerificationStatus=PENDING
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/authoritative-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+STOP: DNS not verified yet. Add/update records at your DNS host (nameservers), wait for propagation, re-run this script.
+After verification, the script will update SES receipt rules (and optionally activate INBOUND_MAIL).
+
+==============================================
+pipeline end — full transcript: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/pipeline-run-2026-04-08T104453Z.log
+==============================================

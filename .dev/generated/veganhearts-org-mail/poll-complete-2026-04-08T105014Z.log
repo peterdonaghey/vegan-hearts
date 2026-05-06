@@ -1,0 +1,39 @@
+poll-and-complete-veganhearts-mail.sh start 2026-04-08T105014Z (max 35×20s)
+log: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/poll-complete-2026-04-08T105014Z.log
+[1/35] Ownership=PENDING Dkim=PENDING
+[2/35] Ownership=PENDING Dkim=PENDING
+[3/35] Ownership=PENDING Dkim=PENDING
+[4/35] Ownership=PENDING Dkim=PENDING
+[5/35] Ownership=PENDING Dkim=PENDING
+[6/35] Ownership=PENDING Dkim=PENDING
+[7/35] Ownership=PENDING Dkim=PENDING
+[8/35] Ownership=PENDING Dkim=PENDING
+[9/35] Ownership=PENDING Dkim=PENDING
+[10/35] Ownership=PENDING Dkim=PENDING
+[11/35] Ownership=PENDING Dkim=PENDING
+[12/35] Ownership=PENDING Dkim=PENDING
+[13/35] Ownership=PENDING Dkim=PENDING
+[14/35] Ownership=PENDING Dkim=PENDING
+[15/35] Ownership=PENDING Dkim=PENDING
+[16/35] Ownership=PENDING Dkim=PENDING
+[17/35] Ownership=PENDING Dkim=PENDING
+[18/35] Ownership=PENDING Dkim=PENDING
+[19/35] Ownership=PENDING Dkim=PENDING
+[20/35] Ownership=PENDING Dkim=PENDING
+[21/35] Ownership=PENDING Dkim=PENDING
+[22/35] Ownership=PENDING Dkim=PENDING
+[23/35] Ownership=PENDING Dkim=PENDING
+[24/35] Ownership=VERIFIED Dkim=PENDING
+[25/35] Ownership=VERIFIED Dkim=PENDING
+[26/35] Ownership=VERIFIED Dkim=PENDING
+[27/35] Ownership=VERIFIED Dkim=PENDING
+[28/35] Ownership=VERIFIED Dkim=PENDING
+[29/35] Ownership=VERIFIED Dkim=PENDING
+[30/35] Ownership=VERIFIED Dkim=PENDING
+[31/35] Ownership=VERIFIED Dkim=PENDING
+[32/35] Ownership=VERIFIED Dkim=PENDING
+[33/35] Ownership=VERIFIED Dkim=PENDING
+[34/35] Ownership=VERIFIED Dkim=PENDING
+[35/35] Ownership=VERIFIED Dkim=PENDING
+poll-and-complete: timed out waiting for VERIFIED (public DNS may already be correct; AWS checks can lag).
+Re-run later: ./.dev/scripts/poll-and-complete-veganhearts-mail.sh

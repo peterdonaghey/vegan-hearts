@@ -1,0 +1,48 @@
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "VERIFIED",
+    "DkimVerificationStatus": "VERIFIED"
+}

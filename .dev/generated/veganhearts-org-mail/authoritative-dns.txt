@@ -1,0 +1,11 @@
+DNS for veganhearts.org (Vercel DNS, Route 53, etc. — whoever your nameservers point to) — add these records exactly as returned by AWS.
+If your host appends the zone name, use trailing dots on names where shown.
+
+MX     veganhearts.org.                                              10 inbound-smtp.us-east-1.amazonaws.com.
+TXT    _amazonses.veganhearts.org.                                   3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw=
+CNAME  autodiscover.veganhearts.org.                                 autodiscover.mail.us-east-1.awsapps.com.
+CNAME  vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.  vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com.
+CNAME  lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.  lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com.
+CNAME  pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.  pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com.
+TXT    veganhearts.org.                                              v=spf1 include:amazonses.com ~all
+TXT    _dmarc.veganhearts.org.                                       v=DMARC1;p=quarantine;pct=100;fo=1

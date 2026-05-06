@@ -1,0 +1,424 @@
+=== workmail-setup-veganhearts-org.sh 2026-04-08T08:58:49Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+register-mail-domain OK
+--- Step 2: get-mail-domain (save DNS for Spaceship) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "PENDING",
+    "DkimVerificationStatus": "PENDING"
+}
+OwnershipVerificationStatus=PENDING DkimVerificationStatus=PENDING
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/spaceship-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+STOP: DNS not verified yet. Add/update records on Spaceship, wait for propagation, re-run this script.
+After verification, the script will update SES receipt rules (and optionally activate INBOUND_MAIL).
+=== workmail-setup-veganhearts-org.sh 2026-04-08T09:39:36Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+Domain already registered on org; skipping register-mail-domain.
+--- Step 2: get-mail-domain (save DNS for Spaceship) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "PENDING",
+    "DkimVerificationStatus": "PENDING"
+}
+OwnershipVerificationStatus=PENDING DkimVerificationStatus=PENDING
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/authoritative-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+STOP: DNS not verified yet. Add/update records at your DNS host (nameservers), wait for propagation, re-run this script.
+After verification, the script will update SES receipt rules (and optionally activate INBOUND_MAIL).
+=== workmail-setup-veganhearts-org.sh 2026-04-08T10:45:11Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+Domain already registered on org; skipping register-mail-domain.
+--- Step 2: get-mail-domain (save DNS for your NS host, e.g. Vercel) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "PENDING",
+    "DkimVerificationStatus": "PENDING"
+}
+OwnershipVerificationStatus=PENDING DkimVerificationStatus=PENDING
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/authoritative-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+STOP: DNS not verified yet. Add/update records at your DNS host (nameservers), wait for propagation, re-run this script.
+After verification, the script will update SES receipt rules (and optionally activate INBOUND_MAIL).
+=== workmail-setup-veganhearts-org.sh 2026-04-08T10:45:47Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+Domain already registered on org; skipping register-mail-domain.
+--- Step 2: get-mail-domain (save DNS for your NS host, e.g. Vercel) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "PENDING",
+    "DkimVerificationStatus": "PENDING"
+}
+OwnershipVerificationStatus=PENDING DkimVerificationStatus=PENDING
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/authoritative-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+STOP: DNS not verified yet. Add/update records at your DNS host (nameservers), wait for propagation, re-run this script.
+After verification, the script will update SES receipt rules (and optionally activate INBOUND_MAIL).
+=== workmail-setup-veganhearts-org.sh 2026-04-08T10:47:22Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+Domain already registered on org; skipping register-mail-domain.
+--- Step 2: get-mail-domain (save DNS for your NS host, e.g. Vercel) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "PENDING",
+    "DkimVerificationStatus": "PENDING"
+}
+OwnershipVerificationStatus=PENDING DkimVerificationStatus=PENDING
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/authoritative-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+STOP: DNS not verified yet. Add/update records at your DNS host (nameservers), wait for propagation, re-run this script.
+After verification, the script will update SES receipt rules (and optionally activate INBOUND_MAIL).
+=== workmail-setup-veganhearts-org.sh 2026-04-08T11:03:27Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+Domain already registered on org; skipping register-mail-domain.
+--- Step 2: get-mail-domain (save DNS for your NS host, e.g. Vercel) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "VERIFIED",
+    "DkimVerificationStatus": "PENDING"
+}
+OwnershipVerificationStatus=VERIFIED DkimVerificationStatus=PENDING
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/authoritative-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+
+WARN: DkimVerificationStatus=PENDING (AWS can lag after correct CNAMEs). Continuing with SES receipt rules / activation; DKIM usually flips to VERIFIED soon.
+--- Step 3: SES — add veganhearts.org to WorkMail receipt rule ---
+update-receipt-rule OK
+--- Step 4: ses set-active-receipt-rule-set INBOUND_MAIL ---
+Active receipt rule set is now INBOUND_MAIL (other sets inactive).
+--- Step 5: create users hello@ and education@ (if missing) ---
+
+An error occurred (NameAvailabilityException) when calling the CreateUser operation: A member with the same name already exists
+=== workmail-setup-veganhearts-org.sh 2026-04-08T11:03:55Z ===
+Profile=peterdonaghey Region=us-east-1
+--- Step 1: register-mail-domain (veganhearts.org) ---
+Domain already registered on org; skipping register-mail-domain.
+--- Step 2: get-mail-domain (save DNS for your NS host, e.g. Vercel) ---
+{
+    "Records": [
+        {
+            "Type": "MX",
+            "Hostname": "veganhearts.org.",
+            "Value": "10 inbound-smtp.us-east-1.amazonaws.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_amazonses.veganhearts.org.",
+            "Value": "3qfnCSKJkslZ2jnKemQynfHB2eMWz6C3mzmwUVm8lTw="
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "autodiscover.veganhearts.org.",
+            "Value": "autodiscover.mail.us-east-1.awsapps.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "vmiq3vz3ibpcgpt7xetjirgazniy4j42._domainkey.veganhearts.org.",
+            "Value": "vmiq3vz3ibpcgpt7xetjirgazniy4j42.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "lczjptcbmal64xweq7gviy4hor23vfve._domainkey.veganhearts.org.",
+            "Value": "lczjptcbmal64xweq7gviy4hor23vfve.dkim.amazonses.com."
+        },
+        {
+            "Type": "CNAME",
+            "Hostname": "pfjuux25tywev4okue7fbcle2riybf2s._domainkey.veganhearts.org.",
+            "Value": "pfjuux25tywev4okue7fbcle2riybf2s.dkim.amazonses.com."
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "veganhearts.org.",
+            "Value": "v=spf1 include:amazonses.com ~all"
+        },
+        {
+            "Type": "TXT",
+            "Hostname": "_dmarc.veganhearts.org.",
+            "Value": "v=DMARC1;p=quarantine;pct=100;fo=1"
+        }
+    ],
+    "IsTestDomain": false,
+    "IsDefault": false,
+    "OwnershipVerificationStatus": "VERIFIED",
+    "DkimVerificationStatus": "VERIFIED"
+}
+OwnershipVerificationStatus=VERIFIED DkimVerificationStatus=VERIFIED
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/authoritative-dns.txt
+Wrote: /Users/peterdonaghey/Projects/vegan-hearts/.dev/generated/veganhearts-org-mail/dns-records.json
+--- Step 3: SES — add veganhearts.org to WorkMail receipt rule ---
+Recipient veganhearts.org already present in rule m-efd36f204fa4480f9eee765d5d380afa
+--- Step 4: ses set-active-receipt-rule-set INBOUND_MAIL ---
+Active receipt rule set is now INBOUND_MAIL (other sets inactive).
+--- Step 5: create users hello@ and education@ (if missing) ---
+Created and enabled: hello@veganhearts.org
+Created and enabled: education@veganhearts.org
+=== done ===
