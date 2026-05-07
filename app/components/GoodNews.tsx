@@ -76,7 +76,7 @@ export default function GoodNews({ items }: GoodNewsProps) {
             🌻 Uplifting Updates
           </span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-vh-green mb-4">
-            Good Vegan News
+            Fresh Vegan News
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-vh-orange to-vh-green rounded-full mx-auto mb-5"></div>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto leading-relaxed">
