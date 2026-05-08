@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -8,6 +9,38 @@ import GoodNews, { defaultGoodNews } from "./components/GoodNews";
 
 
 export default function Home() {
+  const [downloadCount, setDownloadCount] = useState<number | null>(null);
+  const [thankYou, setThankYou] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/download-ebook?count')
+      .then((res) => res.json())
+      .then((data) => setDownloadCount(data.count))
+      .catch(() => {});
+  }, []);
+
+  const handleDownload = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Optimistically bump count
+    setDownloadCount((prev) => (prev ?? 0) + 1);
+    setThankYou(true);
+
+    // Fire counter increment in background
+    fetch('/api/download-ebook?increment')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.count) setDownloadCount(data.count);
+      })
+      .catch(() => {});
+
+    // Show thank-you briefly, then open PDF
+    setTimeout(() => {
+      window.open(
+        'https://vegan-hearts-public-files.s3.us-east-1.amazonaws.com/ebooks/awakening-your-vegan-heart-21-days.pdf',
+        '_blank'
+      );
+    }, 600);
+  };
   return (
     <>
       {/* <Navigation /> */}
@@ -46,9 +79,15 @@ export default function Home() {
             We are so happy you found this space where everyone is Loved as a living being and precious soul!
           </p>
 
-          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-10">
+          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-6">
             May you be vegan, in transition or just curious what all this is about — we welcome you with open arms to explore and participate!
           </p>
+
+          <div className="max-w-2xl mx-auto mb-10">
+            <p className="text-lg md:text-xl text-vh-green/80 leading-relaxed italic">
+              You're already part of the Vegan Hearts family. 💚
+            </p>
+          </div>
 
           {/* Ebook Download Card */}
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl border-2 border-vh-orange/40 max-w-lg mx-auto">
@@ -60,14 +99,22 @@ export default function Home() {
             <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
               Download <strong className="text-vh-orange">Awakening Your Vegan Heart in 21 Days</strong> — a gentle, inspiring guide to compassionate living.
             </p>
-            <a
-              href="https://vegan-hearts-public-files.s3.us-east-1.amazonaws.com/ebooks/awakening-your-vegan-heart-21-days.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full px-8 py-3 bg-vh-green text-white rounded-lg font-medium hover:bg-vh-green-dark transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            <button
+              onClick={handleDownload}
+              className="inline-block w-full px-8 py-3 bg-vh-green text-white rounded-lg font-medium hover:bg-vh-green-dark transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
             >
               Download Free Ebook
-              </a>
+            </button>
+            {thankYou && (
+              <p className="mt-3 text-sm text-vh-green font-medium animate-pulse">
+                Thank you! Downloading your ebook… 💚
+              </p>
+            )}
+            {downloadCount !== null && (
+              <p className="mt-1 text-sm text-gray-600">
+                Downloaded {downloadCount.toLocaleString()} time{downloadCount !== 1 ? 's' : ''}
+              </p>
+            )}
               <div className="flex justify-center mt-6">
               <Image
                 src="/book-cover.png"
