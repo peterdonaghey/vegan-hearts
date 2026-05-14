@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { Send, Mail, ArrowLeft } from 'lucide-react';
 import AdminLayout from '@/app/components/AdminLayout';
 import RichTextEditor from '@/app/components/RichTextEditor';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 const FROM_ADDRESSES = [
   { label: 'Education', email: 'education@veganhearts.org' },
@@ -13,10 +14,27 @@ const FROM_ADDRESSES = [
 ];
 
 export default function AdminEmailPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gradient-to-b from-[#FFFAF1] to-white flex items-center justify-center"><p className="text-gray-500 text-lg font-display">Loading...</p></div>}>
+      <EmailCompose />
+    </Suspense>
+  );
+}
+
+function EmailCompose() {
+  const searchParams = useSearchParams();
   const [fromAddress, setFromAddress] = useState('education@veganhearts.org');
   const [toInput, setToInput] = useState('');
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
+
+  // Pre-fill from inbox reply
+  useEffect(() => {
+    const replyTo = searchParams.get('replyTo');
+    const replySubject = searchParams.get('subject');
+    if (replyTo) setToInput(replyTo);
+    if (replySubject) setSubject(replySubject);
+  }, [searchParams]);
   const [sending, setSending] = useState(false);
   const [result, setResult] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
