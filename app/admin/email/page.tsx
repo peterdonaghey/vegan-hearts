@@ -42,7 +42,7 @@ function EmailCompose() {
     e.preventDefault();
     setResult(null);
 
-    const toAddresses = toInput
+    const toAddresses = (toInput || '')
       .split(/[,\n]/)
       .map((a) => a.trim())
       .filter(Boolean);
