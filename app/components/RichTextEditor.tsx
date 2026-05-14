@@ -8,15 +8,20 @@ let ReactQuill: any = null;
 if (typeof window !== 'undefined') {
   const quillModule = require('react-quill-new');
   ReactQuill = quillModule.default || quillModule;
+
+  // Use inline styles instead of CSS classes — critical for email rendering
+  const AlignStyle = ReactQuill.Quill.import('attributors/style/align');
+  ReactQuill.Quill.register(AlignStyle, true);
 }
 
 interface RichTextEditorProps {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
+  disableVideo?: boolean;
 }
 
-export default function RichTextEditor({ value, onChange, placeholder }: RichTextEditorProps) {
+export default function RichTextEditor({ value, onChange, placeholder, disableVideo }: RichTextEditorProps) {
   const quillRef = useRef<any>(null);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -336,7 +341,7 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
         ['bold', 'italic', 'underline', 'strike'],
         [{ list: 'ordered' }, { list: 'bullet' }],
         ['blockquote', 'code-block'],
-        ['link', 'image', 'video'],
+        disableVideo ? ['link', 'image'] : ['link', 'image', 'video'],
         [{ align: [] }],
         ['clean'],
       ],
@@ -363,7 +368,7 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
     'code-block',
     'link',
     'image',
-    'video',
+    ...(disableVideo ? [] : ['video']),
     'align',
   ];
 

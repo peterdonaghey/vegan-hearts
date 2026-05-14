@@ -62,6 +62,23 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Email body is required' }, { status: 400 });
     }
 
+    // Build proper email HTML document — raw fragments get mangled by Gmail
+    const emailHtml = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    img { max-width: 100% !important; height: auto !important; display: block !important; }
+  </style>
+</head>
+<body style="margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;line-height:1.6;color:#333;background-color:#ffffff;">
+  <div style="max-width:600px;margin:0 auto;padding:20px;">
+  ${emailBody}
+  </div>
+</body>
+</html>`;
+
     // Send via SES
     await sesClient.send(
       new SendEmailCommand({
@@ -76,7 +93,7 @@ export async function POST(request: Request) {
           },
           Body: {
             Html: {
-              Data: emailBody,
+              Data: emailHtml,
               Charset: 'UTF-8',
             },
             Text: {

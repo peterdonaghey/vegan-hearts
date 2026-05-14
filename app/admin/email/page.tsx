@@ -161,6 +161,7 @@ export default function AdminEmailPage() {
                 value={body}
                 onChange={setBody}
                 placeholder="Write your message here... You can paste or drag & drop images directly."
+                disableVideo={true}
               />
             </div>
           </div>
