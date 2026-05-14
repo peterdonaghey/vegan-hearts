@@ -155,14 +155,14 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
     const quill = quillRef.current?.getEditor();
     if (!quill) return;
 
-    try {
-      // Insert a placeholder while uploading
-      const range = quill.getSelection(true);
-      const placeholder = '<div class="video-upload-placeholder" style="background: #f3f4f6; border: 2px dashed #d1d5db; border-radius: 8px; padding: 32px; text-align: center; color: #6b7280;">Uploading video...</div>';
-      quill.clipboard.dangerouslyPasteHTML(range.index, placeholder);
-      quill.setSelection(range.index + 1);
+    const range = quill.getSelection(true);
+    const uid = `vid-load-${Date.now()}`;
 
-      // Upload to S3
+    // Insert a temporary loading placeholder via innerHTML trick that quill won't mangle
+    const placeholderHtml = `<p id="${uid}" style="background:#f3f4f6;border:2px dashed #d1d5db;border-radius:8px;padding:16px;text-align:center;color:#6b7280;">⏳ Uploading video...</p>`;
+    quill.clipboard.dangerouslyPasteHTML(range.index, placeholderHtml, 'user');
+
+    try {
       const formData = new FormData();
       formData.append('file', file);
 
@@ -171,7 +171,6 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
         throw new Error('Not authenticated');
       }
 
-      console.log('Uploading video to S3...');
       const response = await fetch('/api/news/upload-video', {
         method: 'POST',
         headers: {
@@ -186,30 +185,29 @@ export default function RichTextEditor({ value, onChange, placeholder }: RichTex
       }
 
       const { url } = await response.json();
-      console.log('Video uploaded successfully:', url);
 
-      // Replace placeholder with actual video HTML
-      const currentContent = quill.root.innerHTML;
-      const videoHtml = `<video controls style="max-width: 100%; border-radius: 8px;"><source src="${url}" type="${file.type}"></video>`;
-      const newContent = currentContent.replace(
-        /<div class="video-upload-placeholder"[^>]*>.*?<\/div>/,
-        videoHtml
-      );
-      quill.root.innerHTML = newContent;
+      // Find the placeholder by ID and replace with video
+      const placeholderNode = quill.root.querySelector(`#${uid}`);
+      if (placeholderNode) {
+        const video = document.createElement('video');
+        video.controls = true;
+        video.style.cssText = 'max-width:100%;border-radius:8px;';
+        video.src = url;
+        placeholderNode.replaceWith(video);
+      }
 
     } catch (error) {
       console.error('Error uploading video:', error);
       
-      // Replace placeholder with error message
-      const quill = quillRef.current?.getEditor();
-      if (quill) {
-        const currentContent = quill.root.innerHTML;
-        const errorHtml = '<div style="background: #fee2e2; border: 2px dashed #ef4444; border-radius: 8px; padding: 16px; text-align: center; color: #dc2626;">Video upload failed. Please try again.</div>';
-        const newContent = currentContent.replace(
-          /<div class="video-upload-placeholder"[^>]*>.*?<\/div>/,
-          errorHtml
-        );
-        quill.root.innerHTML = newContent;
+      const q = quillRef.current?.getEditor();
+      if (q) {
+        const placeholderNode = q.root.querySelector(`#${uid}`);
+        if (placeholderNode) {
+          const errSpan = document.createElement('span');
+          errSpan.style.cssText = 'color:#dc2626;font-weight:600;';
+          errSpan.textContent = '✕ Video upload failed';
+          placeholderNode.replaceWith(errSpan);
+        }
       }
       
       alert('Failed to upload video. Please try again.');

@@ -20,6 +20,8 @@ function pickVerifiedSource(destination) {
     return 'hello@veganhearts.org';
   if (d.some((x) => x === 'education@veganhearts.org' || x.startsWith('education@veganhearts.org')))
     return 'education@veganhearts.org';
+  if (d.some((x) => x === 'info@veganhearts.org' || x.startsWith('info@veganhearts.org')))
+    return 'info@veganhearts.org';
   if (d.some((x) => x.includes('vegan-hearts.org')))
     return 'education@vegan-hearts.org';
   return 'hello@veganhearts.org';
@@ -30,6 +32,7 @@ export const handler = async (event) => {
   const messageId = record.ses.mail.messageId;
   const bucket = process.env.BUCKET;
   const forwardTo = process.env.FORWARD_TO;
+  const forwardToDev = process.env.FORWARD_TO_DEV;
 
   const destination = record.ses.mail.destination || [];
   const sourceAddr = pickVerifiedSource(destination);
@@ -57,19 +60,38 @@ Subject: ${subject}
 
 ${messageBody}`;
 
-    await ses.send(
-      new SendEmailCommand({
-        Source: sourceAddr,
-        Destination: { ToAddresses: [forwardTo] },
-        ReplyToAddresses: [fromEmail],
-        Message: {
-          Subject: { Data: `[vh] ${subject}` },
-          Body: { Text: { Data: cleanBody } },
-        },
-      }),
-    );
+    // Forward to Evelina (if configured)
+    if (forwardTo) {
+      await ses.send(
+        new SendEmailCommand({
+          Source: sourceAddr,
+          Destination: { ToAddresses: [forwardTo] },
+          ReplyToAddresses: [fromEmail],
+          Message: {
+            Subject: { Data: `[vh] ${subject}` },
+            Body: { Text: { Data: cleanBody } },
+          },
+        }),
+      );
+      console.log(`Forwarded (${sourceAddr}) from ${from} → ${forwardTo}`);
+    }
 
-    console.log(`Forwarded (${sourceAddr}) from ${from} → ${forwardTo}`);
+    // BCC to dev (if configured)
+    if (forwardToDev) {
+      await ses.send(
+        new SendEmailCommand({
+          Source: sourceAddr,
+          Destination: { ToAddresses: [forwardToDev] },
+          ReplyToAddresses: [fromEmail],
+          Message: {
+            Subject: { Data: `[vh-dev] ${subject}` },
+            Body: { Text: { Data: cleanBody } },
+          },
+        }),
+      );
+      console.log(`Forwarded (${sourceAddr}) from ${from} → ${forwardToDev} (dev)`);
+    }
+
     return { statusCode: 200 };
   } catch (error) {
     console.error('Forwarding error:', error);

@@ -17,7 +17,6 @@ const s3Client = new S3Client({
 });
 
 const BUCKET_NAME = 'vegan-hearts-assets';
-const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB for videos
 
 // POST - Upload video for news articles (admin only)
 export async function POST(request: Request) {
@@ -52,32 +51,7 @@ export async function POST(request: Request) {
       fileSizeMB: (file.size / (1024 * 1024)).toFixed(2) + 'MB',
     });
 
-    // Validate file type
-    const validTypes = ['video/mp4', 'video/webm', 'video/quicktime', 'video/x-msvideo'];
-    if (!validTypes.includes(file.type)) {
-      console.error('Video upload failed: Invalid file type', {
-        provided: file.type,
-        accepted: validTypes,
-      });
-      return NextResponse.json(
-        { error: `Invalid file type: ${file.type}. Only MP4, WebM, MOV, and AVI videos are allowed.` },
-        { status: 400 }
-      );
-    }
-
-    // Validate file size
-    if (file.size > MAX_FILE_SIZE) {
-      console.error('Video upload failed: File too large', {
-        size: file.size,
-        maxSize: MAX_FILE_SIZE,
-        sizeMB: (file.size / (1024 * 1024)).toFixed(2) + 'MB',
-        maxSizeMB: (MAX_FILE_SIZE / (1024 * 1024)).toFixed(2) + 'MB',
-      });
-      return NextResponse.json(
-        { error: `File too large: ${(file.size / (1024 * 1024)).toFixed(2)}MB. Maximum size is ${(MAX_FILE_SIZE / (1024 * 1024)).toFixed(2)}MB.` },
-        { status: 400 }
-      );
-    }
+    // No file type or size restrictions — accepts any video format up to S3 object limit (~5TB)
 
     // Generate unique filename
     const fileExtension = file.name.split('.').pop();

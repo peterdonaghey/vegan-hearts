@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import AdminLayout from '../components/AdminLayout';
-import { Calendar, Users, Newspaper } from 'lucide-react';
+import { Calendar, Users, Newspaper, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AdminDashboard() {
@@ -69,6 +69,23 @@ export default function AdminDashboard() {
               </div>
               <p className="text-gray-600">
                 View and manage email subscribers and mailing list
+              </p>
+            </div>
+          </Link>
+
+          {/* Email */}
+          <Link href="/admin/email">
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group border-2 border-transparent hover:border-vh-orange">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-4 bg-vh-orange/10 rounded-xl group-hover:bg-vh-orange group-hover:text-white transition-colors">
+                  <Mail className="h-8 w-8 text-vh-orange group-hover:text-white" />
+                </div>
+                <h2 className="text-2xl font-display font-bold text-vh-orange">
+                  Email
+                </h2>
+              </div>
+              <p className="text-gray-600">
+                Send professional emails from your VeganHearts addresses
               </p>
             </div>
           </Link>
