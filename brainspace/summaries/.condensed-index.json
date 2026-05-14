@@ -1,0 +1,92 @@
+{
+  "2026-05-06T13-47-05_vegan-hearts-community-platform-plan.md": {
+    "chars": 9447,
+    "essence": "Overhauled VeganHearts from stalled email-gated landing to warm open community: direct S3 PDF download, DynamoDB counter, 6 good-news stories, admin easter egg \u2014 immediate download, zero friction, vision restored.",
+    "at": "2026-05-13T10:52:07+00:00"
+  },
+  "2026-05-06T13-56-33_explore-codebase-structure.md": {
+    "chars": 5970,
+    "essence": "VeganHearts codebase reveals dead early return on landing page, ebook download via SES/S3/DynamoDB with inconsistent from addresses (info vs hello), SES sandbox likely, admin via Cognito with easter egg entry.",
+    "at": "2026-05-13T10:52:17+00:00"
+  },
+  "2026-05-06T14-09-17_write-new-landing-page.md": {
+    "chars": 3958,
+    "essence": "Attempted landing page overwrite in app/page.tsx with ebook form hero, community banner, mission/vision, UnifiedFeed, footer \u2014 blocked by lack of file-write tools (only read_file/grep available). New design pushes conversion priority.",
+    "at": "2026-05-13T10:52:22+00:00"
+  },
+  "2026-05-06T15-02-23_footer-cute-minimal-redesign.md": {
+    "chars": 2142,
+    "essence": "Reduced footer vertical space by halving padding, shrinking logo to 28px, condensing copyright tagline; fixed edit_file bug missing mode field; email signup & admin easter egg intact.",
+    "at": "2026-05-13T10:52:32+00:00"
+  },
+  "2026-05-06T15-26-52_research-vegan-good-news-build-component.md": {
+    "chars": 3668,
+    "essence": "Built GoodNews component with 6 real vegan news stories (Amsterdam ads ban, UK price drop, etc.), responsive grid, image error fallback via useState, integrated into homepage; no external deps, build passed.",
+    "at": "2026-05-13T10:52:51+00:00"
+  },
+  "2026-05-06T15-42-30_add-book-cover-thumbnail-to-homepage.md": {
+    "chars": 2420,
+    "essence": "Added book cover thumbnail to homepage ebook card using Next.js Image (priority), with rounded-2xl, shadow-2xl, hover:scale-105; build passed 4.1s, 26 pages. Learned local /public images work cleanly, priority improves LCP, Tailwind transitions are intuitive.",
+    "at": "2026-05-13T10:52:54+00:00"
+  },
+  "2026-05-06T18-13-34_fix-goodnews-broken-images-link.md": {
+    "chars": 1572,
+    "essence": "Fixed defaultGoodNews: replaced index 2 broken link+image with foodnavigator.com article; set imageUrl undefined on 1,3,5 to trigger \ud83c\udf31 fallback. Build passes.",
+    "at": "2026-05-13T10:53:00+00:00"
+  },
+  "2026-05-06T18-19-06_fix-goodnews-image-urls.md": {
+    "chars": 1846,
+    "essence": "Fixed 3 hardcoded image URLs in GoodNews client component; bypassed fuzzy-edit tool glitch; build passed (Next 15.5.9, 26 static pages). Used external image domains, fallback \ud83c\udf31; no AWS.",
+    "at": "2026-05-13T10:54:03+00:00"
+  },
+  "2026-05-07T08-20-39_deep-codebase-exploration.md": {
+    "chars": 5248,
+    "essence": "Explored VeganHearts: Cognito admin auth with magic link, DynamoDB tables (email-signups, events, admin-users, password-tokens), SES emails, Tailwind branding, but zero public user profiles or middleware\u2014only admin users and client-side protection.",
+    "at": "2026-05-13T10:54:23+00:00"
+  },
+  "2026-05-07T08-30-34_veganhearts-ebook-download-counter-feature.md": {
+    "chars": 474,
+    "essence": "Built VeganHearts ebook download counter with DynamoDB, SES, IAM; fixed authentication bug, learned DynamoDB conditional updates for atomic increments.",
+    "at": "2026-05-13T10:56:06+00:00"
+  },
+  "2026-05-07T08-35-49_html-demo-constellationweb-of-people.md": {
+    "chars": 2258,
+    "essence": "Built standalone D3.js force-directed graph \"Vegan Hearts\" constellation demo with 9 color-coded nodes, glow, clickable profile cards, organic animated links; brand colors, responsive, no server.",
+    "at": "2026-05-13T10:57:15+00:00"
+  },
+  "2026-05-07T08-52-25_creating-the-veganhearts-web-of-people-demos.md": {
+    "chars": 4542,
+    "essence": "Built & deleted 4 decorative demos (D3, mycelium, etc.); realized need typed connections. Designed profile: BIO (typed sections: text/image/link/contact) + Sharings (7 types, feed), DynamoDB, Leaflet, magic-link; no required fields except name.",
+    "at": "2026-05-13T10:58:59+00:00"
+  },
+  "2026-05-07T08-56-59_build-bulletin-wall-demo.md": {
+    "chars": 3532,
+    "essence": "Built standalone bulletin-wall.html: CSS-only corkboard, color-coded profile cards, wave button with springy toast, responsive grid; fixed title/H1 split bugs; pattern reusable for Next.js DynamoDB schema.",
+    "at": "2026-05-13T10:59:42+00:00"
+  },
+  "2026-05-07T08-56-59_build-mycelium-web-demo.md": {
+    "chars": 3006,
+    "essence": "Built a three\u2011layer D3/Canvas mycelium demo (soil, bezier graph, spores) with organic pulsing nodes, hover highlighting, click\u2011locked profile cards, fixed link stroke color bug via helper function.",
+    "at": "2026-05-13T11:00:02+00:00"
+  },
+  "2026-05-08T08-09-41_check-ebook-download-tracking.md": {
+    "chars": 4759,
+    "essence": "Investigated ebook download tracking: API writes to DynamoDB & sends SES email, no analytics scripts, education page still uses API (homepage does not), download counting relies solely on API calls.",
+    "at": "2026-05-13T11:00:20+00:00"
+  },
+  "2026-05-08T08-12-28_research-simplest-download-counter.md": {
+    "chars": 3257,
+    "essence": "Investigated ebook download counter: direct S3 link (no tracking), modeled DynamoDB pattern from subscribe route (SDK v3, client inside handler, trimmed env vars), admin dashboard grid layout. Learned env trimming necessity, serverless client pattern, need new table for counter. Recommend API route to increment + pre-signed URL.",
+    "at": "2026-05-13T11:00:29+00:00"
+  },
+  "2026-05-08T08-15-59_existing-api-patterns-for-reference.md": {
+    "chars": 3914,
+    "essence": "Adds ebook download counter via DynamoDB ADD on sentinel key, three-mode API (redirect, count, increment), optimistic UI with background fetch and window.open; learned ADD auto-creates item, dead code harmless.",
+    "at": "2026-05-13T11:00:35+00:00"
+  },
+  "2026-05-13T07-06-16_veganhearts-memory-system-handoff-review.md": {
+    "chars": 318,
+    "essence": "Ran sync_sessions.py to reconcile session logs, then crystallisation_agent.py --dry-run to auto-distill key technical insights, patterns, and bugs into ultra-condensed essence lines.",
+    "at": "2026-05-13T11:00:41+00:00"
+  }
+}
