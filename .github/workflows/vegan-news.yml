@@ -1,0 +1,29 @@
+name: Vegan News Agent
+
+on:
+  schedule:
+    # Every Monday at 10am UTC
+    - cron: '0 10 * * 1'
+  workflow_dispatch:  # allow manual trigger too
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: scripts/vegan-news-agent/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scripts/vegan-news-agent/requirements.txt
+
+      - name: Run agent
+        env:
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.VEGAN_NEWS_PAT }}
+        run: python scripts/vegan-news-agent/news_agent.py
