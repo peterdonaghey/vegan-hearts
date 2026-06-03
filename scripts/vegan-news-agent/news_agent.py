@@ -108,8 +108,8 @@ def search_vegan_news() -> str:
     Returns a JSON list of results with title, url, and description.
     The agent should call this first to find candidate articles.
     """
-    print(f"       🔍 Searching Brave for vegan news...", flush=True)
-    results = _brave_search("positive vegan news 2026 plant-based progress")
+    print(f"       🔍 Searching Brave for compassionate vegan news...", flush=True)
+    results = _brave_search("farm animal sanctuary rescue story compassion 2026 heartwarming")
     print(f"       → {len(results)} results found", flush=True)
     return json.dumps(
         [{"title": r["title"], "url": r["url"], "description": r.get("description", "")}
@@ -329,13 +329,23 @@ agent = Agent(
         5. Call read_feed() again to check existing article IDs.
         6. Call publish_article() with all the details.
 
-        Rules:
+        RULES (most important):
         - Only add ONE article per run.
         - The article must be recent (past month or so).
-        - Avoid celebrity gossip, opinion pieces, or fluff. Real news.
+        - ONLY pick stories about: animal rescues and sanctuary stories,
+          community gardens and food-sharing initiatives, educators teaching
+          compassion, grassroots movements, people helping animals and each other,
+          acts of kindness, vegan community building,
+          or other genuinely heartwarming human-interest stories.
+        - DO NOT pick stories about: market data, product launches, corporate
+          milestones, investment figures, supermarket sales, price comparisons,
+          industry forecasts, or any "market capitalist" framed news.
+          We are painting a picture of a new world, not tracking an industry.
+        - Avoid celebrity gossip, opinion pieces, or fluff.
         - The summary should be 1-2 sentences, warm and informative.
-        - Category must be one of: Policy Win, Price Win, Market Growth,
-          Innovation, Sanctuary, Health Policy, Food Service, Media, Community, Science.
+        - Category must be one of: Sanctuary, Community, Food Service, Media,
+          Health Policy, Innovation.  (Avoid Market Growth, Price Win unless
+          the story is truly about people, not markets.)
         - The date should be the current month + year, e.g. "June 2026".
         - The id should be a short kebab-case slug from the title.
         - DO NOT add an article if its ID already exists in the feed.

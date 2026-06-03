@@ -134,14 +134,14 @@ export const defaultGoodNews: GoodNewsItem[] = [
     category: "Price Win"
   },
   {
-    id: 'europe-plant-based-16bn',
-    title: "Europe's Plant-Based Market Hits €16.3 Billion",
-    summary: "The plant-based food market across six European countries reached €16.3 billion in 2025, growing 5.1% year-on-year. But meat alternatives are only 4% of this — nuts, seeds, and dairy alternatives dominate, driven by flexitarians.",
-    sourceUrl: "https://www.foodnavigator.com/Article/2026/04/21/plant-based-meat-only-4-of-plant-based-market/",
-    sourceName: "FoodNavigator",
-    imageUrl: "https://www.foodnavigator.com/resizer/v2/GTZLOL7BUVBO7FZV75YR24U3DM.jpg?auth=9ad2d6f67a35c9e542c0449880eb515170618e4bf0951678423085658c4b2c94&smart=true",
-    date: "April 2026",
-    category: "Market Growth"
+    id: 'billie-hen-rescue',
+    title: "Hen Rescued From Slaughter Finds Joy at Sanctuary",
+    summary: "Billie the hen was minutes from death when activists spoke with her transport driver — and one compassionate conversation changed everything. Now at Farm Sanctuary, she dances to music and is serenaded by her caregivers, proving that connection between unlikely allies can save a life.",
+    sourceUrl: "https://www.farmsanctuary.org/news-stories/four-farm-animals-rescued-just-in-time",
+    sourceName: "Farm Sanctuary",
+    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2024/05/07150712/2024_04-23_FSNY_Evie_sheep_with_Margaretta_lamb_LH_9887-1600x1068.jpg",
+    date: "May 2026",
+    category: "Sanctuary"
   },
   {
     id: 'global-sanctuary-day',
