@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── June 2026 ──
+  {
+    id: "new-roots-le-gratine-lupine-cheese",
+    title: "Swiss Vegan Creamery New Roots Launches Lupine-Based Grated Cheese Alternative",
+    summary: "Swiss creamery New Roots has launched Le Gratiné, a meltable, stretchy grated cheese alternative made from locally sourced organic lupine beans — a regional protein source that also enriches soil health. The company helped cultivate 90 tons of lupins in 2025, and sweet lupin was just named Superfood of the Year 2026 by Biovision.",
+    sourceUrl: "https://vegconomist.com/cheese-alternatives/swiss-vegan-creamery-new-root-launches-lupine-based-grated-cheese-alternative/",
+    sourceName: "vegconomist",
+    imageUrl: "https://assets.vegconom.de/media/wp-content/uploads/sites/3/2026/06/02165029/Artikel-Header-1200-x-900-px-19-1.jpg",
+    date: "June 2026",
+    category: "Innovation",
+  },
+
   {
     id: 'amsterdam-ads-ban',
     title: "Amsterdam Bans Meat & Fossil Fuel Ads",
