@@ -292,8 +292,11 @@ def publish_article(
         f"- Date: {date}\n\n"
         f"### Validation\n"
         f"- ✅ Source link verified (200 OK)\n"
-        f"- {'✅ Image verified' if image_url else 'ℹ️  No image (will show \ud83c\udf31 fallback)'}\n"
+        f"- {'✅ Image verified' if image_url else 'ℹ️  No image (will show \U0001f331 fallback)'}\n"
         f"- ✅ No duplicate with existing articles\n\n"
+        f"### Preview\n"
+        f"🌐 [Vercel Preview](https://vegan-hearts-git-{branch.replace('/', '-')}-team-dizbgx2bon0j5ykhouyxm9cr.vercel.app)\n"
+        f"\n"
         f"_Automated by Vegan News Agent_"
     )
     pr = _gh_api("POST", f"/repos/{GITHUB_REPO}/pulls",
