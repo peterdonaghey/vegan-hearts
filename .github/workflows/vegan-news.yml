@@ -22,8 +22,36 @@ jobs:
         run: pip install -r scripts/vegan-news-agent/requirements.txt
 
       - name: Run agent
+        id: agent
         env:
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.VEGAN_NEWS_PAT }}
-        run: python scripts/vegan-news-agent/news_agent.py
+        run: |
+          python scripts/vegan-news-agent/news_agent.py 2>&1 | tee /tmp/agent-output.txt
+          # Extract PR URL if one was created
+          PR_URL=$(grep -oP 'https://github.com/[^/]+/[^/]+/pull/\d+' /tmp/agent-output.txt | tail -1 || true)
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+          # Extract branch name for Vercel preview URL
+          BRANCH="vegan-news/$(date +%Y-%m-%d)"
+          BRANCH_SLUG=$(echo "$BRANCH" | tr '/' '-')
+          echo "preview_url=https://vegan-hearts-git-${BRANCH_SLUG}-team-dizbgx2bon0j5ykhouyxm9cr.vercel.app" >> "$GITHUB_OUTPUT"
+
+      - name: Send notification email
+        if: ${{ steps.agent.outputs.pr_url != '' && secrets.SMTP_PASSWORD != '' }}
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: donagheypeter@gmail.com
+          password: ${{ secrets.SMTP_PASSWORD }}
+          from: Vegan News Agent
+          to: donagheypeter@googlemail.com
+          subject: "🌱 New good-news article ready for review"
+          body: |
+            A new article was found and added to the GoodNews feed.
+
+            📝 PR: ${{ steps.agent.outputs.pr_url }}
+            🌐 Preview: ${{ steps.agent.outputs.preview_url }}
+
+            Open the PR to review and merge.
