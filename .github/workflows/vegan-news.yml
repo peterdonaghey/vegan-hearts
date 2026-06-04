@@ -2,8 +2,8 @@ name: Vegan News Agent
 
 on:
   schedule:
-    # Every Monday at 10am UTC
-    - cron: '0 10 * * 1'
+    # Every Friday at 10am UTC
+    - cron: '0 10 * * 5'
   workflow_dispatch:  # allow manual trigger too
 
 jobs:
