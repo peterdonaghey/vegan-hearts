@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── May 2026 ──
+  {
+    id: "omi-now-loved-by-friends",
+    title: "Once Abused and Left Behind, Omi's Now Loved By So Many Friends",
+    summary: "Omi was just a helpless calf when he was cruelly abandoned alone on the side of a road — but today he's thriving at Farm Sanctuary, surrounded by animal friends and loving caregivers in a heartwarming story of resilience and the healing power of compassion.",
+    sourceUrl: "https://www.farmsanctuary.org/news-stories/once-abused-omi-now-loved-by-friends",
+    sourceName: "Farm Sanctuary",
+    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2026/05/14121804/2026_05-07_FSAC_Omi_cow_CD-9565-scaled.jpg",
+    date: "May 2026",
+    category: "Sanctuary",
+  },
+
   // ── June 2026 ──
   {
     id: "new-roots-le-gratine-lupine-cheese",
