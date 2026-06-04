@@ -103,6 +103,17 @@ export default function GoodNews({ items }: GoodNewsProps) {
 export const defaultGoodNews: GoodNewsItem[] = [
   // ── May 2026 ──
   {
+    id: "farm-sanctuary-40-years",
+    title: "Farm Sanctuary marks 40 years of animal rescue and advocacy",
+    summary: "What began with the rescue of a single sheep has grown into a worldwide movement — Farm Sanctuary, the pioneering farm animal protection organization, celebrates 40 years of rescuing abused farm animals, advocating for compassion, and inspiring a plant-based future.",
+    sourceUrl: "https://www.witf.org/2026/05/12/farm-sanctuary-marks-40-years-of-animal-rescue-and-advocacy/",
+    sourceName: "WITF / The Spark",
+    date: "May 2026",
+    category: "Sanctuary",
+  },
+
+  // ── May 2026 ──
+  {
     id: "omi-now-loved-by-friends",
     title: "Once Abused and Left Behind, Omi's Now Loved By So Many Friends",
     summary: "Omi was just a helpless calf when he was cruelly abandoned alone on the side of a road — but today he's thriving at Farm Sanctuary, surrounded by animal friends and loving caregivers in a heartwarming story of resilience and the healing power of compassion.",
