@@ -37,8 +37,17 @@ jobs:
           BRANCH_SLUG=$(echo "$BRANCH" | tr '/' '-')
           echo "preview_url=https://vegan-hearts-git-${BRANCH_SLUG}-team-dizbgx2bon0j5ykhouyxm9cr.vercel.app" >> "$GITHUB_OUTPUT"
 
+      - name: Check SMTP secret
+        id: check_smtp
+        run: |
+          if [ -n "${{ secrets.SMTP_PASSWORD }}" ]; then
+            echo "has_smtp=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_smtp=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Send notification email
-        if: ${{ steps.agent.outputs.pr_url != '' && secrets.SMTP_PASSWORD != '' }}
+        if: ${{ steps.agent.outputs.pr_url != '' && steps.check_smtp.outputs.has_smtp == 'true' }}
         uses: dawidd6/action-send-mail@v4
         with:
           server_address: smtp.gmail.com
