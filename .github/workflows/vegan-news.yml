@@ -38,28 +38,24 @@ jobs:
         id: vercel
         if: ${{ steps.agent.outputs.pr_url != '' }}
         run: |
-          BRANCH="vegan-news/$(date +%Y-%m-%d)"
-          echo "Polling for Vercel deployment on branch $BRANCH..."
-          for i in $(seq 1 30); do
-            # Get the deployment status URL for this branch
-            STATUS_URL=$(gh api repos/peterdonaghey/vegan-hearts/deployments \
-              --jq ".[] | select(.ref == \"$BRANCH\") | .statuses_url" | head -1)
-            if [ -n "$STATUS_URL" ]; then
-              PREVIEW_URL=$(gh api "$STATUS_URL" --jq '.[0].environment_url' | head -1)
-              if [ -n "$PREVIEW_URL" ] && [ "$PREVIEW_URL" != "null" ]; then
-                echo "url=$PREVIEW_URL" >> "$GITHUB_OUTPUT"
-                echo "Found: $PREVIEW_URL"
-                # Add a PR comment with the preview link
-                PR_NUM="${{ steps.agent.outputs.pr_number }}"
-                gh pr comment "$PR_NUM" -R peterdonaghey/vegan-hearts \
-                  --body "🌐 **Vercel Preview:** [$PREVIEW_URL]($PREVIEW_URL)"
-                exit 0
-              fi
+          echo "Waiting for Vercel to deploy the preview..."
+          for i in $(seq 1 36); do
+            # Get the latest Preview deployment's environment URL
+            PREVIEW_URL=$(gh api repos/peterdonaghey/vegan-hearts/deployments \
+              --jq '[.[] | select(.environment == "Preview")][0] | .statuses_url' \
+              | head -1 | xargs -I{} gh api {} --jq '.[0].environment_url' 2>/dev/null || true)
+            if [ -n "$PREVIEW_URL" ] && [ "$PREVIEW_URL" != "null" ]; then
+              echo "url=$PREVIEW_URL" >> "$GITHUB_OUTPUT"
+              echo "Found: $PREVIEW_URL"
+              PR_NUM="${{ steps.agent.outputs.pr_number }}"
+              gh pr comment "$PR_NUM" -R peterdonaghey/vegan-hearts \
+                --body "🌐 **Vercel Preview:** [$PREVIEW_URL]($PREVIEW_URL)"
+              exit 0
             fi
-            echo "Waiting... ($i/30)"
+            echo "Waiting... ($i/36)"
             sleep 10
           done
-          echo "Vercel deployment not found after 5 minutes"
+          echo "No preview deployment found after 6 minutes"
           echo "url=" >> "$GITHUB_OUTPUT"
 
       - name: Check SMTP secret
