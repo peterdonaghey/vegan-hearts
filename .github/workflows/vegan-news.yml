@@ -4,7 +4,7 @@ on:
   schedule:
     # Every Friday at 10am UTC
     - cron: '0 10 * * 5'
-  workflow_dispatch:  # allow manual trigger too
+  workflow_dispatch:
 
 jobs:
   news:
@@ -29,13 +29,38 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.VEGAN_NEWS_PAT }}
         run: |
           python scripts/vegan-news-agent/news_agent.py 2>&1 | tee /tmp/agent-output.txt
-          # Extract PR URL if one was created
           PR_URL=$(grep -oP 'https://github.com/[^/]+/[^/]+/pull/\d+' /tmp/agent-output.txt | tail -1 || true)
           echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
-          # Extract branch name for Vercel preview URL
+          PR_NUM=$(echo "$PR_URL" | grep -oP '\d+$' || true)
+          echo "pr_number=$PR_NUM" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for Vercel deployment
+        id: vercel
+        if: ${{ steps.agent.outputs.pr_url != '' }}
+        run: |
           BRANCH="vegan-news/$(date +%Y-%m-%d)"
-          BRANCH_SLUG=$(echo "$BRANCH" | tr '/' '-')
-          echo "preview_url=https://vegan-hearts-git-${BRANCH_SLUG}-team-dizbgx2bon0j5ykhouyxm9cr.vercel.app" >> "$GITHUB_OUTPUT"
+          echo "Polling for Vercel deployment on branch $BRANCH..."
+          for i in $(seq 1 30); do
+            # Get the deployment status URL for this branch
+            STATUS_URL=$(gh api repos/peterdonaghey/vegan-hearts/deployments \
+              --jq ".[] | select(.ref == \"$BRANCH\") | .statuses_url" | head -1)
+            if [ -n "$STATUS_URL" ]; then
+              PREVIEW_URL=$(gh api "$STATUS_URL" --jq '.[0].environment_url' | head -1)
+              if [ -n "$PREVIEW_URL" ] && [ "$PREVIEW_URL" != "null" ]; then
+                echo "url=$PREVIEW_URL" >> "$GITHUB_OUTPUT"
+                echo "Found: $PREVIEW_URL"
+                # Add a PR comment with the preview link
+                PR_NUM="${{ steps.agent.outputs.pr_number }}"
+                gh pr comment "$PR_NUM" -R peterdonaghey/vegan-hearts \
+                  --body "🌐 **Vercel Preview:** [$PREVIEW_URL]($PREVIEW_URL)"
+                exit 0
+              fi
+            fi
+            echo "Waiting... ($i/30)"
+            sleep 10
+          done
+          echo "Vercel deployment not found after 5 minutes"
+          echo "url=" >> "$GITHUB_OUTPUT"
 
       - name: Check SMTP secret
         id: check_smtp
@@ -61,6 +86,6 @@ jobs:
             A new article was found and added to the GoodNews feed.
 
             📝 PR: ${{ steps.agent.outputs.pr_url }}
-            🌐 Preview: ${{ steps.agent.outputs.preview_url }}
+            🌐 Preview: ${{ steps.vercel.outputs.url }}
 
             Open the PR to review and merge.

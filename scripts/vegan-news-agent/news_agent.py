@@ -292,11 +292,8 @@ def publish_article(
         f"- Date: {date}\n\n"
         f"### Validation\n"
         f"- ✅ Source link verified (200 OK)\n"
-        f"- {'✅ Image verified' if image_url else 'ℹ️  No image (will show \U0001f331 fallback)'}\n"
+        f"- {'✅ Image verified' if image_url else '❌ IMAGE MISSING — agent should not have published'}\n"
         f"- ✅ No duplicate with existing articles\n\n"
-        f"### Preview\n"
-        f"🌐 [Vercel Preview](https://vegan-hearts-git-{branch.replace('/', '-')}-team-dizbgx2bon0j5ykhouyxm9cr.vercel.app)\n"
-        f"\n"
         f"_Automated by Vegan News Agent_"
     )
     pr = _gh_api("POST", f"/repos/{GITHUB_REPO}/pulls",
@@ -353,7 +350,11 @@ agent = Agent(
         - The id should be a short kebab-case slug from the title.
         - DO NOT add an article if its ID already exists in the feed.
         - DO NOT add an article if the link doesn't return 200.
-        - DO NOT add an article if the image is broken (unless no image, that's fine).
+        - DO NOT add an article if the image is broken.
+        - **MANDATORY: Every article MUST have a working image.** Never use
+          the fallback. If the article page doesn't have a usable image, find
+          one by searching the source site or choose a different article.
+          No image = no publish.
 
         You have all the tools you need.  Go ahead.
     """),
