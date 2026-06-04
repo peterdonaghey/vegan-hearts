@@ -108,6 +108,7 @@ export const defaultGoodNews: GoodNewsItem[] = [
     summary: "What began with the rescue of a single sheep has grown into a worldwide movement — Farm Sanctuary, the pioneering farm animal protection organization, celebrates 40 years of rescuing abused farm animals, advocating for compassion, and inspiring a plant-based future.",
     sourceUrl: "https://www.witf.org/2026/05/12/farm-sanctuary-marks-40-years-of-animal-rescue-and-advocacy/",
     sourceName: "WITF / The Spark",
+    imageUrl: "https://www.witf.io/wp-content/uploads/2026/05/gene-hilda-1358x1080.jpeg",
     date: "May 2026",
     category: "Sanctuary",
   },
