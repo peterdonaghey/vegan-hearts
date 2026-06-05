@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── June 2026 ──
+  {
+    id: "fandango-sanctuary-florida",
+    title: "I Found a Florida Sanctuary Where Rescued Farm Animals Finally Get to Rest",
+    summary: "A visit to Fandango Sanctuary in Englewood, Florida reveals the incredible stories of rescued farm animals who, after surviving neglect and abuse, have found a peaceful forever home filled with compassion and dignity — a beautiful reminder of the transformative power of animal sanctuaries.",
+    sourceUrl: "https://uncoveringflorida.com/i-found-a-florida-sanctuary-where-rescued-farm-animals-finally-get-to-rest/",
+    sourceName: "Uncovering Florida",
+    imageUrl: "https://uncoveringflorida.com/wp-content/uploads/2026/05/i-found-a-florida-sanctuary-where-rescued-farm-animals-finally-get-to-rest.jpg",
+    date: "June 2026",
+    category: "Sanctuary",
+  },
+
   // ── May 2026 ──
   {
     id: "omi-now-loved-by-friends",
