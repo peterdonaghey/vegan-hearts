@@ -103,6 +103,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 export const defaultGoodNews: GoodNewsItem[] = [
   // ── June 2026 ──
   {
+    id: "wisconsin-sanctuary-safe-haven",
+    title: "This Heartwarming Wisconsin Sanctuary Is A Safe Haven For Rescued Animals",
+    summary: "Rescued farm animals discover something they have rarely known — the guarantee of lifelong care — at this heartwarming Wisconsin sanctuary, where every animal receives the safety, comfort, and dignity they deserve. It's a beautiful reminder that compassion can transform even the most uncertain beginnings into stories of hope.",
+    sourceUrl: "https://takingthekids.com/this-heartwarming-wisconsin-sanctuary-is-a-safe-haven-for-rescued-animals/",
+    sourceName: "Taking The Kids",
+    imageUrl: "https://takingthekids.com/wp-content/uploads/2026/06/This-Heartwarming-Wisconsin-Sanctuary-Is-A-Safe-Haven-For-Rescued-Animals.jpg",
+    date: "June 2026",
+    category: "Sanctuary",
+  },
+
+  // ── June 2026 ──
+  {
     id: "fandango-sanctuary-florida",
     title: "I Found a Florida Sanctuary Where Rescued Farm Animals Finally Get to Rest",
     summary: "A visit to Fandango Sanctuary in Englewood, Florida reveals the incredible stories of rescued farm animals who, after surviving neglect and abuse, have found a peaceful forever home filled with compassion and dignity — a beautiful reminder of the transformative power of animal sanctuaries.",
