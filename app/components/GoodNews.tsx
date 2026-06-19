@@ -103,6 +103,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 export const defaultGoodNews: GoodNewsItem[] = [
   // ── June 2026 ──
   {
+    id: "sanctuary-photos-kinder-world",
+    title: "Six Sanctuary Photos That Show a Kinder World Is Possible",
+    summary: "Farm Sanctuary shares six heartwarming photos of rescued farm animals—from goats and pigs to cows and chickens—thriving in loving care, offering a beautiful glimpse of a compassionate world already taking shape.",
+    sourceUrl: "https://www.farmsanctuary.org/news-stories/sanctuary-photos-show-a-kinder-world-is-possible/",
+    sourceName: "Farm Sanctuary",
+    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2026/02/20163528/2025_01-08_FSNY_Tina_and_Halbert_goats_LH_2553-1-scaled-e1780327923822.jpg",
+    date: "June 2026",
+    category: "Sanctuary",
+  },
+
+  // ── June 2026 ──
+  {
     id: "fandango-sanctuary-florida",
     title: "I Found a Florida Sanctuary Where Rescued Farm Animals Finally Get to Rest",
     summary: "A visit to Fandango Sanctuary in Englewood, Florida reveals the incredible stories of rescued farm animals who, after surviving neglect and abuse, have found a peaceful forever home filled with compassion and dignity — a beautiful reminder of the transformative power of animal sanctuaries.",
