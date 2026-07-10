@@ -307,8 +307,10 @@ def publish_article(
             f"   File: {GOODNEWS_PATH}"
         )
 
+    import random as _r
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    branch = f"vegan-news/{timestamp}"
+    suffix = _r.randint(100, 999)
+    branch = f"vegan-news/{timestamp}-{suffix}"
 
     base = _gh_api("GET", f"/repos/{GITHUB_REPO}/git/ref/heads/{GITHUB_BASE}")
     base_sha = base.json()["object"]["sha"]
