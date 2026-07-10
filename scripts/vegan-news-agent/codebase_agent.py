@@ -10,6 +10,7 @@ with sanctuaries, and with a kinder world.
 from __future__ import annotations
 
 import json
+import markdown
 import os
 import smtplib
 import ssl
@@ -117,10 +118,23 @@ def send_report(subject: str, body: str) -> str:
         return "⚠️  No SMTP_PASSWORD — email not sent (printed below)"
     try:
         msg = EmailMessage()
-        msg.set_content(body)
         msg["Subject"] = f"💚 {subject}"
         msg["From"] = "Vegan Hearts Dreamer"
         msg["To"] = "donagheypeter@googlemail.com"
+        
+        # Plain text fallback
+        msg.set_content(body)
+        # HTML version with rendered Markdown
+        html = markdown.markdown(body, extensions=["extra"])
+        html_doc = f"""<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 600px; padding: 20px;">
+{html}
+</body>
+</html>"""
+        msg.add_alternative(html_doc, subtype="html")
+        
         context = ssl.create_default_context()
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as s:
             s.login("donagheypeter@gmail.com", SMTP_PASSWORD)
