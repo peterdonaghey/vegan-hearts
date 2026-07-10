@@ -1,0 +1,50 @@
+name: Vegan Hearts Daily
+
+on:
+  schedule:
+    - cron: '0 11 * * *'   # Daily at 11am UTC
+  workflow_dispatch:
+
+jobs:
+  news:
+    name: 🗞️ News
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: scripts/vegan-news-agent/requirements.txt
+      - name: Install
+        run: pip install -r scripts/vegan-news-agent/requirements.txt
+      - name: Run news agent
+        id: agent
+        env:
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.VEGAN_NEWS_PAT }}
+        run: |
+          python scripts/vegan-news-agent/news_agent.py 2>&1 | tee /tmp/news-output.txt
+          PR_URL=$(grep -oP 'https://github.com/[^/]+/[^/]+/pull/\d+' /tmp/news-output.txt | tail -1 || true)
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+
+  advance:
+    name: 🌱 Advance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: scripts/vegan-news-agent/requirements.txt
+      - name: Install
+        run: pip install -r scripts/vegan-news-agent/requirements.txt
+      - name: Run codebase agent
+        id: advance
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.VEGAN_NEWS_PAT }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: python scripts/vegan-news-agent/codebase_agent.py 2>&1 | tee /tmp/advance-output.txt
