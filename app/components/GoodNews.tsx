@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "crow-teaches-starving-orphan-bird",
+    title: "Crow Takes to Teaching a Starving Orphan Bird How to Eat",
+    summary: "A tiny jackdaw found starving and close to death in Nottingham, England has been nursed back to health at Brinsley Animal Rescue — and an older crow at the sanctuary has taken the youngster under his wing, patiently teaching him how to eat in the most heartwarming display of interspecies kindness.",
+    sourceUrl: "https://www.goodnewsnetwork.org/crow-takes-to-teaching-a-starving-orphan-bird-how-to-eat/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/07/starving-jackdaw-with-older-crow-SWNS.jpeg",
+    date: "July 2026",
+    category: "Community",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
