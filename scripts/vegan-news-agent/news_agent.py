@@ -108,8 +108,22 @@ def search_vegan_news() -> str:
     Returns a JSON list of results with title, url, and description.
     The agent should call this first to find candidate articles.
     """
+    # Weekly rotating query for variety
+    _queries = [
+        "vegan plant-based policy law ban subsidy government legislation 2026 world",
+        "vegan restaurant cafe chain opening vegan menu launch school canteen 2026",
+        "vegan community food share garden kitchen grassroots mutual aid 2026",
+        "farm animal sanctuary rescue story compassion heartwarming",
+        "plant-based health nutrition study science research longevity 2026",
+        "vegan fashion leather alternative fur ban cruelty-free cosmetics 2026",
+        "vegan documentary film book media TV show recipe 2026",
+        "vegan India Africa Europe Asia Latin America growing movement 2026",
+    ]
+    week = datetime.now(timezone.utc).isocalendar()[1]
+    query = _queries[week % len(_queries)]
     print(f"       🔍 Searching Brave for compassionate vegan news...", flush=True)
-    results = _brave_search("farm animal sanctuary rescue story compassion 2026 heartwarming")
+    print(f"       Query (week {week}): {query}", flush=True)
+    results = _brave_search(query)
     print(f"       → {len(results)} results found", flush=True)
     return json.dumps(
         [{"title": r["title"], "url": r["url"], "description": r.get("description", "")}
@@ -178,13 +192,38 @@ def check_image(url: str) -> str:
 def read_feed() -> str:
     """Read the current GoodNews.tsx file and return the existing defaultGoodNews array.
 
+    Also checks open PRs for articles that have been proposed but not yet merged.
     Use this to check existing article IDs so you don't add duplicates.
+
+    Returns JSON with:
+      - existing_ids: article IDs from the merged feed (GoodNews.tsx)
+      - count: number of existing IDs
+      - open_pr_source_urls: source URLs found in open (unmerged) PR bodies
     """
     print(f"       📖 Reading current feed...", end=" ", flush=True)
     content = GOODNEWS_PATH.read_text()
     ids = re.findall(r'id:\s*["\']([^"\']+)["\']', content)
-    print(f"{len(ids)} existing articles", flush=True)
-    return json.dumps({"existing_ids": ids, "count": len(ids)}, indent=2)
+
+    # Also check open PRs for unmerged submissions
+    pr_urls: list[str] = []
+    if GITHUB_TOKEN:
+        try:
+            pulls = _gh_api("GET", f"/repos/{GITHUB_REPO}/pulls",
+                           params={"state": "open", "base": GITHUB_BASE}).json()
+            for pr in pulls:
+                body = pr.get("body", "") or ""
+                # Extract source URLs from PR bodies: Source: [Name](url)
+                found = re.findall(r'Source:\s*\[.*?\]\((https?://[^\s)]+)\)', body)
+                pr_urls.extend(found)
+        except Exception as e:
+            print(f"(PR check failed: {e})", end=" ", flush=True)
+
+    print(f"{len(ids)} merged articles + {len(pr_urls)} open PRs", flush=True)
+    return json.dumps({
+        "existing_ids": ids,
+        "count": len(ids),
+        "open_pr_source_urls": sorted(set(pr_urls)),
+    }, indent=2)
 
 
 # ── Tool: write updated feed & create PR ────────────────────────────
@@ -321,12 +360,19 @@ agent = Agent(
         to the site's GoodNews feed.  Work step by step:
 
         1. Call search_vegan_news() to find candidate articles.
-        2. Pick the best one that is NOT already in the feed (check read_feed()).
+        2. Call read_feed() and inspect the returned JSON. It has two fields
+           you must check before picking an article:
+           - existing_ids: article IDs already in the merged feed. Skip any
+             article whose ID matches one of these.
+           - open_pr_source_urls: source URLs of articles already submitted in
+             open (unmerged) PRs. Skip any article whose source URL matches one
+             of these.
         3. Call fetch_page() on the article URL to verify it loads and to
            read the full article so you can write a good 1-2 sentence summary.
         4. Find an image on the page (look for <img> tags or og:image meta).
            Call check_image() on the URL to verify it loads and is a real image.
-        5. Call read_feed() again to check existing article IDs.
+        5. Call read_feed() again to double-check you're not duplicating
+           anything that was submitted since you started.
         6. Call publish_article() with all the details.
 
         RULES (most important):
@@ -348,13 +394,23 @@ agent = Agent(
           the story is truly about people, not markets.)
         - The date should be the current month + year, e.g. "June 2026".
         - The id should be a short kebab-case slug from the title.
-        - DO NOT add an article if its ID already exists in the feed.
+        - DO NOT add an article if its ID is in existing_ids or its source URL
+          is in open_pr_source_urls.
         - DO NOT add an article if the link doesn't return 200.
         - DO NOT add an article if the image is broken.
         - **MANDATORY: Every article MUST have a working image.** Never use
           the fallback. If the article page doesn't have a usable image, find
           one by searching the source site or choose a different article.
           No image = no publish.
+        - CATEGORY ROTATION — Look at the last 2 articles in the feed (the
+          top 2 when read_feed() returns them sorted). If both are the same
+          category, you MUST pick a different category this week. If you've
+          added 2 Sanctuary articles in the last 4 weeks, pick a non-sanctuary
+          category.
+        - GEOGRAPHIC VARIETY — At least every 3rd article should be from
+          outside the United States. Prioritise UK, Europe, India, Africa.
+        - SOURCE VARIETY — Do not use the same source more than once every
+          4 weeks (e.g. farmsanctuary.org max once per month).
 
         You have all the tools you need.  Go ahead.
     """),

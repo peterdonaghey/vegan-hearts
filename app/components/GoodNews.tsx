@@ -175,7 +175,7 @@ export const defaultGoodNews: GoodNewsItem[] = [
     summary: "Billie the hen was minutes from death when activists spoke with her transport driver — and one compassionate conversation changed everything. Now at Farm Sanctuary, she dances to music and is serenaded by her caregivers, proving that connection between unlikely allies can save a life.",
     sourceUrl: "https://www.farmsanctuary.org/news-stories/four-farm-animals-rescued-just-in-time",
     sourceName: "Farm Sanctuary",
-    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2024/05/07150712/2024_04-23_FSNY_Evie_sheep_with_Margaretta_lamb_LH_9887-1600x1068.jpg",
+    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2026/05/06095237/2026_02-06_FSAC_BillieEilish_hen_CD-5507-1600x1067.jpg",
     date: "May 2026",
     category: "Sanctuary"
   },
