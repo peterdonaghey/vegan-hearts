@@ -43,8 +43,8 @@ export default function Home() {
   };
   return (
     <>
-      {/* <Navigation /> */}
-      <main className="min-h-screen ">
+      <Navigation />
+      <main className="min-h-screen pt-16">
       {/* Hero Section with India Mountain Sunset */}
       <section className="relative px-6 pt-8 pb-16 overflow-hidden">
         <div className="absolute inset-0">
