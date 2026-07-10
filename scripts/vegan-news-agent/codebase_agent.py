@@ -9,9 +9,11 @@ with sanctuaries, and with a kinder world.
 
 from __future__ import annotations
 
+import base64
 import json
 import markdown
 import os
+import re
 import smtplib
 import ssl
 import sys
@@ -107,7 +109,36 @@ def fetch_page(url: str) -> str:
         return f"ERROR: {e}"
 
 
-def send_report(subject: str, body: str) -> str:
+def check_replies() -> str:
+    """Check the S3 inbox for replies from the project owner.
+
+    Returns any unread replies found since the last check.
+    Call this before thinking to see if there's feedback.
+    """
+    try:
+        result = subprocess.run(
+            ["aws", "s3", "ls", "s3://vegan-hearts-email-storage/dreamer/"],
+            capture_output=True, text=True, timeout=15,
+        )
+        if not result.stdout.strip():
+            return "No replies found."
+        lines = result.stdout.strip().split("\n")
+        # Get the most recent email
+        latest = lines[-1].strip().split()[-1] if lines else ""
+        if not latest:
+            return "No replies found."
+        result = subprocess.run(
+            ["aws", "s3", "cp", f"s3://vegan-hearts-email-storage/dreamer/{latest}", "-"],
+            capture_output=True, text=True, timeout=15,
+        )
+        if result.stdout:
+            # Extract reply content (after the original message marker)
+            body = result.stdout[:5000]
+            # Mark as read by deleting or moving
+            return f"Reply found:\n\n{body}"
+        return "No replies found."
+    except Exception as e:
+        return f"Could not check replies: {e}"
     """Send an email to the project owner.
 
     Use this to share your ideas, questions, research findings,
@@ -119,7 +150,8 @@ def send_report(subject: str, body: str) -> str:
     try:
         msg = EmailMessage()
         msg["Subject"] = f"💚 {subject}"
-        msg["From"] = "Vegan Hearts Dreamer"
+        msg["From"] = "Vegan Hearts Dreamer <dreamer@veganhearts.org>"
+        msg["Reply-To"] = "dreamer@veganhearts.org"
         msg["To"] = "donagheypeter@googlemail.com"
         
         # Plain text fallback
@@ -210,8 +242,12 @@ agent = Agent(
 
         ## Your job each week
 
-        1. Read the project to understand where it is right now.
-        2. Research ONE topic deeply — sanctuaries that need
+        1. Check for replies from the project owner by calling
+           check_replies(). If there's feedback, read it carefully —
+           they're telling you what resonates and what doesn't.
+           Let their words guide your thinking.
+        2. Read the project to understand where it is right now.
+        3. Research ONE topic deeply — sanctuaries that need
            volunteers, platforms that connect people, small features
            that could make a big difference, stories of connection.
         3. Think about what Vegan Hearts could offer. What would
@@ -250,6 +286,7 @@ agent = Agent(
         read_mission,
         browse_web,
         fetch_page,
+        check_replies,
         send_report,
         recent_news_prs,
     ],
