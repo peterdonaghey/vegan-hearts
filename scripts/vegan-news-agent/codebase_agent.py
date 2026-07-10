@@ -117,7 +117,7 @@ def check_replies() -> str:
     """
     try:
         result = subprocess.run(
-            ["aws", "s3", "ls", "s3://vegan-hearts-email-storage/dreamer/"],
+            ["aws", "s3", "ls", "s3://vegan-hearts-dreamer-mail/"],
             capture_output=True, text=True, timeout=15,
         )
         if not result.stdout.strip():
@@ -128,7 +128,7 @@ def check_replies() -> str:
         if not latest:
             return "No replies found."
         result = subprocess.run(
-            ["aws", "s3", "cp", f"s3://vegan-hearts-email-storage/dreamer/{latest}", "-"],
+            ["aws", "s3", "cp", f"s3://vegan-hearts-dreamer-mail/{latest}", "-"],
             capture_output=True, text=True, timeout=15,
         )
         if result.stdout:
