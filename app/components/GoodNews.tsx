@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "homeless-man-returns-dog-ashes",
+    title: "Homeless Man Helps Find and Return Stolen Dog's Ashes, Receives Thousands to Get Back on His Feet",
+    summary: "When a family's car was broken into and their late dog's ashes and memorial paw prints were stolen, a Seattle man who had been homeless for seven years tracked down the thief and returned the irreplaceable items—inspiring an outpouring of community support that raised over $55,000 to help him get back on his feet.",
+    sourceUrl: "https://www.goodnewsnetwork.org/homeless-man-helps-find-and-return-stolen-dogs-ashes-receives-thousands-to-get-back-on-his-feet/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Holly-Dunn-her-late-Chihuahua-Tia-and-the-flyer-she-and-her-family-put-up-to-help-find-Tias-stolen-ashes-credit-GoFundMe.jpg",
+    date: "July 2026",
+    category: "Community",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
