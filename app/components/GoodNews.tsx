@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "bison-rewilding-azerbaijan",
+    title: "From One Surviving Male Bison, Azerbaijan Now Has 25 Calves Born Wild in 7-Year Success Story",
+    summary: "Seven years after 12 European bison were reintroduced to Azerbaijan's Shahdag National Park, the herd has flourished with 25 calves born in the wild — a powerful rewilding success story that began with just one surviving male and has restored a native species to the Caucasus mountains.",
+    sourceUrl: "https://www.goodnewsnetwork.org/project-to-return-the-caucasian-bison-sees-sustained-success-after-7-years/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/06/Translocation-of-10-bison-from-Germany-to-Shahdag-National-Park-in-Azerbaijan-Credit-Emil-Khalilov-WWF.jpg",
+    date: "July 2026",
+    category: "Community",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
