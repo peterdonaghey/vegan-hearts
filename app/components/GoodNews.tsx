@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "mozambique-rhino-rewilding-success",
+    title: "Herculean Effort to Restore Mozambique's Rhino Population Succeeds with 61 Animals Moved There",
+    summary: "After a devastating civil war wiped out most of Mozambique's large wildlife, a massive cross-border rewilding initiative has moved 2,540 animals from 16 different species into Zinave National Park — including 61 rhinos — marking the triumphant return of rhinos to the country for the first time in decades.",
+    sourceUrl: "https://www.goodnewsnetwork.org/herculean-effort-to-restore-mozambiques-rhino-population-succeeds-with-61-animals-moved-there/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/06/credit-Peace-Parks-Foundation-%C2%A9.jpg",
+    date: "July 2026",
+    category: "Community",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
