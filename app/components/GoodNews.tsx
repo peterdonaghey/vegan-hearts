@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "bobkittens-rescued-rehab-wild",
+    title: "4 Different Bobkittens Rescued in a Week, Undergoing Rehab Together for Return to the Wild",
+    summary: "Four baby bobcats, rescued within days of each other from different mothers who either died or abandoned them, are now being rehabilitated together at California's Saratoga Wildlife Care Center, where they will be raised for release back into the wild later this year.",
+    sourceUrl: "https://www.goodnewsnetwork.org/4-different-bobkittens-rescued-in-a-week-undergoing-rehab-together-for-return-to-the-wild/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/07/Two-baby-bobcats-at-the-Wildlife-Care-Center-in-Saratoga-California–Courtesy-of-Peninsula-Humane-Society-SPCA.jpeg",
+    date: "July 2026",
+    category: "Sanctuary",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
