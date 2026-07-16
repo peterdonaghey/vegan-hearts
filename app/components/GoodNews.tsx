@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── March 2026 ──
+  {
+    id: "elephant-ambulance-india-rescue",
+    title: "New Elephant Ambulance Marks Inaugural Rescue, Bringing 27-Year-Old Elephant to Hospital with Leg Injury",
+    summary: "Wildlife SOS in India launched a specially designed Elephant Ambulance and put it to use immediately, rescuing Lakshmi, a 27-year-old elephant suffering from a severe leg injury. The pachyderm paramedics safely transported her to the organization's elephant hospital for life-saving treatment.",
+    sourceUrl: "https://www.goodnewsnetwork.org/new-elephant-ambulance-marks-inaugural-rescue-bringing-27-year-old-to-hospital-with-leg-injury/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/03/Elephant-ambulance-on-highway-Credit-Wildlife-SOS-submitted-.jpg",
+    date: "March 2026",
+    category: "Sanctuary",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
