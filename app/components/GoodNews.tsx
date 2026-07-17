@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "peru-university-vegan-meals",
+    title: "Peruvian University Ordered to Permanently Offer Vegan Meals in Historic Court Ruling",
+    summary: "In a landmark decision, a Peruvian court ruled that a university must permanently provide vegan meal options, recognizing that a lack of plant-based choices violates fundamental human rights and setting a powerful precedent for food accessibility across the country.",
+    sourceUrl: "https://www.veganfoodandliving.com/news/peru-university-permanent-vegan-meals/",
+    sourceName: "Vegan Food &amp; Living",
+    imageUrl: "https://www.veganfoodandliving.com/wp-content/uploads/2026/07/university-students-eating-healthy-vegan-food-canteen.jpg",
+    date: "July 2026",
+    category: "Food Service",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
