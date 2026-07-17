@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "beluga-whales-rescued",
+    title: "30 Beluga Whales Finally Rescued After Two Years Stranded at Shuttered Theme Park",
+    summary: "After more than two years of waiting at Ontario's defunct Marineland, 30 beluga whales are finally being moved to ethical homes — with 28 destined for US aquariums and two headed to a sanctuary in Spain, marking a hard-won victory for marine animal welfare.",
+    sourceUrl: "https://www.goodnewsnetwork.org/30-beluga-whales-finally-rescued-after-2-years-waiting-in-shuttered-theme-park/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2020/08/beluga-whales-sanctuary-released-Sea-Life-Trust..jpg",
+    date: "July 2026",
+    category: "Sanctuary",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
