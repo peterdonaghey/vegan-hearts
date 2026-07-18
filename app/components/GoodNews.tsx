@@ -103,6 +103,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 export const defaultGoodNews: GoodNewsItem[] = [
   // ── June 2026 ──
   {
+    id: "drones-saving-fawns-germany",
+    title: "Drones are Saving Hundreds of Fawns From Mower Deaths in Germany",
+    summary: "A Bavarian wildlife rescue organization is using thermal imaging drones to locate and rescue vulnerable fawns hidden in tall meadow grass ahead of the annual mowing season, saving hundreds of baby deer from otherwise certain death by mowing machinery.",
+    sourceUrl: "https://www.goodnewsnetwork.org/drones-are-saving-hundreds-of-fawns-from-mower-deaths-in-germany-watch/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/06/Deer-fawn-sleeps-hidden-in-grass-Erika-Fletcher-wHdFa4F1zRA-unsplash.jpg",
+    date: "June 2026",
+    category: "Innovation",
+  },
+
+  // ── June 2026 ──
+  {
     id: "fandango-sanctuary-florida",
     title: "I Found a Florida Sanctuary Where Rescued Farm Animals Finally Get to Rest",
     summary: "A visit to Fandango Sanctuary in Englewood, Florida reveals the incredible stories of rescued farm animals who, after surviving neglect and abuse, have found a peaceful forever home filled with compassion and dignity — a beautiful reminder of the transformative power of animal sanctuaries.",
