@@ -103,6 +103,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 export const defaultGoodNews: GoodNewsItem[] = [
   // ── June 2026 ──
   {
+    id: "turbowolf-vegan-cooking-download-festival",
+    title: "Turbowolf Bassist Launches Vegan Cooking Show at Download Festival",
+    summary: "Chef LD, frontman of rock band Turbowolf, is launching a live cooking show at Download Festival 2026 where he'll veganise the favourite meat dishes of performing bands — bringing plant-based comfort food to one of the UK's biggest rock festivals and showing thousands of festival-goers that vegan food is for everyone.",
+    sourceUrl: "https://www.veganfoodandliving.com/news/chef-ld-download-festival-vegan-cooking-show/",
+    sourceName: "Vegan Food &amp; Living",
+    imageUrl: "https://www.veganfoodandliving.com/wp-content/uploads/2026/06/LDs-Kitchen.jpg",
+    date: "June 2026",
+    category: "Food Service",
+  },
+
+  // ── June 2026 ──
+  {
     id: "fandango-sanctuary-florida",
     title: "I Found a Florida Sanctuary Where Rescued Farm Animals Finally Get to Rest",
     summary: "A visit to Fandango Sanctuary in Englewood, Florida reveals the incredible stories of rescued farm animals who, after surviving neglect and abuse, have found a peaceful forever home filled with compassion and dignity — a beautiful reminder of the transformative power of animal sanctuaries.",
