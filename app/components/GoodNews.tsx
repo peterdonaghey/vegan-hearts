@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "pigeon-firefighters-oxygen-rescue",
+    title: "Pigeon Walks Up to Firefighters Who Offer Oxygen to 'Clear its Lungs'",
+    summary: "After a vehicle fire in Oakland, a smoke-inhaled pigeon walked right up to local firefighters seeking help. The crew gently gave the bird oxygen to clear his lungs, capturing a heartwarming animal rescue moment that quickly went viral.",
+    sourceUrl: "https://www.goodnewsnetwork.org/pigeon-walks-up-to-firefighters-who-offer-oxygen/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/07/Fireman-gives-oxygen-to-pidgeon-Facebook-page-for-Oakland-Firefighters-Local-55.jpg",
+    date: "July 2026",
+    category: "Community",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
