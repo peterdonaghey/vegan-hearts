@@ -103,6 +103,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 export const defaultGoodNews: GoodNewsItem[] = [
   // ── June 2026 ──
   {
+    id: "dog-rescued-kayak-sea-norway",
+    title: "Dog Rescued After Being Swept Out to Sea on Inflatable Kayak Headed Toward Norway",
+    summary: "A tour boat crew off the coast of England rescued a dog that had drifted three miles out to sea in an inflatable kayak, searching for two hours before finding the pup alive and well, with the current carrying it toward Norway.",
+    sourceUrl: "https://www.goodnewsnetwork.org/dog-rescued-after-being-swept-out-to-sea-on-inflatable-kayak-headed-toward-norway/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/06/Dog-rescued-at-sea-in-inflatible-kayak-Serenity-Farne-Island-Boat-Tours-SWNS.jpg",
+    date: "June 2026",
+    category: "Community",
+  },
+
+  // ── June 2026 ──
+  {
     id: "fandango-sanctuary-florida",
     title: "I Found a Florida Sanctuary Where Rescued Farm Animals Finally Get to Rest",
     summary: "A visit to Fandango Sanctuary in Englewood, Florida reveals the incredible stories of rescued farm animals who, after surviving neglect and abuse, have found a peaceful forever home filled with compassion and dignity — a beautiful reminder of the transformative power of animal sanctuaries.",
