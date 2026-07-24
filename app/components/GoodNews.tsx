@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "beluga-whales-rescued-marineland",
+    title: "4 Beluga Whales from Shuttered Canadian Park Arrive at Chicago's Shedd Aquarium After Rescue",
+    summary: "Four beluga whales were successfully rescued from the closed Marineland theme park in Ontario and transported to Chicago's Shedd Aquarium, with touching photos showing the complex operation that gave these gentle giants a new lease on life.",
+    sourceUrl: "https://www.goodnewsnetwork.org/4-beluga-whales-from-shuttered-canadian-park-arrive-at-chicagos-shedd-aquarium-after-rescue-look/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/07/The-translocation-operation-credit-Tidebreakers-via-SWNS.jpg",
+    date: "July 2026",
+    category: "Sanctuary",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
