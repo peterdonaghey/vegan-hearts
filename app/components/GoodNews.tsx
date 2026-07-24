@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── May 2026 ──
+  {
+    id: "dobby-puppy-rescued-kitchen-cabinet",
+    title: "Rescued From Kitchen Cabinet, a Hairless Puppy Nicknamed 'Dobby' is Now Healthy, Happy and Free",
+    summary: "A hairless puppy found in appalling conditions inside a kitchen cupboard in Texas has made a miraculous recovery after being rescued by Humane World for Animals — now thriving in a loving home and soaking up all the affection she deserves.",
+    sourceUrl: "https://www.goodnewsnetwork.org/rescued-from-a-kitchen-cabinet-hairless-puppy-named-dobby-is-now-healthy/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Before-Dobby-in-cupboard-After-Haily-and-Misty-submitted-by-Humane-World-for-Animals.jpg",
+    date: "May 2026",
+    category: "Community",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
