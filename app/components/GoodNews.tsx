@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "forensic-science-fights-wildlife-poaching",
+    title: "Award-Winning Photo Shows How Forensic Science Is Fighting Wildlife Poaching",
+    summary: "A striking award-winning photo reveals how UV light and forensic fingerprinting techniques are helping catch poachers and protect vulnerable species like sea turtles and elephants, with fingerprint kits already leading to arrests and seizures across Africa and Asia.",
+    sourceUrl: "https://www.veganfoodandliving.com/news/photo-forensic-science-fights-wildlife-poaching/",
+    sourceName: "Vegan Food & Living",
+    imageUrl: "https://www.veganfoodandliving.com/wp-content/uploads/2026/07/Handprint-on-Sea-Turtle-conservation-photo-Britta-Jaschinski-FEATURE.jpg",
+    date: "July 2026",
+    category: "Innovation",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
