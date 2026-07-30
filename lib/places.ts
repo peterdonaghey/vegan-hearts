@@ -416,6 +416,99 @@ export const places: Place[] = [
     tags: ["vegan", "restaurant", "organic", "algarve", "portugal"],
     source: "research",
   },
+
+  // ============================================================
+  // TAIWAN — NORTH
+  // ============================================================
+  {
+    id: "pigs-heaven",
+    name: "Pigs' Heaven (豬豬天堂)",
+    lat: 25.0925,
+    lng: 121.3422,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "A former pig farm converted into a vegan-run farm animal sanctuary in Linkou, New Taipei City. Rescued hundreds of pigs, cows, goats, sheep, chickens, ducks and geese from slaughter. All animals fed a vegan diet. Also operates as a life-education centre hosting school groups and visitors.",
+    website: "https://www.facebook.com/豬天堂有機護生農場-140823883307481",
+    address: "Linkou District, New Taipei City 244, Taiwan",
+    tags: ["vegan", "taiwan", "new_taipei", "farm_animal", "rescue"],
+    source: "research",
+  },
+
+  // ============================================================
+  // TAIWAN — EAST COAST (HUALIEN & TAITUNG)
+  // ============================================================
+  {
+    id: "city-home-bnb",
+    name: "City Home B&B (城市家園民宿)",
+    lat: 23.9750,
+    lng: 121.6050,
+    type: "accommodation",
+    subtypes: ["vegan_bb", "guesthouse"],
+    description:
+      "All-vegan bed and breakfast in Hualien City serving plant-based breakfast. Top choice for vegan travelers exploring Taroko Gorge and the east coast.",
+    address: "Hualien City, Hualien County, Taiwan",
+    tags: ["vegan", "taiwan", "hualien", "accommodation"],
+    source: "research",
+  },
+  {
+    id: "sun-clover-ecovillage",
+    name: "Sun Clover Ecovillage (陽光三葉草生態村)",
+    lat: 23.1740,
+    lng: 121.2900,
+    type: "project",
+    subtypes: ["ecovillage", "permaculture"],
+    description:
+      "Taiwan's first ecovillage recognised by the Global Ecovillage Network, in Fuli Township, Hualien. A regenerative community focused on organic farming, natural building, and ecological education.",
+    website: "https://www.sunclover-ecovillage.com",
+    address: "Fuli Township, Hualien County, Taiwan",
+    tags: ["vegan", "taiwan", "hualien", "ecovillage", "permaculture", "organic"],
+    source: "research",
+  },
+  {
+    id: "jian-song-eco-village",
+    name: "Jian Song Eco-Village (長濱生態村)",
+    lat: 23.3400,
+    lng: 121.4500,
+    type: "project",
+    subtypes: ["ecovillage", "natural_farming"],
+    description:
+      "Aspiring ecovillage project at the foot of King Kong Mountain in Changbin, Taitung. Focused on natural architecture, natural medicine, natural farming, and plant-based cuisine. Welcomes volunteers through Workaway.",
+    address: "Changbin Township, Taitung County, Taiwan",
+    tags: ["vegan", "taiwan", "taitung", "ecovillage", "volunteer"],
+    source: "research",
+  },
+
+  // ============================================================
+  // TAIWAN — SOUTH (TAINAN, KAOHSIUNG, PENGHU)
+  // ============================================================
+  {
+    id: "ananda-suruci",
+    name: "Ánanda Suruci Master Unit (阿南達瑪迦玉井生態村)",
+    lat: 23.1245,
+    lng: 120.4620,
+    type: "project",
+    subtypes: ["eco_village", "retreat", "permaculture"],
+    description:
+      "Spiritual eco-village in the Yujing countryside of Tainan. Offers organic permaculture farming, yoga and meditation retreats, and detox programmes. Grows its own organic produce and serves sattvic plant-based meals.",
+    website: "https://anandasuruci.org",
+    address: "Yujing District, Tainan City, Taiwan",
+    tags: ["vegan", "taiwan", "tainan", "eco_village", "retreat", "permaculture", "yoga"],
+    source: "research",
+  },
+  {
+    id: "loving-hut-penghu",
+    name: "Loving Hut Paradise Island Vegan B&B (愛家天堂島純素民宿)",
+    lat: 23.5750,
+    lng: 119.6020,
+    type: "accommodation",
+    subtypes: ["vegan_bb", "bed_and_breakfast"],
+    description:
+      "Fully vegan bed and breakfast in Huxi, Penghu, part of the Loving Hut chain. 100% plant-based breakfast, garden, shared lounge, free airport shuttle, 1 km from Penghu Airport.",
+    address: "Huxi, Penghu County, Taiwan",
+    tags: ["vegan", "taiwan", "penghu", "accommodation", "bed_and_breakfast"],
+    source: "research",
+  },
 ];
 
 /**

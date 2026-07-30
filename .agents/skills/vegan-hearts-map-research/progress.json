@@ -11,9 +11,14 @@
       "Norte",
       "Centro",
       "Algarve"
+    ],
+    "taiwan": [
+      "North (Taipei, New Taipei)",
+      "East Coast (Hualien, Taitung)",
+      "South (Tainan, Penghu)"
     ]
   },
-  "totalPlaces": 26,
+  "totalPlaces": 33,
   "currentFocus": "",
-  "notes": "Galicia deep dive — added 8 more places: 4 sanctuaries (Vacaloura in Arzúa, Frente L.A. in Vilalba, Acougo in A Laracha, El Sueño de Jill in Pontevedra), 2 accommodations (Caserío da Castiñeira in Ribeira Sacra, O Soño in Valdoviño), and 2 projects (Savia Ecoaldea Vegana, Val de Rodas Rewilding)."
+  "notes": "Taiwan added — 7 new places: Pigs' Heaven sanctuary (New Taipei), Sun Clover Ecovillage (Hualien), Jian Song Eco-Village (Taitung), City Home B&B (Hualien), Ánanda Suruci (Tainan), Loving Hut Paradise Island B&B (Penghu). Taiwan has very few vegan farm sanctuaries — Pigs' Heaven is the only confirmed one. Vegan food scene is thriving though."
 }
