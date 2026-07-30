@@ -101,6 +101,18 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
+  // ── July 2026 ──
+  {
+    id: "portugal-circus-elephant-sanctuary",
+    title: "Last Circus Elephant in Portugal Can Now Romp-and-Roll on 1000-Acre Sanctuary After 40 Years of Working",
+    summary: "After 40 years of performing in circuses, Julie—the last circus elephant in Portugal—has finally retired to the sprawling 1,000-acre Pangea Elephant Sanctuary in Alentejo, where she can now roam freely, socialize, and live out her days in peace and dignity.",
+    sourceUrl: "https://www.goodnewsnetwork.org/last-circus-elephant-in-portugal-welcomed-to-pangea-sanctuary/",
+    sourceName: "Good News Network",
+    imageUrl: "https://www.goodnewsnetwork.org/wp-content/uploads/2026/07/Last-Circus-Elephant-in-Portugal-July-at-Pangea-Elephant-Sanctuary-SWNS-.jpeg",
+    date: "July 2026",
+    category: "Sanctuary",
+  },
+
   // ── June 2026 ──
   {
     id: "fandango-sanctuary-florida",
