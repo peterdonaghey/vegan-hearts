@@ -509,6 +509,111 @@ export const places: Place[] = [
     tags: ["vegan", "taiwan", "penghu", "accommodation", "bed_and_breakfast"],
     source: "research",
   },
+
+  // ============================================================
+  // TAIWAN — ECO RETREATS & BUDDHIST CENTRES
+  // ============================================================
+  {
+    id: "dharma-drum-mountain",
+    name: "Dharma Drum Mountain (法鼓山)",
+    lat: 25.2235,
+    lng: 121.6110,
+    type: "accommodation",
+    subtypes: ["meditation_retreat", "buddhist_monastery"],
+    description:
+      "Major Chan Buddhist centre in Jinshan, New Taipei City offering silent meditation retreats. Provides basic accommodation and serves traditional vegan temple food (no eggs, garlic, or onions). Retreats in English and Mandarin. Founded by Master Sheng Yen.",
+    website: "https://www.dharmadrum.org",
+    address: "Jinshan District, New Taipei City 208, Taiwan",
+    tags: ["vegan", "taiwan", "new_taipei", "buddhist", "meditation", "retreat"],
+    source: "research",
+  },
+  {
+    id: "origin-yoga-wellness",
+    name: "Origin Yoga & Wellness",
+    lat: 25.2933,
+    lng: 121.5642,
+    type: "accommodation",
+    subtypes: ["yoga_retreat", "wellness_retreat"],
+    description:
+      "Taiwan's first oceanfront yoga retreat centre, by Baishawan Beach in Shimen, New Taipei City. All meals are vegan, prepared with fresh local ingredients. Offers multi-day yoga, meditation, and detox retreat programs.",
+    website: "https://www.originyogawellness.com",
+    address: "Shimen District, New Taipei City 253, Taiwan",
+    tags: ["vegan", "taiwan", "new_taipei", "yoga", "retreat", "wellness"],
+    source: "research",
+  },
+  {
+    id: "zhuoye-cottage",
+    name: "Zhuo Ye Cottage (卓也小屋)",
+    lat: 24.3817,
+    lng: 120.7564,
+    type: "accommodation",
+    subtypes: ["eco_resort", "eco_lodge"],
+    description:
+      "Forest eco-resort in Sanyi, Miaoli with traditional thatched cottages around a lake. Serves creative plant-based cuisine. Features natural indigo dyeing workshops, organic gardens, and nature trails. A celebrated model of eco-tourism.",
+    website: "https://www.joye.com.tw",
+    address: "Sanyi Township, Miaoli County 367, Taiwan",
+    tags: ["vegan", "taiwan", "miaoli", "eco_resort", "forest"],
+    source: "research",
+  },
+  {
+    id: "loosha-hostel",
+    name: "Loosha Hostel (旅巷自在輕旅)",
+    lat: 24.1361,
+    lng: 120.6850,
+    type: "accommodation",
+    subtypes: ["eco_hostel", "vegan_hotel"],
+    description:
+      "Award-winning eco-hostel near Taichung Station with a fully plant-based buffet breakfast. Uses organic local ingredients. Bicycle rental, low-carbon commitment, and a mission to promote sustainable travel.",
+    website: "https://loosha.com.tw",
+    address: "Central District, Taichung City, Taiwan",
+    tags: ["vegan", "taiwan", "taichung", "eco_hostel", "sustainable"],
+    source: "research",
+  },
+  {
+    id: "pingyun-cloud-villa",
+    name: "Pingyun Cloud Villa (平雲山都)",
+    lat: 23.9967,
+    lng: 120.9833,
+    type: "accommodation",
+    subtypes: ["vegan_hotel", "retreat"],
+    description:
+      "Taiwan's only fully vegetarian resort hotel in Puli, Nantou near Chung Tai Chan Temple. All meals are creative plant-based cuisine. A serene mountain retreat with a beautiful ship-shaped building.",
+    website: "https://www.cloudvilla.com.tw",
+    address: "Puli Township, Nantou County, Taiwan",
+    tags: ["vegan", "taiwan", "nantou", "vegan_hotel", "retreat", "mountain"],
+    source: "research",
+  },
+  {
+    id: "dayspring-matsu",
+    name: "Dayspring B&B (日光春和)",
+    lat: 26.1558,
+    lng: 119.9333,
+    type: "accommodation",
+    subtypes: ["vegan_bb", "guesthouse"],
+    description:
+      "Fully vegan bed and breakfast on Nangan Island, Matsu archipelago. Serves plant-based breakfast and afternoon tea with ocean views. A peaceful island retreat on Taiwan's remote Matsu islands.",
+    address: "Nangan Township, Lienchiang County (Matsu), Taiwan",
+    tags: ["vegan", "taiwan", "matsu", "vegan_bb", "island"],
+    source: "research",
+  },
+
+  // ============================================================
+  // TAIWAN — SOUTH SANCTUARIES
+  // ============================================================
+  {
+    id: "tainan-guanyin-life-protection",
+    name: "Tainan Guanyin's Home Life Protection Garden (臺南市觀音的家護生園區)",
+    lat: 23.1600,
+    lng: 120.1600,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "Buddhist pure-vegetarian life protection organisation operating 15 sanctuary sites across Tainan City. Rescues cows, pigs, goats, sheep, deer, ostriches, chickens, ducks and geese from slaughter. All animals fed a pure vegetarian diet with lifelong care.",
+    website: "https://www.avalokitesvara.tw",
+    address: "Tainan City, Taiwan",
+    tags: ["vegan", "taiwan", "tainan", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+  },
 ];
 
 /**
