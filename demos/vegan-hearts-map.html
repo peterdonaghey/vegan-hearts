@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vegan Hearts Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  #map { height: 100vh; width: 100%; }
+
+  /* Minimal floating controls */
+  .map-controls {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .map-controls select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.95);
+    font-size: 0.8rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    cursor: pointer;
+  }
+  .filter-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.95);
+    font-size: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { background: #fff; }
+  .filter-btn.active { background: #2d5a27; color: #fff; }
+
+  /* Legend - bottom left */
+  .legend {
+    position: absolute;
+    bottom: 24px;
+    left: 12px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.92);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    line-height: 1.7;
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .legend-dot.sanctuary { background: #c0392b; }
+  .legend-dot.restaurant { background: #e67e22; }
+  .legend-dot.shop { background: #2980b9; }
+  .legend-dot.project { background: #8e44ad; }
+  .legend-dot.accommodation { background: #16a085; }
+
+  /* Popup styling */
+  .leaflet-popup-content { margin: 10px 14px; }
+  .leaflet-popup-content h3 { font-size: 0.95rem; margin-bottom: 3px; }
+  .leaflet-popup-content .type-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .type-tag.sanctuary { background: #c0392b; }
+  .type-tag.restaurant { background: #e67e22; }
+  .type-tag.shop { background: #2980b9; }
+  .type-tag.project { background: #8e44ad; }
+  .type-tag.accommodation { background: #16a085; }
+  .leaflet-popup-content p { font-size: 0.8rem; color: #555; margin: 2px 0; }
+  .leaflet-popup-content a { color: #2d5a27; font-size: 0.8rem; }
+
+  /* Attribution tweaks */
+  .leaflet-control-attribution { font-size: 0.6rem !important; }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Minimal floating controls -->
+<div class="map-controls">
+  <select id="typeFilter" onchange="applyFilter()">
+    <option value="all">All places</option>
+    <option value="sanctuary">Sanctuaries</option>
+    <option value="restaurant">Restaurants</option>
+    <option value="shop">Shops</option>
+    <option value="project">Projects</option>
+    <option value="accommodation">Accommodation</option>
+  </select>
+  <button class="filter-btn" id="btnFit" onclick="fitAll()">Fit all on map</button>
+</div>
+
+<div class="legend">
+  <div><span class="legend-dot sanctuary"></span>Animal Sanctuary</div>
+  <div><span class="legend-dot restaurant"></span>Vegan Restaurant</div>
+  <div><span class="legend-dot shop"></span>Vegan Shop</div>
+  <div><span class="legend-dot project"></span>Vegan Project</div>
+  <div><span class="legend-dot accommodation"></span>Accommodation</div>
+</div>
+
+<script>
+// ============================================================
+// DATA LAYER
+// Every place is one object. Add as many as you want.
+// Source: manual research, OSM, community submissions.
+// ============================================================
+const places = [
+  // --- GALICIA, SPAIN ---
+  {
+    id: "mino-valley",
+    name: "Mino Valley Farm Sanctuary",
+    lat: 42.5120, lng: -7.6370,
+    type: "sanctuary",
+    subtypes: ["farm_animal"],
+    description: "First farm animal sanctuary in Galicia. 50 acres, 230+ rescued animals.",
+    website: "https://minovalley.org",
+    address: "Pantón, Ribeira Sacra, Lugo, Spain",
+    tags: ["vegan", "rescue", "volunteer", "donations"],
+    image: "",
+    source: "manual"
+  },
+  {
+    id: "o-viso-ecovillage",
+    name: "O Viso Ecovillage",
+    lat: 43.5271, lng: -7.6565,
+    type: "accommodation",
+    subtypes: ["ecovillage", "vegan_hotel"],
+    description: "First 100% vegan rural tourism village in Galicia. Vegan restaurant, eco-apartments, rescued galgos.",
+    website: "https://ovisoecovillage.com",
+    address: "Ourol, A Mariña, Lugo, Spain",
+    tags: ["vegan", "eco", "pet_friendly", "restaurant"],
+    image: "",
+    source: "manual"
+  },
+  {
+    id: "factoria-verde",
+    name: "A Factoria Verde",
+    lat: 43.3706, lng: -8.4065,
+    type: "shop",
+    subtypes: ["grocery", "deli"],
+    description: "Fully vegan grocery store and deli. Organic produce, plant-based cheeses, prepared meals.",
+    website: "https://factoriaverde.com",
+    address: "Wenceslao Fernández Flórez 3, A Coruña, Spain",
+    tags: ["vegan", "organic", "grocery", "deli"],
+    image: "",
+    source: "manual"
+  },
+  {
+    id: "the-greenhouse",
+    name: "The Greenhouse",
+    lat: 42.8782, lng: -8.5446,
+    type: "restaurant",
+    subtypes: ["vegetarian", "vegan"],
+    description: "Vegetarian & vegan restaurant in Santiago. Vegan burgers, salads, Camino favourite.",
+    website: "https://thegreenhousesantiago.com",
+    address: "Santiago de Compostela, Spain",
+    tags: ["vegan", "vegetarian", "camino"],
+    image: "",
+    source: "manual"
+  },
+  {
+    id: "hervor-fervor",
+    name: "Hervor e Fervor",
+    lat: 42.8809, lng: -8.5432,
+    type: "restaurant",
+    subtypes: ["plant_forward"],
+    description: "Chic plant-forward restaurant. Creative dishes with local Galician produce.",
+    website: "https://hervorefervor.com",
+    address: "Santiago de Compostela, Spain",
+    tags: ["vegan_friendly", "creative", "local"],
+    image: "",
+    source: "manual"
+  },
+  {
+    id: "entre-pedras",
+    name: "Entre Pedras",
+    lat: 42.4300, lng: -8.6470,
+    type: "restaurant",
+    subtypes: ["gastronomic"],
+    description: "Experimental plant-based gastronomy. Known for converting omnivores with creative Galician-inspired dishes.",
+    website: "https://entrepedras.gal",
+    address: "Pontevedra, Spain",
+    tags: ["vegan", "gastronomic", "galician"],
+    image: "",
+    source: "manual"
+  }
+];
+
+// ============================================================
+// MAP SETUP
+// ============================================================
+const map = L.map('map', {
+  center: [20, 0],
+  zoom: 2,
+  scrollWheelZoom: true
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors | Data: Vegan Hearts',
+  maxZoom: 18
+}).addTo(map);
+
+// Colours per type
+const colors = {
+  sanctuary: '#c0392b',
+  restaurant: '#e67e22',
+  shop: '#2980b9',
+  project: '#8e44ad',
+  accommodation: '#16a085'
+};
+
+const icons = {
+  sanctuary: '🏠',
+  restaurant: '🍽',
+  shop: '🛒',
+  project: '🌿',
+  accommodation: '🛌'
+};
+
+let markers = [];
+
+function addMarkers(data) {
+  // Clear existing
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
+
+  data.forEach(p => {
+    const color = colors[p.type] || '#999';
+    const marker = L.circleMarker([p.lat, p.lng], {
+      radius: 8,
+      fillColor: color,
+      color: '#fff',
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.85
+    });
+
+    const imgHtml = p.image ? `<img src="${p.image}" style="width:100%;max-height:120px;object-fit:cover;border-radius:4px;margin:4px 0" />` : '';
+    const tagsHtml = p.tags ? p.tags.map(t => `#${t}`).join(' ') : '';
+
+    marker.bindPopup(`
+      <h3>${icons[p.type] || ''} ${p.name}</h3>
+      <span class="type-tag ${p.type}">${p.type}</span>
+      ${imgHtml}
+      <p>${p.description}</p>
+      <p style="font-size:0.75rem;color:#888">${p.address}</p>
+      ${p.website ? `<p><a href="${p.website}" target="_blank">Visit website →</a></p>` : ''}
+      ${tagsHtml ? `<p style="font-size:0.7rem;color:#aaa">${tagsHtml}</p>` : ''}
+    `);
+
+    marker._placeData = p;
+
+    marker.on('mouseover', function() { this.setRadius(11); });
+    marker.on('mouseout', function() { this.setRadius(8); });
+
+    marker.addTo(map);
+    markers.push(marker);
+  });
+}
+
+function applyFilter() {
+  const type = document.getElementById('typeFilter').value;
+  const filtered = type === 'all' ? places : places.filter(p => p.type === type);
+  addMarkers(filtered);
+  if (filtered.length > 0) {
+    fitPlaces(filtered);
+  }
+}
+
+function fitPlaces(data) {
+  if (data.length === 0) return;
+  const bounds = data.map(p => [p.lat, p.lng]);
+  map.fitBounds(bounds, { padding: [50, 50], maxZoom: 14 });
+}
+
+function fitAll() {
+  document.getElementById('typeFilter').value = 'all';
+  addMarkers(places);
+  fitPlaces(places);
+}
+
+// Initial render
+addMarkers(places);
+fitPlaces(places);
+</script>
+</body>
+</html>

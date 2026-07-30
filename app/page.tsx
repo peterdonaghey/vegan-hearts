@@ -6,7 +6,12 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import UnifiedFeed from "./components/UnifiedFeed";
 import GoodNews, { defaultGoodNews } from "./components/GoodNews";
+import dynamic from "next/dynamic";
 
+const SanctuaryMap = dynamic(
+  () => import("@/app/components/SanctuaryMap"),
+  { ssr: false }
+);
 
 export default function Home() {
   const [downloadCount, setDownloadCount] = useState<number | null>(null);
@@ -164,6 +169,29 @@ export default function Home() {
         </div>
       </section>*/}
       <GoodNews items={defaultGoodNews} />
+
+      {/* Sanctuary Map Section */}
+      <section className="px-6 py-16 bg-[#FFFAF1]">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-vh-green mb-3">
+              Vegan Hearts Map
+            </h2>
+            <div className="h-1 w-16 bg-gradient-to-r from-vh-orange to-vh-green rounded-full mx-auto mb-4"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              A growing map of animal sanctuaries and vegan projects around the world.
+              Know a place we should add?
+            </p>
+          </div>
+          <SanctuaryMap
+            height="520px"
+            className="shadow-xl"
+          />
+          <p className="text-center mt-4 text-sm text-gray-400">
+            Map data &copy; <a href="https://openstreetmap.org" className="text-vh-green/60 hover:text-vh-green">OpenStreetMap</a> contributors &middot; Data manually researched
+          </p>
+        </div>
+      </section>
 
       <Footer />
     </main>
