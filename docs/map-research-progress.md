@@ -8,7 +8,7 @@ Skill file updates are batched at the end of the project.
 
 - ✅ **Galicia** — 8 places (Mino Valley, O Viso, Acougo, Frente L.A., Vacaloura, Savia, Sueño de Jill, Val de Rodas)
 - ✅ **Asturias, Cantabria, Basque Country** — 6 (Corazón Verde, Manada Cántabra, Vida Color Frambuesa, Paraíso Interespecie, Burrita Carmela, Roke Enea)
-- ✅ **Catalonia** — 14 (Gaia, Almas Veganas, El Hogar, Món La Bassa, BuenaVida, Cau del Bosc, La Vedruna, Wild Forest, La Casita de Lluvia, La Muntanyeta, Cal Lari ADE, Sakura, Casa de Madera, Casa Albets)
+- ✅ **Catalonia** — 16 (Gaia, Almas Veganas, El Hogar, Món La Bassa, BuenaVida, Cau del Bosc, La Vedruna, Wild Forest, La Casita de Lluvia, La Muntanyeta, Cal Lari ADE, Sakura, Casa de Madera, Casa Albets, El Paraíso de Nora, Santuario Joplin)
 - ✅ **La Rioja** — 2 (Movimiento Lleó, Molino del Corregidor)
 - ✅ **Castile–La Mancha & Extremadura** — 4 (Arthur King, Los Perros Negros, Refugio Los Abuelos, Ciudad Animal Brego)
 - ✅ **Valencia** — 7 (Compasión Animal, El Rebrot de la Vida, El Refugio de Perla, Pollets de la Terreta, Caballo Espíritu Libre, La Paloma Triste, La Granja de Izhan)
@@ -21,7 +21,7 @@ Skill file updates are batched at the end of the project.
 
 ## PORTUGAL
 
-- ✅ **Norte / Centro / Algarve / Lisbon & Setúbal / Alentejo / Azores / Madeira** — 16 (Quinta das Águias, Star Mountain ×2, Outro Lado, Animais Sem Fronteiras, Save & Care, Monte dos Vagabundos, Pangea, Donkeys & Friends, Madeira Sanctuary, Arambha, Projeto Riza, Vida Boa, Ecoaldeia Espiral, Quintinha da Liz, Empatia, Vegan Hills)
+- ✅ **Norte / Centro / Algarve / Lisbon & Setúbal / Alentejo / Azores / Madeira** — 15 (Quinta das Águias, Star Mountain ×2, Outro Lado, Animais Sem Fronteiras, Save & Care, Monte dos Vagabundos, Pangea, Donkeys & Friends, Madeira Sanctuary, Arambha, Projeto Riza, Vida Boa, Ecoaldeia Espiral, Empatia, Vegan Hills)
 - ⏳ **Still open**: Fair Life Ranch (Castelo Branco) — needs vegan-identity confirmation; ACAP Portalegre move unverified
 
 ## TAIWAN
@@ -33,17 +33,18 @@ Skill file updates are batched at the end of the project.
 
 ## Open leads
 
-- **La Llar de l'Animal** (north Mallorca) — antiespecista refuge, but no contact channel found
-- **Santuario Joplin** (reported in Extremadura) — website dead, needs re-verification
-- **Hogar antiespecista Miguel Quintana** (Castellón) — from madridvegano directory
-- **Santuario El Paraíso de Nora** (Valls, Tarragona) — website dead; worth a Facebook check
+- **La Llar de l'Animal** (north Mallorca) — ❌ CLOSED: only a dead antiespecista page (no posts) + a cat-colony TNR group in Alcúdia; no qualifying sanctuary with contact
+- **Santuario Joplin** — ✅ RESOLVED: FB page live (1.4K), email contact, currently fundraising for its finca — ADDED to Catalonia (Tarragona)
+- **Hogar antiespecista Miguel Quintana** (Castellón) — ❌ CLOSED: no FB page found
+- **Santuario El Paraíso de Nora** (Valls, Tarragona) — ✅ RESOLVED: FB page live (5.5K), email — ADDED
+- **El Rincón de Pablosky** (León) — ✅ RESOLVED: FB page live (1.1K), WhatsApp/phone/email/IBAN — ADDED
 - **Redención Hogar de los Animales** (Soria) — active but conventional dog/cat protectora, no vegan mission — excluded
 - **PeludoSOS** (Salamanca) — protectora + farm sanctuary, not explicitly vegan — borderline
-- **Santuario Happyland** (Guadalajara) — unverifiable activity, Teaming dormant since 2020
-- **El Rincón de Pablosky** (León) — secondary lead, needs Facebook check
-- **Microsantuario Movimiento Animal** (Madrid) — FB-only, no town, no activity proof
+- **Santuario Happyland** (Guadalajara) — ❌ CLOSED: no active page (only a 234-follower market-stall page)
+- **Microsantuario Movimiento Animal** (Madrid) — ❌ CLOSED: no FB page found
+- **A Quintinha da Liz** (Viseu, PT) — ❌ REMOVED from map: FB page deleted/unavailable, last media 2021
+- **Fair Life Ranch** (Castelo Branco, PT) — ❌ no vegan framing (welfare/education ranch) — excluded
 - **Bajie Life-Protection Garden 八戒護生園** (Tainan) — pig sanctuary, no address published — needs phone verification
-- **Fair Life Ranch** (Castelo Branco, PT) — active rescue, vegan identity unconfirmed
 - **Santôsha Animal Sanctuary** (PT) — location never published
 - **Eco Aldeia de Cabrum** (Castro Verde, Beja, PT) — vegan status unconfirmed
 

@@ -497,6 +497,45 @@ export const places: Place[] = [
     source: "research",
     sourceUrl: "https://casaalbets.cat",
   },
+  {
+    id: "el-paraiso-de-nora",
+    name: "El Paraíso de Nora, Hogar Antiespecista",
+    lat: 41.2835,
+    lng: 1.2474,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "antiespecista", "rescue"],
+    description:
+      "Antiespecista home in Valls, Tarragona — 'salvamos vidas, despertamos conciencias; un hogar basado en la empatía y el antiespecismo'. Rescues animals from exploitation and abandonment. No website (domain down) — active on Facebook with 5.5K followers and email contact.",
+    address: "Valls, Tarragona, Catalonia, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "santuarioelparaisodenora@gmail.com",
+      facebook: "https://www.facebook.com/elparaisodenora",
+    },
+    tags: ["vegan", "sanctuary", "catalonia", "tarragona", "antiespecista", "rescue"],
+    source: "social",
+    sourceUrl: "https://www.facebook.com/elparaisodenora",
+  },
+  {
+    id: "santuario-joplin",
+    name: "Santuario Joplin",
+    lat: 41.1172,
+    lng: 1.2546,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Animal sanctuary rescuing and sheltering animals who are victims of abandonment, mistreatment and exploitation — 'rescatamos y acogemos animales víctimas del abandono, maltrato y explotación'. Runs a solidarity store (bigcartel) and is currently fundraising to buy its own finca. Website down — reachable via Facebook or email.",
+    address: "Tarragona, Catalonia, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "santuariojoplin@gmail.com",
+      facebook: "https://www.facebook.com/Santuariojoplin",
+      other: "via tienda solidaria santuariojoplin.bigcartel.com",
+    },
+    tags: ["vegan", "sanctuary", "catalonia", "tarragona", "farm_animal", "rescue"],
+    source: "social",
+    sourceUrl: "https://www.facebook.com/Santuariojoplin",
+  },
 
   // ============================================================
   // SPAIN — ANDALUSIA & MURCIA
@@ -1094,6 +1133,28 @@ export const places: Place[] = [
     sourceUrl: "https://santuarioespiritulibre.com",
   },
   {
+    id: "el-rincon-de-pablosky",
+    name: "El Rincón de Pablosky",
+    lat: 42.5987,
+    lng: -5.5671,
+    type: "sanctuary",
+    subtypes: ["rescue", "special_care"],
+    description:
+      "NGO in León born from the need to save the lives of animals that require special care. Runs sponsorship (10€/month), membership (5€/month) and donation programmes — home to long-lived rescues like Algarrobito, heading for 33 years. Reachable by WhatsApp, phone or email.",
+    address: "León, Castile & León, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "pablogm.tecno@gmail.com",
+      phone: "+34 696 81 79 97",
+      whatsapp: "+34 696 81 79 97",
+      facebook: "https://www.facebook.com/ElRinconDePablosky",
+      other: "IBAN ES09 2108 4273 2300 4312 0765 · apadrinamiento · socio",
+    },
+    tags: ["vegan", "sanctuary", "leon", "castile-leon", "rescue"],
+    source: "social",
+    sourceUrl: "https://www.facebook.com/ElRinconDePablosky",
+  },
+  {
     id: "madrid-help-horses",
     name: "Madrid Help Horses",
     lat: 40.5923,
@@ -1596,25 +1657,6 @@ export const places: Place[] = [
     tags: ["vegan", "ecovillage", "braga", "norte", "portugal", "community"],
     source: "research",
     sourceUrl: "https://ecoaldeavegetariana.wordpress.com",
-  },
-  {
-    id: "a-quintinha-da-liz",
-    name: "A Quintinha da Liz — Santuário Animal",
-    lat: 40.6445,
-    lng: -7.7977,
-    type: "sanctuary",
-    subtypes: ["farm_animal", "rescue"],
-    description:
-      "Small 'people in the dirt' sanctuary on a 200-year-old quinta in Nesperido, Viseu — 60+ rescued animals (cats, dogs, ducks, turkeys, a goat, sheep, chickens, guinea pigs) rescued from abuse, streets and slaughter-bound farms. Serves 100% plant-based meals, offers solidarity holidays, retreats and volunteering.",
-    address: "Nesperido, Povolide, Viseu, Portugal",
-    locationPrecision: "approximate",
-    contact: {
-      facebook: "https://www.facebook.com/aquintinhadalizsantuarioanimal",
-      other: "via Teaming (€1/month)",
-    },
-    tags: ["vegan", "sanctuary", "viseu", "centro", "portugal", "farm_animal", "rescue"],
-    source: "social",
-    sourceUrl: "https://www.facebook.com/aquintinhadalizsantuarioanimal",
   },
 
   // ============================================================
