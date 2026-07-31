@@ -1536,6 +1536,86 @@ export const places: Place[] = [
     source: "research",
     sourceUrl: "https://veganretreatportugal.com",
   },
+  {
+    id: "o-projeto-riza",
+    name: "O Projeto Riza — Santuário Animal",
+    lat: 40.2482,
+    lng: -8.4155,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Antiespecista-vegan farm sanctuary founded in 2019 by Isabel Borges in Eiras, Coimbra, now run by resident volunteers — 25+ rescued farm animals. Also runs the Guarda Rios forest school for kids and the Coimbra Vegan Market. Featured on RTP in 2025.",
+    website: "https://oprojetoriza.org",
+    address: "Eiras, Coimbra, Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      instagram: "https://www.instagram.com/oprojetoriza",
+      facebook: "https://www.facebook.com/OProjetoRiza",
+      other: "MBWay 934 067 187 · Patreon",
+    },
+    tags: ["vegan", "sanctuary", "coimbra", "centro", "portugal", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://oprojetoriza.org",
+  },
+  {
+    id: "santuario-vida-boa",
+    name: "Santuário Animal Vida Boa",
+    lat: 41.6770,
+    lng: -7.5806,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Registered association (2019) in Anelhe, Chaves, Trás-os-Montes with 160+ resident animals — farm, companion and wildlife. Runs animal-assisted therapy, One Health and nature-conservation programmes; funded partly through the DTC Trás-os-Montes pet-care company whose profits revert to the sanctuary.",
+    website: "https://santuarioanimalvidaboa.org",
+    address: "Quinta Vessada de Baixo, Anelhe, Chaves, Vila Real, Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      instagram: "https://www.instagram.com/santuario_animal_vida_boa",
+      other: "via santuarioanimalvidaboa.org · Facebook · YouTube",
+    },
+    tags: ["vegan", "sanctuary", "vila-real", "norte", "portugal", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://santuarioanimalvidaboa.org",
+  },
+  {
+    id: "ecoaldeia-espiral",
+    name: "Ecoaldeia Espiral",
+    lat: 41.5136,
+    lng: -7.9878,
+    type: "project",
+    subtypes: ["ecovillage", "community"],
+    description:
+      "Vegan/vegetarian ecovillage in Cabeceiras de Basto, northern Portugal — 12 hectares, 12+ years old, consensus-based community living with free education and no alcohol or tobacco. No animal products allowed on site ('eggs and honey cannot enter the ecoaldeia'). Takes visitors and new members.",
+    website: "https://ecoaldeaespiral.com",
+    address: "Cabeceiras de Basto, Braga, Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      email: "ecoaldeavegetariana@gmail.com",
+      other: "via Teaming (€1/month) · blog ecoaldeavegetariana.wordpress.com",
+    },
+    tags: ["vegan", "ecovillage", "braga", "norte", "portugal", "community"],
+    source: "research",
+    sourceUrl: "https://ecoaldeavegetariana.wordpress.com",
+  },
+  {
+    id: "a-quintinha-da-liz",
+    name: "A Quintinha da Liz — Santuário Animal",
+    lat: 40.6445,
+    lng: -7.7977,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Small 'people in the dirt' sanctuary on a 200-year-old quinta in Nesperido, Viseu — 60+ rescued animals (cats, dogs, ducks, turkeys, a goat, sheep, chickens, guinea pigs) rescued from abuse, streets and slaughter-bound farms. Serves 100% plant-based meals, offers solidarity holidays, retreats and volunteering.",
+    address: "Nesperido, Povolide, Viseu, Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/aquintinhadalizsantuarioanimal",
+      other: "via Teaming (€1/month)",
+    },
+    tags: ["vegan", "sanctuary", "viseu", "centro", "portugal", "farm_animal", "rescue"],
+    source: "social",
+    sourceUrl: "https://www.facebook.com/aquintinhadalizsantuarioanimal",
+  },
 
   // ============================================================
   // PORTUGAL — ALGARVE
@@ -1559,7 +1639,32 @@ export const places: Place[] = [
     source: "research",
     sourceUrl: "https://www.facebook.com/outrolado.pt",
   },
+  {
+    id: "vegan-hills-vegoa",
+    name: "Vegan Hills / Vegoa",
+    lat: 37.1411,
+    lng: -8.8626,
+    type: "project",
+    subtypes: ["ecovillage", "community", "permaculture"],
+    description:
+      "Vegan intentional community on 103 hectares of off-grid Algarve hills near Pedralva — yurts, campervans and wooden cabins, permaculture gardens, retreats and workshops. The Vegoa.org non-profit promotes veganism and sustainability; actively looking for new members.",
+    website: "https://vegoa.org",
+    address: "Vale Marreiros e Castelo, Pedralva, Vila do Bispo, Faro, Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      email: "hello@vegoa.org",
+      instagram: "https://www.instagram.com/vegan.hills.community",
+      facebook: "https://www.facebook.com/Vegoa.org",
+      other: "via Workaway",
+    },
+    tags: ["vegan", "ecovillage", "algarve", "portugal", "community", "permaculture"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/Vegoa.org",
+  },
 
+  // ============================================================
+  // PORTUGAL — LISBON & SETÚBAL
+  // ============================================================
   {
     id: "animais-sem-fronteiras",
     name: "Animais Sem Fronteiras",
@@ -1581,10 +1686,6 @@ export const places: Place[] = [
     source: "social",
     sourceUrl: "https://www.instagram.com/animais_sem_fronteiras/",
   },
-
-  // ============================================================
-  // PORTUGAL — LISBON & SETÚBAL
-  // ============================================================
   {
     id: "save-and-care",
     name: "Animal Save & Care Portugal",
@@ -1605,6 +1706,26 @@ export const places: Place[] = [
     tags: ["vegan", "sanctuary", "setubal", "portugal", "farm_animal", "rescue"],
     source: "research",
     sourceUrl: "https://www.animalsaveandcareportugal.com",
+  },
+  {
+    id: "santuario-empatia-amorempatia",
+    name: "Santuário Empatia — Amorempatia",
+    lat: 38.9121,
+    lng: -8.9889,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Farm animal sanctuary of the Amorempatia association (founded 2018) — ~100 animals: cows, pigs, ducks, horses, sheep, plus dogs and cats. Abolitionist framing ('promovendo a libertação animal'); the 7-hectare site in the Lisbon district is deliberately unpublished to avoid abandonment dumping. Featured by Visão and Público.",
+    address: "Vila Franca de Xira area (west of Lisbon), Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/a.amorempatia",
+      instagram: "https://www.instagram.com/a.amorempatia",
+      other: "via Teaming (€1/month)",
+    },
+    tags: ["vegan", "sanctuary", "lisbon", "portugal", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/a.amorempatia",
   },
 
   // ============================================================
@@ -1768,6 +1889,47 @@ export const places: Place[] = [
     source: "research",
     sourceUrl: "https://www.facebook.com/cpla9353",
   },
+  {
+    id: "dajia-life-protection-garden",
+    name: "Dajia Life-Protection Garden (大甲護生園)",
+    lat: 24.3489,
+    lng: 120.6224,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "The only life-protection garden of the Chinese Life Protection Association network in Taichung — ducks, geese, chickens, pigeons and koi living out their lives on ~0.5 ha in Dajia district. Part of Venerable Hai Tao's 30+ garden network across Taiwan.",
+    address: "Dajia District, Taichung, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      phone: "+886 921 725 848",
+      facebook: "https://www.facebook.com/cpla9353",
+      other: "郵政劃撥 42138483 (中華護生協會)",
+    },
+    tags: ["vegan", "taiwan", "taichung", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/cpla9353",
+  },
+  {
+    id: "gukeng-ecovillage",
+    name: "Gukeng International Mindful Ecovillage (古坑國際心靈生態村)",
+    lat: 23.6426,
+    lng: 120.5620,
+    type: "project",
+    subtypes: ["ecovillage", "community", "organic"],
+    description:
+      "Taiwan's largest intentional ecovillage project — a Buddhist-vegetarian community built around the Bliss & Wisdom education park in Gukeng, Yunlin: ~100 ha of organic farmland, 400+ member households, renewable energy and elder-care programmes. Vegetarian ethos with organic agriculture.",
+    website: "https://www.bwbc.edu.tw/eco-village/",
+    address: "Maiyuan Village, Gukeng Township, Yunlin County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      email: "blisswisdomedupark@gmail.com",
+      phone: "+886 5 582 8222",
+      facebook: "https://www.facebook.com/bwedupark",
+    },
+    tags: ["vegan", "taiwan", "yunlin", "ecovillage", "organic", "community"],
+    source: "research",
+    sourceUrl: "https://www.bwbc.edu.tw/eco-village/",
+  },
 
   // ============================================================
   // TAIWAN — EAST COAST (YILAN, HUALIEN & TAITUNG)
@@ -1811,6 +1973,46 @@ export const places: Place[] = [
     tags: ["vegan", "taiwan", "yilan", "rescue", "buddhist"],
     source: "research",
     sourceUrl: "https://www.lfhmv.org.tw",
+  },
+  {
+    id: "dayi-life-protection-garden",
+    name: "Dayi Life-Protection Garden (大義護生園)",
+    lat: 24.6660,
+    lng: 121.6532,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "The Yilan flagship garden of the Chinese Life Protection Association network — sheep, sambar deer, turkeys, chickens, ducks and geese on ~0.6 ha in Sanxing, run by the network's secretary-general. Sister garden to Yuanshan (pigs and chickens).",
+    address: "Dayi Village, Sanxing Township, Yilan County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      phone: "+886 910 167 769",
+      facebook: "https://www.facebook.com/cpla9353",
+      other: "中華護生協會 (03)989-8686 · 郵政劃撥 42138483",
+    },
+    tags: ["vegan", "taiwan", "yilan", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/cpla9353",
+  },
+  {
+    id: "guangfu-life-protection-garden",
+    name: "Hualien Life-Protection Garden (花蓮護生園)",
+    lat: 23.6695,
+    lng: 121.4227,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "The East Coast garden of the Chinese Life Protection Association network in Guangfu, Hualien — chickens, ducks and catfish on ~0.5 ha. Gives Hualien county coverage for rescued poultry.",
+    address: "Dafeng Village, Guangfu Township, Hualien County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      phone: "+886 910 233 911",
+      facebook: "https://www.facebook.com/cpla9353",
+      other: "中華護生協會 (03)989-8686 · 郵政劃撥 42138483",
+    },
+    tags: ["vegan", "taiwan", "hualien", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/cpla9353",
   },
 
   // ============================================================
@@ -1913,5 +2115,85 @@ export const places: Place[] = [
     tags: ["vegan", "taiwan", "chiayi", "farm_animal", "rescue", "buddhist"],
     source: "research",
     sourceUrl: "https://news.ltn.com.tw/news/life/breakingnews/2019612",
+  },
+  {
+    id: "bw-life-protection-park",
+    name: "Bliss & Wisdom Life-Protection Education Park (福智護生教育示範園區)",
+    lat: 22.9624,
+    lng: 120.3345,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "The biggest life-protection park outside the Hai Tao network, built in 2013 by the Bliss & Wisdom Foundation on the site of a former dairy-goat farm in Guanmiao, Tainan. Home to 200+ rescued animals — Nubian dairy goats saved from slaughterhouse auctions, yellow cattle, parrots, sulcata tortoises and waterfowl. Runs vegan food fairs and animal-sponsorship campaigns; visits by appointment.",
+    website: "https://buddhism.blisswisdom.org",
+    address: "Guanmiao District, Tainan City, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      phone: "+886 2-7751-6788",
+      facebook: "https://www.facebook.com/BWlifeprotection",
+      other: "via FB message (appointment only)",
+    },
+    tags: ["vegan", "taiwan", "tainan", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/BWlifeprotection",
+  },
+  {
+    id: "old-cattle-home",
+    name: "Old Cattle Home (柳營老牛的家)",
+    lat: 23.2796,
+    lng: 120.3112,
+    type: "sanctuary",
+    subtypes: ["cattle", "rescue", "municipal"],
+    description:
+      "Taiwan's best-known water buffalo refuge — a municipal retirement home in Liuying, Tainan where retired, abused or lost working cattle live out their lives instead of going to slaughter. Famous for tearful farmer-farewell scenes; runs a cattle-sponsorship programme. Government-run municipal sanctuary (not a vegan project), but a beloved destination for vegans.",
+    address: "Xincuo 102, Liuying District, Tainan City, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      phone: "+886 6-299-1111 ext. 5067",
+      facebook: "https://www.facebook.com/老牛的家",
+      other: "via Tainan City Agriculture Bureau",
+    },
+    tags: ["vegan", "taiwan", "tainan", "cattle", "rescue"],
+    source: "research",
+    sourceUrl: "https://agron.tainan.gov.tw/News_Content.aspx?n=1270&s=11391",
+  },
+  {
+    id: "madou-life-protection-garden",
+    name: "Madou Life-Protection Garden (麻豆護生園區)",
+    lat: 23.1817,
+    lng: 120.2482,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "One of the Chinese Life Protection Association network's biggest farm-animal gardens (~2 ha) in Madou, Tainan — chickens, ducks, geese, peacocks, sheep, cows, rabbits, turtles and koi. Featured in the 2019 Liberty Times investigation of the network. One of the few gardens with its own Facebook page.",
+    address: "Anye Village 80-1, Madou District, Tainan City, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/pages/麻豆護生園區/338231200007052",
+      other: "郵政劃撥 42138483 (中華護生協會)",
+    },
+    tags: ["vegan", "taiwan", "tainan", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/pages/麻豆護生園區/338231200007052",
+  },
+  {
+    id: "neipu-life-protection-garden",
+    name: "Neipu Life-Protection Garden (內埔護生園)",
+    lat: 22.6121,
+    lng: 120.5665,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "Pingtung's farm-animal garden of the Chinese Life Protection Association network — chickens, sheep and rabbits on ~0.5 ha in Neipu. Adds farm-animal presence to Pingtung, where the network's other sites are dog-focused.",
+    address: "Hexing Village, Neipu Township, Pingtung County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      phone: "+886 960 326 746",
+      facebook: "https://www.facebook.com/cpla9353",
+      other: "中華護生協會 (03)989-8686 · 郵政劃撥 42138483",
+    },
+    tags: ["vegan", "taiwan", "pingtung", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/cpla9353",
   },
 ];
