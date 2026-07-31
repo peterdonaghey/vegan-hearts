@@ -101,112 +101,123 @@ export default function GoodNews({ items }: GoodNewsProps) {
 }
 
 export const defaultGoodNews: GoodNewsItem[] = [
-  // ── June 2026 ──
+  // ── School meals ──
   {
-    id: "fandango-sanctuary-florida",
-    title: "I Found a Florida Sanctuary Where Rescued Farm Animals Finally Get to Rest",
-    summary: "A visit to Fandango Sanctuary in Englewood, Florida reveals the incredible stories of rescued farm animals who, after surviving neglect and abuse, have found a peaceful forever home filled with compassion and dignity — a beautiful reminder of the transformative power of animal sanctuaries.",
-    sourceUrl: "https://uncoveringflorida.com/i-found-a-florida-sanctuary-where-rescued-farm-animals-finally-get-to-rest/",
-    sourceName: "Uncovering Florida",
-    imageUrl: "https://uncoveringflorida.com/wp-content/uploads/2026/05/i-found-a-florida-sanctuary-where-rescued-farm-animals-finally-get-to-rest.jpg",
-    date: "June 2026",
-    category: "Sanctuary",
-  },
-
-  // ── May 2026 ──
-  {
-    id: "farm-sanctuary-40-years",
-    title: "Farm Sanctuary marks 40 years of animal rescue and advocacy",
-    summary: "What began with the rescue of a single sheep has grown into a worldwide movement — Farm Sanctuary, the pioneering farm animal protection organization, celebrates 40 years of rescuing abused farm animals, advocating for compassion, and inspiring a plant-based future.",
-    sourceUrl: "https://www.witf.org/2026/05/12/farm-sanctuary-marks-40-years-of-animal-rescue-and-advocacy/",
-    sourceName: "WITF / The Spark",
-    imageUrl: "https://www.witf.io/wp-content/uploads/2026/05/gene-hilda-1358x1080.jpeg",
-    date: "May 2026",
-    category: "Sanctuary",
-  },
-
-  // ── May 2026 ──
-  {
-    id: "omi-now-loved-by-friends",
-    title: "Once Abused and Left Behind, Omi's Now Loved By So Many Friends",
-    summary: "Omi was just a helpless calf when he was cruelly abandoned alone on the side of a road — but today he's thriving at Farm Sanctuary, surrounded by animal friends and loving caregivers in a heartwarming story of resilience and the healing power of compassion.",
-    sourceUrl: "https://www.farmsanctuary.org/news-stories/once-abused-omi-now-loved-by-friends",
-    sourceName: "Farm Sanctuary",
-    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2026/05/14121804/2026_05-07_FSAC_Omi_cow_CD-9565-scaled.jpg",
-    date: "May 2026",
-    category: "Sanctuary",
-  },
-
-  // ── June 2026 ──
-  {
-    id: "new-roots-le-gratine-lupine-cheese",
-    title: "Swiss Vegan Creamery New Roots Launches Lupine-Based Grated Cheese Alternative",
-    summary: "Swiss creamery New Roots has launched Le Gratiné, a meltable, stretchy grated cheese alternative made from locally sourced organic lupine beans — a regional protein source that also enriches soil health. The company helped cultivate 90 tons of lupins in 2025, and sweet lupin was just named Superfood of the Year 2026 by Biovision.",
-    sourceUrl: "https://vegconomist.com/cheese-alternatives/swiss-vegan-creamery-new-root-launches-lupine-based-grated-cheese-alternative/",
-    sourceName: "vegconomist",
-    imageUrl: "https://assets.vegconom.de/media/wp-content/uploads/sites/3/2026/06/02165029/Artikel-Header-1200-x-900-px-19-1.jpg",
-    date: "June 2026",
-    category: "Innovation",
-  },
-
-  {
-    id: 'amsterdam-ads-ban',
-    title: "Amsterdam Bans Meat & Fossil Fuel Ads",
-    summary: "In a world-first for a capital city, Amsterdam has banned public advertisements for meat and fossil fuels from billboards and transit spaces, aligning urban advertising with climate goals.",
-    sourceUrl: "https://www.cbsnews.com/news/amsterdam-bans-advertising-meat-fossil-fuels-public-places/",
-    sourceName: "CBS News",
-    imageUrl: "https://assets3.cbsnewsstatic.com/hub/i/r/2026/05/05/17425e29-6118-4a88-88b5-dd08454e5cac/thumbnail/1200x630/0a0d56c3705b8b97b651e675b59d9b58/gettyimages-2269163881.jpg",
-    date: "May 2026",
-    category: "Policy Win"
-  },
-  {
-    id: 'plant-based-cheaper-uk',
-    title: "Plant-Based Meat Now 33% Cheaper in UK Shops",
-    summary: "New data shows it's now significantly cheaper to choose plant-based meat over animal equivalents in major supermarkets like Tesco, as meat prices soar and the 'vegan tax' disappears.",
-    sourceUrl: "https://veganfoodandliving.com/news/plant-based-prices-cheaper-beef/",
-    sourceName: "Vegan Food & Living",
-    imageUrl: "https://www.veganfoodandliving.com/wp-content/uploads/2026/05/Shopper-hand-holding-a-Package-of-Beyond-Meat-brand-Plant-Based-hamburger-beyond-ground-beef-substitute-in-a-supermarket-freezer-shelf.jpg",
-    date: "May 2026",
-    category: "Price Win"
-  },
-  {
-    id: 'billie-hen-rescue',
-    title: "Hen Rescued From Slaughter Finds Joy at Sanctuary",
-    summary: "Billie the hen was minutes from death when activists spoke with her transport driver — and one compassionate conversation changed everything. Now at Farm Sanctuary, she dances to music and is serenaded by her caregivers, proving that connection between unlikely allies can save a life.",
-    sourceUrl: "https://www.farmsanctuary.org/news-stories/four-farm-animals-rescued-just-in-time",
-    sourceName: "Farm Sanctuary",
-    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2026/05/06095237/2026_02-06_FSAC_BillieEilish_hen_CD-5507-1600x1067.jpg",
-    date: "May 2026",
-    category: "Sanctuary"
-  },
-  {
-    id: 'global-sanctuary-day',
-    title: "First Global Sanctuary Day Celebrated",
-    summary: "Forty years after Farm Sanctuary's founding, animal advocates worldwide celebrated the first-ever Global Sanctuary Day, honouring the rescue and care of farmed animals across hundreds of sanctuaries.",
-    sourceUrl: "https://www.npr.org/2026/04/17/nx-s1-5775921/animal-activists-are-celebrating-their-first-global-sanctuary-day",
-    sourceName: "NPR",
-    imageUrl: "https://assets.farmsanctuary.org/content/uploads/2026/03/10093855/2024_05-20_FSNY_Mustard_hat_and_Eat_Plants_long_sleeve_with_Ayla_and_Hayes_steer_LH_6610-1-1600x1065.jpg",
-    date: "April 2026",
-    category: "Sanctuary"
-  },
-  {
-    id: 'finland-dietary-guidelines',
-    title: "Finland's New Guidelines Boost Plant-Based Eating",
-    summary: "Finland's updated national dietary guidelines are driving a surge in whole-food proteins like tofu and legumes, with meat reduction now the most popular dietary change among Finns.",
-    sourceUrl: "https://greenqueen.com.hk/finland-food-based-dietary-guidelines-plant-based-market-growth",
+    id: "poland-mandatory-vegan-school-lunches",
+    title: "Poland Makes Vegan School Lunches Mandatory",
+    summary: "Poland's health ministry has signed a regulation requiring every school to serve at least one fully vegan lunch a week, plus plant-based alternatives on days when meat or fish is served. From September 2026, the new rules — based on the Planetary Health Diet — will transform meals for 6.8 million children across nearly 36,000 schools.",
+    sourceUrl: "https://www.greenqueen.com.hk/poland-plant-based-meals-vegan-school-lunches-health/",
     sourceName: "Green Queen",
-    imageUrl: "https://www.greenqueen.com.hk/wp-content/uploads/2026/04/finland-food-based-dietary-guidelines-plant-based-market-growth-social-1024x536.png",
-    date: "April 2026",
-    category: "Health Policy"
+    imageUrl: "https://www.greenqueen.com.hk/wp-content/uploads/2026/02/poland-plant-based-meals-vegan-school-lunches-health-social-1024x536.png",
+    date: "February 2026",
+    category: "School Meals",
   },
+
+  // ── Vegan movement ──
   {
-    id: 'eu-plant-based-eggs',
-    title: "EU Plant-Based Eggs Market to Hit $211M by 2036",
-    summary: "Driven by food-tech innovation and rising vegan adoption, the EU plant-based eggs market is forecast to grow at 17.5% annually, reaching over $200 million within a decade.",
-    sourceUrl: "https://www.morningstar.com/news/accesswire/1157381msn/eu-plant-based-eggs-market-outlook-2026-2036-vegan-adoption-and-food-tech-innovation-drive-usd-211-million-opportunity",
-    sourceName: "Morningstar",
-    imageUrl: "https://app.accessnewswire.com/imagelibrary/8971f4da-a587-4c4c-93b4-d636b976ceb3/image.png",
-    date: "April 2026",
-    category: "Innovation"
-  }
+    id: "veganuary-30-million-2026",
+    title: "Record 30 Million People Tried Vegan During Veganuary 2026",
+    summary: "A record-breaking 30 million people worldwide chose to try vegan this January, powering at least 1,187 new plant-based products and menu items — a powerful answer to claims that veganism is fading. Interest was so strong in Germany that supermarkets briefly ran out of tofu.",
+    sourceUrl: "https://veganuary.com/veganuary-2026-campaign-review/",
+    sourceName: "Veganuary",
+    imageUrl: "https://veganuary.com/wp-content/uploads/2026/03/Veganuary-2026-Campaign-Review-Blog-Header.png",
+    date: "March 2026",
+    category: "Vegan Movement",
+  },
+
+  // ── Anti-cruelty law ──
+  {
+    id: "ontario-bans-dog-cat-experiments",
+    title: "Ontario Bans Cruel Dog & Cat Experiments",
+    summary: "Ontario has become the first jurisdiction in the world to ban invasive medical experiments on cats and dogs. The historic Bill 75 follows shocking revelations about secret dog testing in Ontario labs — a major victory for animal protection in Canada.",
+    sourceUrl: "https://animaljustice.ca/blog/victory-ontario-bans-cruel-cat-dog-experiments",
+    sourceName: "Animal Justice",
+    imageUrl: "https://animaljustice.ca/wp-content/uploads/2026/05/Ontario-band-cat-and-dog-experiments-social.jpg",
+    date: "May 2026",
+    category: "Policy Win",
+  },
+
+  // ── School meals ──
+  {
+    id: "plant-powered-school-meals-act",
+    title: "US Congress to Consider $12 Million Plan for Plant-Based School Lunches",
+    summary: "The Plant Powered School Meals Pilot Act would provide $12 million in grants to help American schools serve more plant-based meals — funding culinary training for kitchen staff, plant-based ingredients and dairy-free milk. With nearly 70% of Americans backing better vegan options in schools, momentum is growing on Capitol Hill.",
+    sourceUrl: "https://vegnews.com/congress-vegan-school-meals",
+    sourceName: "VegNews",
+    imageUrl: "https://vegnews.com/media/W1siZiIsIjU2OTk1L1JCIGFydGljbGUgaW1hZ2VzLTE5LnBuZyJdLFsicCIsImNyb3BfcmVzaXplZCIsIjE2MDB4ODQwKzArNTIiLCIxMjAweDYzMF4iXSxbInAiLCJlbmNvZGUiLCJqcGciLCIiXSxbInAiLCJvcHRpbWl6ZSJdLFsicCIsInNyZ2Jfc3RyaXAiXV0/RB%20article%20images-19.jpg?sha=b232f7a13684fd87",
+    date: "March 2026",
+    category: "School Meals",
+  },
+
+  // ── Vegan movement ──
+  {
+    id: "vegan-society-top-countries",
+    title: "These Are the Top Countries for Plant-Based Eating, According to The Vegan Society",
+    summary: "The Vegan Society's first global investigation into plant-based eating finds veganism is no longer a niche movement: 16-30% of people are flexitarian in most countries, India leads with 14% vegan and 26% vegetarian, and Taiwan and Portugal top the per-capita ranking for vegan restaurants.",
+    sourceUrl: "https://www.greenqueen.com.hk/veganism-around-the-world-the-vegan-society-report-friendly-countries/",
+    sourceName: "Green Queen",
+    imageUrl: "https://www.greenqueen.com.hk/wp-content/uploads/2026/01/veganism-around-the-world-the-vegan-society-report-friendly-countries-social-1024x536.png",
+    date: "January 2026",
+    category: "Vegan Movement",
+  },
+
+  // ── Big victory ──
+  {
+    id: "octopus-farm-plans-withdrawn",
+    title: "Plans for the World's First Octopus Farm Scrapped",
+    summary: "Nueva Pescanova has withdrawn plans for the world's first commercial octopus farm in Gran Canaria, Spain — where one million highly intelligent octopuses a year would have been raised in crowded tanks. After three years of campaigning by scientists and animal welfare groups, a cruel new industry has been prevented from taking hold in Europe.",
+    sourceUrl: "https://www.eurogroupforanimals.org/news/landmark-victory-plans-worlds-first-octopus-farm-withdrawn",
+    sourceName: "Eurogroup for Animals",
+    imageUrl: "https://www.eurogroupforanimals.org/files/eurogroupforanimals/styles/blog_detail/public/2026-07/Octopus%20-%20canva_0.png?itok=4qtP7DVS",
+    date: "July 2026",
+    category: "Policy Win",
+  },
+
+  // ── School meals ──
+  {
+    id: "spain-plant-based-school-meals-law",
+    title: "Spain Makes Plant-Based School Meals a Legal Right",
+    summary: "New legislation in Spain requires every school to offer fully plant-based meals — or provide facilities for students to bring and store their own food if it can't. The Royal Decree also mandates weekly legumes and daily fruit and vegetables while banning sugary drinks, a landmark win for vegan families across the country.",
+    sourceUrl: "https://www.veganfoodandliving.com/news/plant-based-school-meals-spain-new-law/",
+    sourceName: "Vegan Food & Living",
+    imageUrl: "https://www.veganfoodandliving.com/wp-content/uploads/2025/05/vegan-lunch-box-near-thermos-fresh-apples-and-biscuits-in-front-of-school-backpack-768x510.jpg",
+    date: "May 2025",
+    category: "School Meals",
+  },
+
+  // ── Anti-cruelty policy ──
+  {
+    id: "us-military-ends-live-animal-training",
+    title: "US Military Ends Practice of Shooting Live Animals to Train Medics",
+    summary: "The US military has ended the decades-old practice of shooting live animals to train medics to treat battlefield wounds, following years of bipartisan pressure from animal welfare advocates. It's a landmark policy change sparing thousands of animals from being used in trauma training.",
+    sourceUrl: "https://www.smithsonianmag.com/smart-news/us-military-ends-practice-of-shooting-live-animals-to-train-medics-to-treat-battlefield-wounds-180987942/",
+    sourceName: "Smithsonian Magazine",
+    imageUrl: "https://th-thumbnailer.cdn-si-edu.com/WIyFksWexaNP1mNgSCQkf8SVd0M=/fit-in/1600x0/filters:focal(3000x2000:3001x2001)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/cf/0b/cf0b0b7a-e9f8-4637-a5c5-afbf9d19bbab/pexels-pavel-bondarenko-1393453-2722455.jpg",
+    date: "January 2026",
+    category: "Policy Win",
+  },
+
+  // ── Anti-cruelty law ──
+  {
+    id: "italy-end-male-chick-culling",
+    title: "Italy to End the Killing of Male Chicks in the Egg Industry",
+    summary: "Italy has published guidelines that will end the mass culling of day-old male chicks from January 2027, requiring hatcheries to use in-ovo sexing technology instead. The change could save an estimated 34 million chicks a year from being killed on their first day of life.",
+    sourceUrl: "https://www.eurogroupforanimals.org/news/italy-end-killing-male-chicks-egg-industry-end-2026",
+    sourceName: "Eurogroup for Animals",
+    imageUrl: "https://www.eurogroupforanimals.org/files/eurogroupforanimals/styles/blog_detail/public/2020-02/chicks-hatched-recovered-chicken-young-animal.jpg?itok=pPDOqk7c",
+    date: "November 2025",
+    category: "Policy Win",
+  },
+
+  // ── Anti-cruelty law ──
+  {
+    id: "poland-fur-farming-ban",
+    title: "Poland Bans Fur Farming — Europe's Largest Producer",
+    summary: "Poland's president has signed a law banning fur farming, ending the country's reign as the EU's largest fur producer and shutting down its mink farms over the coming years. The ban is a huge blow to the global fur trade and is seen as paving the way for an EU-wide prohibition.",
+    sourceUrl: "https://notesfrompoland.com/2025/12/02/polish-president-signs-fur-farm-ban-into-law-but-vetoes-prohibition-on-chaining-up-dogs/",
+    sourceName: "Notes From Poland",
+    imageUrl: "https://notesfrompoland.com/wp-content/uploads/2025/12/54283180338_b834ef4f86_k.jpg",
+    date: "December 2025",
+    category: "Policy Win",
+  },
 ];
