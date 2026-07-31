@@ -15,26 +15,31 @@ Skill file updates are batched at the end of the project.
 - ✅ **Andalusia & Murcia** — 10 (La Candela, Jacobs Ridge, Hogar de Gringa, Alma Libertaria, Todos los Caballos del Mundo, A Better Life 4 Horses, Rancho Edén, Donkey Dreamland, Rincón de Barakah, Cortijillo de Lola)
 - ✅ **Balearic Islands** — 2 (Eden, Trebaluger)
 - ✅ **Canary Islands** — 4 (Animal Academy, Finca Arkadia, Tenerife Animal Sanctuary, Petricor)
-- ⏳ **Madrid & Castile–León** — partial (Santuario Vegan, Leon Vegano, Santuario Dharma) — ROUND 2 TARGET
+- ✅ **Madrid** — 6 (Santuario Vegan, Madrid Help Horses, El Valle Encantado, Henfluencers, La Voz Animal, Salvando Peludos)
+- ✅ **Castile & León** — 5 (Leon Vegano, Santuario Dharma, Winston, Garfi, Espíritu Libre)
 - ⏳ **Aragon & Navarre** — EMPTY (confirmed sparse; Vegan Hope (Zaragoza) dormant since 2016)
 
 ## PORTUGAL
 
 - ✅ **Norte / Centro / Algarve / Lisbon & Setúbal / Alentejo / Azores** — 9 (Quinta das Águias, Star Mountain ×2, Outro Lado, Animais Sem Fronteiras, Save & Care, Monte dos Vagabundos, Pangea, Donkeys & Friends)
-- ⏳ **Madeira** — ROUND 2 TARGET
+- ✅ **Madeira** — 2 (Madeira Sanctuary (Ponta do Sol), Arambha Eco Village (Ribeira Brava))
 
 ## TAIWAN
 
-- ⏳ **North / East Coast / South** — 4 places (Pigs' Heaven, Sun Clover, Ánanda Suruci, Guanyin's Home) — ROUND 2 TARGET (aim ~15)
+- ✅ **North / Central / East Coast / South** — 9 (Pigs' Heaven, CPLA Luyeyuan (Miaoli), Sun Clover, Feixiang Mijing (Yilan), Ánanda Suruci, Guanyin's Home, Hsu's Garden (Tainan), Taiwan Dog Rescue Yanpu (Pingtung), Meishan (Chiayi))
+- Taiwan's vegan sanctuary scene = Buddhist 護生 life-protection networks (Hai Tao's 30+ gardens + Hsu's) plus Pigs' Heaven as the only western-style vegan farm sanctuary
 
 ## Open leads
 
-- **Espíritu Libre** (Soria) — moved from Murcia; needs contact info before adding
-- **Santuario Winston** (Ávila, horses), **Santuario Animal Garfi** (Segovia), **Redención Hogar de los Animales** (Soria), **Santuario Happyland** (Guadalajara)
 - **La Llar de l'Animal** (north Mallorca) — antiespecista refuge, but no contact channel found
 - **Santuario Joplin** (reported in Extremadura) — website dead, needs re-verification
 - **Hogar antiespecista Miguel Quintana** (Castellón) — from madridvegano directory
 - **Santuario El Paraíso de Nora** (Valls, Tarragona) — website dead; worth a Facebook check
+- **Redención Hogar de los Animales** (Soria) — active but conventional dog/cat protectora, no vegan mission — excluded
+- **PeludoSOS** (Salamanca) — protectora + farm sanctuary, not explicitly vegan — borderline
+- **Santuario Happyland** (Guadalajara) — unverifiable activity, Teaming dormant since 2020
+- **El Rincón de Pablosky** (León) — secondary lead, needs Facebook check
+- **Microsantuario Movimiento Animal** (Madrid) — FB-only, no town, no activity proof
 
 ## Dead resources
 
@@ -45,4 +50,6 @@ Skill file updates are batched at the end of the project.
 
 - Region checklist in SKILL.md (mark completed regions)
 - Directory list updates + spainvegan.es warning
+- Garfi is in La Vecilla, LEÓN (directories wrongly say Segovia)
+- Taiwan: Buddhist 護生 life-protection networks are the dominant model — include them (precedent: Guanyin's Home)
 - Any new search-term learnings

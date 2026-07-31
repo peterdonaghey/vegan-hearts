@@ -1029,6 +1029,173 @@ export const places: Place[] = [
     source: "research",
     sourceUrl: "https://refugiolosabuelos.org",
   },
+  {
+    id: "santuario-winston",
+    name: "Santuario Winston — Hogar de Caballos Libres",
+    lat: 40.5651,
+    lng: -4.5591,
+    type: "sanctuary",
+    subtypes: ["equine", "rescue"],
+    description:
+      "Horse sanctuary founded in 2012 by Dolores Pérez Molina, born when she rescued the horse Winston. ~46 horses plus ponies and donkeys live free across 4 fincas near Herradón de Pinares, Ávila — never ridden. Currently crowdfunding to buy a permanent finca, with open days in 2026.",
+    website: "https://santuariowinston.org",
+    address: "La Cañada, Herradón de Pinares, Ávila, Castile & León, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      whatsapp: "+34 690 143 920",
+      instagram: "https://www.instagram.com/santuarioequino_winston",
+      other: "IBAN ES89 2100 1277 8113 0027 3677 · migranodearena campaign",
+    },
+    tags: ["vegan", "sanctuary", "avila", "castile-leon", "equine", "rescue"],
+    source: "research",
+    sourceUrl: "https://santuariowinston.org",
+  },
+  {
+    id: "santuario-garfi",
+    name: "Santuario Animal Garfi",
+    lat: 42.8487,
+    lng: -5.4059,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Vegan farm animal sanctuary in La Vecilla, León — sheep, pigs, chickens and more, rescued, rehabilitated and cared for for life. Explicitly vegan with veganism as its core mission; no government funding, powered by donations, Teaming and supporters.",
+    website: "https://www.santuariogarfi.org",
+    address: "Camino Cuesta del Sol s/n, La Vecilla, León, Castile & León, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "info@santuariogarfi.org",
+      instagram: "https://www.instagram.com/santuariogarfi",
+      facebook: "https://www.facebook.com/santuariogarfi",
+      other: "Bizum 05357 · Teaming · Patreon",
+    },
+    tags: ["vegan", "sanctuary", "leon", "castile-leon", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://www.santuariogarfi.org",
+  },
+  {
+    id: "santuario-espiritu-libre",
+    name: "Santuario Espíritu Libre",
+    lat: 41.6013,
+    lng: -2.7219,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Antispeciesist refuge for farm animals — started in Albacete (2015), moved to Murcia (2016), settled in Soria (2020) on a 9-hectare finca. ~70-80 residents (sheep, goats, pigs, ducks, chickens, turkeys, pigeons, rats), 150+ animals saved since founding. Exact location deliberately unpublished.",
+    website: "https://santuarioespiritulibre.com",
+    address: "Soria province, Castile & León, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "santuario.espiritulibre@gmail.com",
+      instagram: "https://www.instagram.com/santuarioespiritulibre",
+      other: "Teaming · IBAN ES10 1491 0001 21 300010 3710",
+    },
+    tags: ["vegan", "sanctuary", "soria", "castile-leon", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://santuarioespiritulibre.com",
+  },
+  {
+    id: "madrid-help-horses",
+    name: "Madrid Help Horses",
+    lat: 40.5923,
+    lng: -3.4120,
+    type: "sanctuary",
+    subtypes: ["equine", "rescue"],
+    description:
+      "Equine retirement sanctuary founded in 2014 in Serracines, Fresno de Torote — horses and burros rescued from abuse and abandonment live out their lives (no adoption), plus horse welfare education. Registered association nº 34823, promotes antiespecismo.",
+    website: "https://mhh.es",
+    address: "Serracines, Fresno de Torote, Madrid, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "victoria@madridhelphorses.org",
+      instagram: "https://www.instagram.com/madridhelphorses",
+      other: "Bizum 626 10 37 32 · Teaming · IBAN ES25 0182 0966 2102 0415 7714",
+    },
+    tags: ["vegan", "sanctuary", "madrid", "equine", "rescue"],
+    source: "research",
+    sourceUrl: "https://mhh.es",
+  },
+  {
+    id: "el-valle-encantado-posada-animal",
+    name: "El Valle Encantado — Posada Animal",
+    lat: 40.5248,
+    lng: -3.7716,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Small farm animal sanctuary in the western sierra of Madrid — 100+ animals of 10 species (sheep, donkeys, pigs...). Featured on RTVE and El Salto. Very active on Facebook (28.8K likes); exact location unpublished.",
+    website: "https://www.elvallencantado.org",
+    address: "Sierra Oeste, Madrid, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "info@elvallencantado.org",
+      facebook: "https://www.facebook.com/posadanimal.vallencantado",
+      other: "via Teaming · amadrinamiento",
+    },
+    tags: ["vegan", "sanctuary", "madrid", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://www.elvallencantado.org",
+  },
+  {
+    id: "henfluencers",
+    name: "HENFLUENCERS — Microsantuario",
+    lat: 40.5248,
+    lng: -3.7716,
+    type: "sanctuary",
+    subtypes: ["poultry", "microsanctuary", "rescue"],
+    description:
+      "Vegan microsanctuary in Madrid focused on birds from exploitation — hens, roosters, ducks, turkeys and pigeons, including hormone-implanted hens. Founded as Free Phoenix (~2017) by Rocío Fernández, now renamed Henfluencers. 100+ animals rescued. No website — reachable via Instagram and Teaming.",
+    address: "Madrid province, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      instagram: "https://www.instagram.com/hen.fluencers",
+      other: "via Teaming (€1/month) · X @henfluencers",
+    },
+    tags: ["vegan", "sanctuary", "madrid", "poultry", "microsanctuary", "rescue"],
+    source: "social",
+    sourceUrl: "https://www.instagram.com/hen.fluencers",
+  },
+  {
+    id: "la-voz-animal",
+    name: "Protectora-Santuario La Voz Animal",
+    lat: 40.0322,
+    lng: -3.6040,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Protectora and sanctuary founded in 2000 south of Madrid, rescuing farm animals since 2006 — 300+ farm animals live permanently (sheep, goats, pigs, horses, ponies, donkeys, birds, rabbits) alongside dogs and cats in adoption. 25th anniversary events through 2025-2026.",
+    website: "https://www.lavozanimal.com",
+    address: "Near Aranjuez, Madrid, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      email: "info@lavozanimal.com",
+      phone: "+34 649 022 582",
+      facebook: "https://www.facebook.com/ProtectoraSantuarioLaVozAnimal",
+    },
+    tags: ["vegan", "sanctuary", "madrid", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://www.lavozanimal.com",
+  },
+  {
+    id: "santuario-salvando-peludos",
+    name: "Santuario Salvando Peludos",
+    lat: 40.2927,
+    lng: -4.1267,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue"],
+    description:
+      "Protectora and farm animal sanctuary in Villamanta, Madrid — cows, goats, sheep, pigs, wild boar, hens, pigeons and tortoises live out their lives, rescued from slaughter and abandonment. Featured in El País in July 2026 rescuing animals from the Madrid wildfires.",
+    website: "https://salvandopeludos.org",
+    address: "Camino de los Quemados, Villamanta, Madrid, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/santuariosalvandopeludos",
+      instagram: "https://www.instagram.com/santuariosalvandopeludos",
+      other: "via salvandopeludos.org (contact form)",
+    },
+    tags: ["vegan", "sanctuary", "madrid", "farm_animal", "rescue"],
+    source: "research",
+    sourceUrl: "https://salvandopeludos.org",
+  },
 
   // ============================================================
   // SPAIN — EXTREMADURA
@@ -1510,6 +1677,53 @@ export const places: Place[] = [
   },
 
   // ============================================================
+  // PORTUGAL — MADEIRA
+  // ============================================================
+  {
+    id: "madeira-sanctuary",
+    name: "Madeira Sanctuary",
+    lat: 32.6812,
+    lng: -17.1041,
+    type: "sanctuary",
+    subtypes: ["rescue", "shelter"],
+    description:
+      "A one-woman-run animal sanctuary in Ponta do Sol caring for ~40 dogs and 80 cats rescued from the streets of Madeira — many blind, abused or abandoned. A true grassroots, donation-dependent operation that survived an eviction order in 2026. Exact address unpublished for safety.",
+    address: "Ponta do Sol, Madeira, Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      email: "madeirasanctuary@gmail.com",
+      phone: "+351 961 093 019",
+      instagram: "https://www.instagram.com/madeira_sanctuary",
+      facebook: "https://www.facebook.com/madeirasanctuary",
+      other: "IBAN PT50 0033 0000 4557 0658 4920 5 · MBWAY · GoFundMe",
+    },
+    tags: ["vegan", "sanctuary", "madeira", "portugal", "dogs", "cats", "rescue"],
+    source: "social",
+    sourceUrl: "https://www.instagram.com/madeira_sanctuary",
+  },
+  {
+    id: "arambha-eco-village",
+    name: "Arambha Eco Village",
+    lat: 32.6801,
+    lng: -17.0780,
+    type: "project",
+    subtypes: ["ecovillage", "permaculture"],
+    description:
+      "7-hectare permaculture ecovillage and intentional community in a restored terraced valley in Tábua, Ribeira Brava — superadobe domes, food forests, Laurisilva reforestation, PDC courses, workshops and retreats. A plant-based community (vegetarian with vegan options) with rescued geese and turkeys living on site.",
+    website: "https://arambha.net",
+    address: "Estrada do Pico Ferreiro, Tábua, Ribeira Brava, Madeira, Portugal",
+    locationPrecision: "approximate",
+    contact: {
+      instagram: "https://www.instagram.com/arambhanet",
+      facebook: "https://www.facebook.com/p/Arambha-Madeira-100091823101831",
+      other: "via arambha.net (contact form) · Workaway",
+    },
+    tags: ["vegan", "ecovillage", "madeira", "portugal", "permaculture", "community"],
+    source: "research",
+    sourceUrl: "https://arambha.net",
+  },
+
+  // ============================================================
   // TAIWAN — NORTH
   // ============================================================
   {
@@ -1533,7 +1747,30 @@ export const places: Place[] = [
   },
 
   // ============================================================
-  // TAIWAN — EAST COAST (HUALIEN & TAITUNG)
+  // TAIWAN — CENTRAL (MIAOLI & TAICHUNG)
+  // ============================================================
+  {
+    id: "cpla-luyeyuan",
+    name: "Chinese Life Protection Association — Luyeyuan Garden (中華護生協會苗栗護生鹿野苑)",
+    lat: 24.5395,
+    lng: 120.9206,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "The founding life-protection organisation of Venerable Hai Tao's network (est. 2002), which runs 30+ life-protection gardens across Taiwan. The Miaoli garden is a ~2-hectare farm animal sanctuary in the hills of Shitan keeping rescued ostriches, deer, goats, chickens, geese, rabbits and pigeons for life.",
+    address: "Zhumu Village, Shitan Township, Miaoli County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/cpla9353",
+      other: "via lifetv.ai/donation-life-care",
+    },
+    tags: ["vegan", "taiwan", "miaoli", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.facebook.com/cpla9353",
+  },
+
+  // ============================================================
+  // TAIWAN — EAST COAST (YILAN, HUALIEN & TAITUNG)
   // ============================================================
   {
     id: "sun-clover-ecovillage",
@@ -1553,6 +1790,27 @@ export const places: Place[] = [
     tags: ["vegan", "taiwan", "hualien", "ecovillage", "permaculture", "organic"],
     source: "research",
     sourceUrl: "https://www.sunclover-ecovillage.com",
+  },
+  {
+    id: "feixiang-mijing",
+    name: "Feixiang Mijing (飛翔蜜境)",
+    lat: 24.6345,
+    lng: 121.7923,
+    type: "sanctuary",
+    subtypes: ["rescue", "buddhist_life_protection"],
+    description:
+      "The Yilan 'north hall' of the Li-Feng-Hui-Min V animal care network, founded in 2013 by five friends including vegetarian actor Yang Huai-min. 129+ elderly, injured and disabled cats and dogs live free-roaming in a farmstead in Dongshan — 1,500+ animals rescued to date. Open daily 10:30-16:00.",
+    website: "https://www.lfhmv.org.tw",
+    address: "三堵二路151號, Dongshan Township, Yilan County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      email: "lfhmv151@gmail.com",
+      phone: "+886 3-9590953",
+      facebook: "https://www.facebook.com/LFHMV151",
+    },
+    tags: ["vegan", "taiwan", "yilan", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://www.lfhmv.org.tw",
   },
 
   // ============================================================
@@ -1595,5 +1853,65 @@ export const places: Place[] = [
     tags: ["vegan", "taiwan", "tainan", "farm_animal", "rescue", "buddhist"],
     source: "research",
     sourceUrl: "https://www.avalokitesvara.tw",
+  },
+  {
+    id: "hsu-life-protection-garden",
+    name: "Hsu's Life-Protection Garden (徐園長護生園)",
+    lat: 23.1993,
+    lng: 120.1588,
+    type: "sanctuary",
+    subtypes: ["rescue", "buddhist_life_protection"],
+    description:
+      "Taiwan's largest life-protection dog sanctuary — ~5,000 rescued dogs across 3 sites, 90% of them 'death-row' dogs pulled from government shelters plus snare and accident victims. Founded in 2012 by siblings Hsu Wen-hui and Hsu Wen-liang. Weekend visiting and adoption days are a beloved local institution.",
+    website: "https://hapatc.org.tw",
+    address: "Xihu 112, Jiangjun District, Tainan City, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/profile.php?id=100064701337712",
+      instagram: "https://www.instagram.com/jack520520520",
+      other: "via hapatc.org.tw/donate",
+    },
+    tags: ["vegan", "taiwan", "tainan", "rescue", "buddhist", "dogs"],
+    source: "research",
+    sourceUrl: "https://hapatc.org.tw",
+  },
+  {
+    id: "twdr-yanpu",
+    name: "Taiwan Dog Rescue — Yanpu Life-Protection Garden (台灣救狗協會鹽埔護生園)",
+    lat: 22.7548,
+    lng: 120.5728,
+    type: "sanctuary",
+    subtypes: ["rescue", "buddhist_life_protection"],
+    description:
+      "The dog-care arm of Venerable Hai Tao's life-protection network: five gardens holding ~890 dogs rescued from euthanasia in government shelters, with the Yanpu garden in Pingtung as the flagship (603 dogs). Promotes adoption over buying; lifelong vegetarian care for the rest.",
+    address: "Yanpu Township, Pingtung County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      phone: "+886 2-2963-6969",
+      facebook: "https://www.facebook.com/TWdogrescues",
+      other: "postal transfer 5001-6766 · TWQR (LINE Pay, 台灣Pay)",
+    },
+    tags: ["vegan", "taiwan", "pingtung", "rescue", "buddhist", "dogs"],
+    source: "research",
+    sourceUrl: "https://www.cpsh.org.tw/OnePage.aspx?mid=138&id=335",
+  },
+  {
+    id: "meishan-life-protection-garden",
+    name: "Meishan Life-Protection Garden (梅山護生園)",
+    lat: 23.6038,
+    lng: 120.4713,
+    type: "sanctuary",
+    subtypes: ["farm_animal", "rescue", "buddhist_life_protection"],
+    description:
+      "Farm animal and dog garden of the Chinese Life Protection Association network in Dalin Township, near the Meishan interchange — rescued cows, deer, peacocks, poultry and dogs living out their lives. Part of Hai Tao's network of 30+ gardens across Taiwan.",
+    address: "Dalin Township, Chiayi County, Taiwan",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/cpla9353",
+      other: "via 台灣救狗協會 +886 2-2963-6969",
+    },
+    tags: ["vegan", "taiwan", "chiayi", "farm_animal", "rescue", "buddhist"],
+    source: "research",
+    sourceUrl: "https://news.ltn.com.tw/news/life/breakingnews/2019612",
   },
 ];
