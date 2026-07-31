@@ -119,21 +119,59 @@ export default function SanctuaryMap({
       const imgHtml = p.image
         ? `<img src="${p.image}" style="width:100%;max-height:120px;object-fit:cover;border-radius:4px;margin:4px 0" />`
         : "";
-      const tagsHtml = p.tags
-        ?.map((t) => `#${t}`)
-        .join(" ");
+      const tagsHtml = p.tags?.map((t) => `#${t}`).join(" ");
+
+      // Contact links
+      const contactHtml = (() => {
+        const c = p.contact;
+        if (!c) return "";
+        const links: string[] = [];
+        if (c.email) links.push(`<a href="mailto:${c.email}">✉️ ${c.email}</a>`);
+        if (c.whatsapp)
+          links.push(`<a href="https://wa.me/${c.whatsapp.replace(/[^0-9]/g, "")}" target="_blank">💬 WhatsApp</a>`);
+        if (c.phone) links.push(`📞 ${c.phone}`);
+        if (c.instagram)
+          links.push(`<a href="${c.instagram}" target="_blank">📸 Instagram</a>`);
+        if (c.facebook)
+          links.push(`<a href="${c.facebook}" target="_blank">📘 Facebook</a>`);
+        if (c.telegram) links.push(`✈️ Telegram: ${c.telegram}`);
+        if (c.other) links.push(`🔗 ${c.other}`);
+        return links.length
+          ? `<p style="margin:4px 0">${links.join(" · ")}</p>`
+          : "";
+      })();
+
+      const precisionBadge =
+        p.locationPrecision === "approximate"
+          ? `<p style="margin:2px 0;font-size:0.7rem;color:#b58900;font-style:italic">◌ Location approximate (${p.address.split(",").slice(-2).join(",").trim()})</p>`
+          : "";
 
       marker.bindPopup(`
-        <div style="min-width:180px">
+        <div style="min-width:200px">
           <h3 style="margin:0 0 2px;font-size:1rem">${icon} ${p.name}</h3>
           <span style="display:inline-block;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.3px;padding:1px 6px;border-radius:3px;color:#fff;background:${color};margin-bottom:4px">${p.type}</span>
           ${imgHtml}
           <p style="margin:4px 0;font-size:0.8rem;color:#555;line-height:1.4">${p.description}</p>
-          <p style="font-size:0.75rem;color:#888;margin:2px 0">${p.address}</p>
+          <p style="font-size:0.75rem;color:#888;margin:2px 0">📍 ${p.address}</p>
+          ${precisionBadge}
+          ${contactHtml}
           ${p.website ? `<p style="margin:4px 0"><a href="${p.website}" target="_blank" style="color:#2d5a27;font-size:0.8rem">Visit website →</a></p>` : ""}
           ${tagsHtml ? `<p style="font-size:0.7rem;color:#aaa;margin:2px 0">${tagsHtml}</p>` : ""}
         </div>
       `);
+
+      // Approximate locations get a dashed ring so it's visually clear coords are not exact
+      if (p.locationPrecision === "approximate") {
+        L.circle([p.lat, p.lng], {
+          radius: 8000,
+          color: color,
+          weight: 1,
+          dashArray: "6 6",
+          opacity: 0.6,
+          fillOpacity: 0.05,
+          fillColor: color,
+        }).addTo(map);
+      }
 
       marker.on("mouseover", () => marker.setRadius(11));
       marker.on("mouseout", () => marker.setRadius(8));
