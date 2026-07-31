@@ -78,7 +78,7 @@ export interface Place {
 ## Two Research Tracks
 
 ### Track A: Web Research (for established places)
-For each region: search web in English + local language (see search terms below), check directories (GEN, Workaway, WWOOF, sanctuarydirectory.com, ladocumentalistavegana.com, yourdailyvegan.com, veganparadise.org).
+For each region: search web in English + local language (see search terms below), check directories (GEN, Workaway, WWOOF, sanctuarydirectory.com, ladocumentalistavegana.com, madridvegano.es/santuarios-de-animales-en-espana, vlcanimalsave.org, elfuturoesvegano.com/es/mas-info/santuarios, yourdailyvegan.com). ⚠️ spainvegan.es is DEAD (now a casino spam domain) — do not use it. Also check xeu.cat (Catalan association registry) and the Generalitat registries for sanctuary addresses.
 
 ### Track B: Social Media Research (for niche, website-less places) — CRITICAL
 The small places often have NO website but DO have a Facebook page, Instagram, or Teaming group. Facebook requires login — the user will log in when available. Instagram can be browsed without login.
@@ -194,15 +194,15 @@ We're covering Spain and Portugal systematically, region by region. Region list:
 ### SPAIN
 1. ~~**Galicia**~~ *(done — Mino Valley, O Viso, Vacaloura, Acougo, Frente L.A., Sueño de Jill, Savia, Val de Rodas)*
 2. ~~**Asturias, Cantabria, Basque Country**~~ *(done — Corazón Verde, Manada Cántabra, Vida Color Frambuesa, Paraíso Interespecie, Burrita Carmela, Roke Enea)*
-3. **Catalonia** *(partial — Santuario Gaia, Almas Veganas)* → **TODO: find more**
-4. **Aragon, Navarre** *(nothing validated yet — Vegan Hope (Zaragoza) dormant; Corazón Verde moved to Asturias)*
+3. ~~**Catalonia**~~ *(done — Gaia, Almas Veganas, El Hogar, Món La Bassa, BuenaVida, Cau del Bosc, La Vedruna, Wild Forest, La Casita de Lluvia, La Muntanyeta, Cal Lari ADE, Sakura, Casa de Madera, Casa Albets)*
+4. **Aragon, Navarre** *(confirmed sparse — every directory lists ZERO vegan sanctuaries; Vegan Hope (Zaragoza) still dormant since 2016 — re-check before adding)*
 5. ~~**La Rioja**~~ *(done — Movimiento Lleó, El Molino del Corregidor)*
-6. **Castile & León, Madrid** *(partial — Santuario Vegan, Leon Vegano, Santuario Dharma (Gredos))* → **TODO: re-verify via Facebook**
+6. **Castile & León, Madrid** *(partial — Santuario Vegan, Leon Vegano, Santuario Dharma (Gredos))* → **TODO: re-verify via Facebook; Espíritu Libre moved to Soria — needs contact info to add**
 7. ~~**Castile–La Mancha, Extremadura**~~ *(done — Arthur King, Los Perros Negros, Refugio Los Abuelos, Ciudad Animal Brego)*
 8. ~~**Valencia**~~ *(done — Compasión Animal, El Rebrot de la Vida, El Refugio de Perla, Pollets de la Terreta, Caballo Espíritu Libre, La Paloma Triste, La Granja de Izhan)*
-9. **Murcia** *(partial — Jacobs Ridge)*
-10. **Andalusia** *(partial — La Candela, El Hogar de Gringa (Málaga))* → **TODO: re-verify via Facebook**
-11. **Balearic Islands** *(partial — Eden Sanctuary)*
+9. ~~**Murcia**~~ *(done — Jacobs Ridge, Alma Libertaria, El Rincón de Barakah)*
+10. ~~**Andalusia**~~ *(done — La Candela, El Hogar de Gringa, Todos los Caballos del Mundo, A Better Life 4 Horses, Rancho Edén, Donkey Dreamland, El Cortijillo de Lola)*
+11. ~~**Balearic Islands**~~ *(done — Eden (Mallorca), Trebaluger (Menorca))* → **La Llar de l'Animal (north Mallorca) has NO contact channel — one FB search away from qualifying**
 12. ~~**Canary Islands**~~ *(done — The Animal Academy, Finca Arkadia, Tenerife Animal Sanctuary, Santuario Petricor)*
 
 ### PORTUGAL
