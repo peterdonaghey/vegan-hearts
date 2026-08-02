@@ -1,10 +1,7 @@
 'use client';
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import UnifiedFeed from "./components/UnifiedFeed";
 import GoodNews, { defaultGoodNews } from "./components/GoodNews";
 import dynamic from "next/dynamic";
 
@@ -14,47 +11,14 @@ const SanctuaryMap = dynamic(
 );
 
 export default function Home() {
-  const [downloadCount, setDownloadCount] = useState<number | null>(null);
-  const [thankYou, setThankYou] = useState(false);
-
-  useEffect(() => {
-    fetch('/api/download-ebook?count')
-      .then((res) => res.json())
-      .then((data) => setDownloadCount(data.count))
-      .catch(() => {});
-  }, []);
-
-  const handleDownload = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    // Optimistically bump count
-    setDownloadCount((prev) => (prev ?? 0) + 1);
-    setThankYou(true);
-
-    // Fire counter increment in background
-    fetch('/api/download-ebook?increment')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.count) setDownloadCount(data.count);
-      })
-      .catch(() => {});
-
-    // Show thank-you briefly, then open PDF
-    setTimeout(() => {
-      window.open(
-        'https://vegan-hearts-public-files.s3.us-east-1.amazonaws.com/ebooks/awakening-your-vegan-heart-21-days.pdf',
-        '_blank'
-      );
-    }, 600);
-  };
   return (
     <>
-      {/* <Navigation /> */}
       <main className="min-h-screen ">
       {/* Hero Section with India Mountain Sunset */}
       <section className="relative px-6 pt-8 pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://vegan-hearts-assets.s3.us-east-1.amazonaws.com/india-documentary/india-2026-01-03-at-14.00.48.jpg"
+            src="/india-documentary/india-2026-01-03-at-14.00.48.jpg"
             alt="Majestic mountain sunset with silhouetted trees in the foreground"
             fill
             className="object-cover object-center"
@@ -96,30 +60,20 @@ export default function Home() {
 
           {/* Ebook Download Card */}
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl border-2 border-vh-orange/40 max-w-lg mx-auto">
-            {/* Book Cover Thumbnail */}
-
             <p className="text-xl md:text-2xl font-display font-semibold text-vh-green mb-2">
               🌱 Free Ebook
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
               Download <strong className="text-vh-orange">Awakening Your Vegan Heart in 21 Days</strong> — a gentle, inspiring guide to compassionate living.
             </p>
-            <button
-              onClick={handleDownload}
-              className="inline-block w-full px-8 py-3 bg-vh-green text-white rounded-lg font-medium hover:bg-vh-green-dark transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 cursor-pointer"
+            <a
+              href="/ebooks/awakening-your-vegan-heart-21-days.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full px-8 py-3 bg-vh-green text-white rounded-lg font-medium hover:bg-vh-green-dark transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 cursor-pointer text-center"
             >
               Download Free Ebook
-            </button>
-            {thankYou && (
-              <p className="mt-3 text-sm text-vh-green font-medium animate-pulse">
-                Thank you! Downloading your ebook… 💚
-              </p>
-            )}
-            {downloadCount !== null && (
-              <p className="mt-1 text-sm text-gray-600">
-                Downloaded {downloadCount.toLocaleString()} time{downloadCount !== 1 ? 's' : ''}
-              </p>
-            )}
+            </a>
               <div className="flex justify-center mt-6">
               <Image
                 src="/book-cover.png"
@@ -134,40 +88,6 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Latest News & Events Section
-      <section className="px-6 py-20 bg-white">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-vh-green mb-4">
-              Latest Updates
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-vh-orange to-vh-green rounded-full mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">
-              Stay connected with our journey, news, and upcoming events
-            </p>
-          </div>
-
-          <UnifiedFeed
-            limit={6}
-            showViewAll={true}
-          />
-        </div>
-      </section>*/}
-
-      {/* <ValuesSection /> */}
-      {/* Email Signup Section */}
-      {/*<section className="px-6 py-8 ">
-        <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-xl md:text-2xl font-display font-bold text-vh-green mb-2">
-            Join Our Journey
-          </h2>
-          <p className="text-sm md:text-base text-gray-600 mb-5 leading-relaxed max-w-md mx-auto">
-            Receive inspiring updates, course announcements, and community news.
-          </p>
-          <EmailSignupForm />
-        </div>
-      </section>*/}
       <GoodNews items={defaultGoodNews} />
 
       {/* Sanctuary Map Section */}

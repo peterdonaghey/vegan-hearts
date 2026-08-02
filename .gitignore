@@ -36,7 +36,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-*.pdf
+# keep the repo-root book copy out of git, but commit public/ebooks/
+/Awakening your Vegan Heart.pdf
 
 # brainspace - full tool results (can be large)
 brainspace/results/
@@ -46,3 +47,5 @@ brainspace/sessions/
 **/.venv/
 
 .brainspaces/
+
+.playwright/
