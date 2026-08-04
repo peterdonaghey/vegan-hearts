@@ -173,15 +173,17 @@ export const places: Place[] = [
     type: "sanctuary",
     subtypes: ["farm_animal", "rescue"],
     description:
-      "Mini multi-species antiespecista sanctuary in Pontevedra run by Paula Cudeiro. Rescues animals from abuse, abandonment and exploitation. Home to 30+ animals — sheep, goats, rabbits, rats, dogs, cats. Actively promotes veganism through rescue and education.",
+      "Mini multispecies antiespecista microsanctuary in Pontevedra run by Paula Cudeiro. Rescues animals from abuse, abandonment and exploitation — 40+ animals: sheep, goats, rabbits, rats, dogs, cats. Actively promotes veganism through rescue and education. Donations via IBAN and Teaming.",
     address: "Pontevedra, Galicia, Spain",
     locationPrecision: "approximate",
     contact: {
-      other: "via El Diario profile (sourceUrl) — no direct contact published",
+      instagram: "https://www.instagram.com/elsuenhodejill",
+      facebook: "https://www.facebook.com/elsuenhodejill",
+      other: "Teaming (€1/month) · IBAN ES03 6726 8300 1100 6595 3080",
     },
     tags: ["vegan", "rescue", "antiespecista", "farm_animal", "galicia"],
     source: "research",
-    sourceUrl: "https://www.eldiario.es/el-caballo-de-nietzsche/mujeres-santuarios-animales_1_2042431.html",
+    sourceUrl: "https://www.instagram.com/elsuenhodejill",
   },
   {
     id: "val-de-rodas",
@@ -297,7 +299,7 @@ export const places: Place[] = [
     subtypes: ["farm_animal", "rescue"],
     description:
       "Vegan sanctuary since 2016 in Esparreguera — 250+ animals rescued mostly from confiscations: Vietnamese pigs via FAADA, horses, sheep, goats, poultry and wildlife in rehabilitation. Self-managed with weekly volunteers.",
-    website: "https://santuariobuenavida.com",
+    website: "https://santuariobuenavida.org",
     address: "Esparreguera, Barcelona, Catalonia, Spain",
     locationPrecision: "approximate",
     contact: {
@@ -308,7 +310,7 @@ export const places: Place[] = [
     },
     tags: ["vegan", "sanctuary", "catalonia", "barcelona", "farm_animal", "rescue"],
     source: "research",
-    sourceUrl: "https://santuariobuenavida.com",
+    sourceUrl: "https://santuariobuenavida.org",
   },
   {
     id: "refugi-el-cau-del-bosc",
@@ -410,11 +412,11 @@ export const places: Place[] = [
       email: "refugilamuntanyeta@gmail.com",
       whatsapp: "+34 646 52 74 79",
       instagram: "https://www.instagram.com/refugilamuntanyeta",
-      other: "via Teaming · GoFundMe",
+      other: "via Teaming · GoFundMe · linktr.ee/refugilamuntanyeta",
     },
     tags: ["vegan", "sanctuary", "catalonia", "barcelona", "small_animals", "rescue"],
     source: "research",
-    sourceUrl: "https://monterrassa.cat/societat/medi-ambient/2026/01/refugi-muntanyeta",
+    sourceUrl: "https://monterrassa.cat/es/general-es/odisea-para-el-refugio-la-muntanyeta-para-salvar-a-sus-jabalies-496566/",
   },
   {
     id: "cal-lari-protectora-ade",
@@ -569,15 +571,15 @@ export const places: Place[] = [
     subtypes: ["farm_animal", "rescue", "charity"],
     description:
       "Vegan animal sanctuary in the mountains of Murcia. UK-registered charity. Home to 130+ rescued animals — 72 pigs plus cows, goats, sheep, donkeys, horses, and poultry. Focus on rescuing from the agricultural industry.",
-    website: "https://jacobsridgeanimalsanctuary.com",
+    website: "https://www.jacobsridge.com",
     address: "Near Mula, Murcia, Spain",
     locationPrecision: "exact",
     contact: {
-      other: "via jacobsridgeanimalsanctuary.com",
+      other: "via jacobsridge.com",
     },
     tags: ["vegan", "rescue", "farm_animal", "charity", "murcia"],
     source: "manual",
-    sourceUrl: "https://jacobsridgeanimalsanctuary.com",
+    sourceUrl: "https://www.jacobsridge.com",
   },
   {
     id: "el-hogar-de-gringa",
@@ -1374,16 +1376,16 @@ export const places: Place[] = [
     type: "sanctuary",
     subtypes: ["farm_animal", "rescue"],
     description:
-      "Antiespecista, anarcho-transferminist and libertarian sanctuary founded in 2018 in Álava. Rescues non-human animals from exploitation and abandonment — pigs, hens, pigeons, dogs and cats — offering them a dignified life. Promotes animal rights from an intersectional perspective.",
-    website: "https://paraisointerespecie.com",
-    address: "Álava, Basque Country, Spain",
+      "Antiespecista, anarcho-transferminist and libertarian sanctuary founded in 2018 in the Condado de Treviño, Álava. Rescues non-human animals from exploitation and abandonment — pigs, hens, pigeons, dogs and cats — offering them a dignified life. Promotes animal rights from an intersectional perspective. Recently crowdfunded to move to a better terrain.",
+    address: "Condado de Treviño, Álava, Basque Country, Spain",
     locationPrecision: "approximate",
     contact: {
-      other: "via paraisointerespecie.com",
+      instagram: "https://www.instagram.com/paraisointerespecie",
+      other: "via petinder.online listing",
     },
     tags: ["vegan", "sanctuary", "alava", "basque_country", "farm_animal", "rescue"],
     source: "research",
-    sourceUrl: "https://paraisointerespecie.com",
+    sourceUrl: "https://www.instagram.com/paraisointerespecie",
   },
   {
     id: "roke-enea-microsantuario",
@@ -1418,7 +1420,7 @@ export const places: Place[] = [
     subtypes: ["association", "rescue"],
     description:
       "Non-profit antiespecista association based in La Rioja (with roots in Álava). Runs El Txoko Lleó, a small home where 20 rescued animals live — dogs, cats and tortoises. Promotes veganism through education, campaigns and the vegan 'EmVutido Lleó'.",
-    website: "https://movimientoantiespecistalleo.com",
+    website: "https://movimientoantiespecistalleo.blogspot.com",
     address: "La Rioja, Spain",
     locationPrecision: "approximate",
     contact: {
@@ -1427,7 +1429,7 @@ export const places: Place[] = [
     },
     tags: ["vegan", "antiespecista", "la-rioja", "association", "rescue"],
     source: "research",
-    sourceUrl: "https://movimientoantiespecistalleo.com",
+    sourceUrl: "https://movimientoantiespecistalleo.blogspot.com",
   },
   {
     id: "el-molino-del-corregidor",
@@ -1606,7 +1608,6 @@ export const places: Place[] = [
     subtypes: ["farm_animal", "rescue"],
     description:
       "Antiespecista-vegan farm sanctuary founded in 2019 by Isabel Borges in Eiras, Coimbra, now run by resident volunteers — 25+ rescued farm animals. Also runs the Guarda Rios forest school for kids and the Coimbra Vegan Market. Featured on RTP in 2025.",
-    website: "https://oprojetoriza.org",
     address: "Eiras, Coimbra, Portugal",
     locationPrecision: "approximate",
     contact: {
@@ -1616,7 +1617,7 @@ export const places: Place[] = [
     },
     tags: ["vegan", "sanctuary", "coimbra", "centro", "portugal", "farm_animal", "rescue"],
     source: "research",
-    sourceUrl: "https://oprojetoriza.org",
+    sourceUrl: "https://www.rtp.pt/noticias/pais/quinta-em-coimbra-resgata-animais-e-promove-ensino-alternativo_n1660706",
   },
   {
     id: "santuario-vida-boa",
@@ -1715,8 +1716,7 @@ export const places: Place[] = [
     type: "sanctuary",
     subtypes: ["farm_animal", "rescue", "dog_hotel"],
     description:
-      "Animal sanctuary and rescue centre in Alcochete, Setúbal district. Dedicated to sheltering farm animals and companion animals (dogs, pigs, cows, horses, rabbits, chickens, turkeys, goats, sheep). Very active on Instagram (12.9K followers) with public sanctuary visits and volunteer recruitment. Donations via IBAN.",
-    website: "https://www.animaisemfronteiras.org",
+      "Animal sanctuary and rescue centre in Alcochete, Setúbal district. Dedicated to sheltering farm animals and companion animals (dogs, pigs, cows, horses, rabbits, chickens, turkeys, goats, sheep). Very active on Instagram (12.9K followers) with public sanctuary visits and volunteer recruitment. Donations via IBAN. Website currently down — reachable via Instagram or email.",
     address: "Alcochete, Setúbal, Portugal",
     locationPrecision: "approximate",
     contact: {
@@ -2113,7 +2113,7 @@ export const places: Place[] = [
     contact: {
       facebook: "https://www.facebook.com/profile.php?id=100064701337712",
       instagram: "https://www.instagram.com/jack520520520",
-      other: "via hapatc.org.tw/donate",
+      other: "via hapatc.org.tw",
     },
     tags: ["vegan", "taiwan", "tainan", "rescue", "buddhist", "dogs"],
     source: "research",
@@ -2137,7 +2137,7 @@ export const places: Place[] = [
     },
     tags: ["vegan", "taiwan", "pingtung", "rescue", "buddhist", "dogs"],
     source: "research",
-    sourceUrl: "https://www.cpsh.org.tw/OnePage.aspx?mid=138&id=335",
+    sourceUrl: "https://www.facebook.com/TWdogrescues",
   },
   {
     id: "meishan-life-protection-garden",
@@ -2197,7 +2197,7 @@ export const places: Place[] = [
     },
     tags: ["vegan", "taiwan", "tainan", "cattle", "rescue"],
     source: "research",
-    sourceUrl: "https://agron.tainan.gov.tw/News_Content.aspx?n=1270&s=11391",
+    sourceUrl: "https://www.cna.com.tw/news/aloc/202512130047.aspx",
   },
   {
     id: "madou-life-protection-garden",

@@ -121,23 +121,36 @@ export default function SanctuaryMap({
         : "";
       const tagsHtml = p.tags?.map((t) => `#${t}`).join(" ");
 
-      // Contact links
+      // Contact links — every channel is a real, clickable link
       const contactHtml = (() => {
         const c = p.contact;
         if (!c) return "";
+        const linkify = (text: string) =>
+          text
+            .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
+            .replace(/(^|[\s(])([\w-]+(?:\.[a-z]{2,})+(?:\/[^\s<)]*)?)/g, (m, pre, domain) =>
+              pre + `<a href="https://${domain}" target="_blank" rel="noopener">${domain}</a>`
+            );
         const links: string[] = [];
         if (c.email) links.push(`<a href="mailto:${c.email}">✉️ ${c.email}</a>`);
         if (c.whatsapp)
-          links.push(`<a href="https://wa.me/${c.whatsapp.replace(/[^0-9]/g, "")}" target="_blank">💬 WhatsApp</a>`);
-        if (c.phone) links.push(`📞 ${c.phone}`);
+          links.push(`<a href="https://wa.me/${c.whatsapp.replace(/[^0-9]/g, "")}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
+        if (c.phone) links.push(`<a href="tel:${c.phone.replace(/[^+0-9]/g, "")}">📞 ${c.phone}</a>`);
         if (c.instagram)
-          links.push(`<a href="${c.instagram}" target="_blank">📸 Instagram</a>`);
+          links.push(`<a href="${c.instagram}" target="_blank" rel="noopener">📸 Instagram</a>`);
         if (c.facebook)
-          links.push(`<a href="${c.facebook}" target="_blank">📘 Facebook</a>`);
-        if (c.telegram) links.push(`✈️ Telegram: ${c.telegram}`);
-        if (c.other) links.push(`🔗 ${c.other}`);
+          links.push(`<a href="${c.facebook}" target="_blank" rel="noopener">📘 Facebook</a>`);
+        if (c.telegram) {
+          const handle = c.telegram.replace(/^@/, "").replace(/^https?:\/\/t\.me\//, "");
+          links.push(`<a href="https://t.me/${handle}" target="_blank" rel="noopener">✈️ Telegram</a>`);
+        }
+        if (c.other) {
+          const linked = linkify(c.other);
+          const hasLink = /<a /.test(linked);
+          links.push(hasLink ? `🔗 ${linked}` : `🔗 ${c.other}`);
+        }
         return links.length
-          ? `<p style="margin:4px 0">${links.join(" · ")}</p>`
+          ? `<p style="margin:4px 0;line-height:1.5">${links.join("<br/>")}</p>`
           : "";
       })();
 
