@@ -81,7 +81,7 @@ for (const o of objects) {
 // Check URL with fetch
 async function check(url) {
   const controller = new AbortController();
-  const t = setTimeout(() => controller.abort(), 12000);
+  const t = setTimeout(() => controller.abort(), 20000);
   try {
     const res = await fetch(url, {
       method: "GET",

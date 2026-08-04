@@ -147,25 +147,6 @@ export const places: Place[] = [
     sourceUrl: "https://santuariovacaloura.org",
   },
   {
-    id: "savia-ecoaldea",
-    name: "Savia Ecoaldea Vegana",
-    lat: 43.5114,
-    lng: -7.1267,
-    type: "project",
-    subtypes: ["ecovillage", "community"],
-    description:
-      "The first vegan agroecological cohousing project in Spain, in the Valle del Eo on the Galicia-Asturias border. A community built on veganism, permaculture, degrowth, and mutual support. Shared housing, organic vegan gardens, and a commitment to animal liberation. Accepts residents and visitors.",
-    website: "https://www.saviaecoaldeavegana.com",
-    address: "Valle del Eo, Ribadeo area, Galicia/Asturias border, Spain",
-    locationPrecision: "approximate",
-    contact: {
-      other: "via saviaecoaldeavegana.com",
-    },
-    tags: ["vegan", "ecovillage", "community", "permaculture", "organic", "galicia", "asturias"],
-    source: "research",
-    sourceUrl: "https://www.saviaecoaldeavegana.com",
-  },
-  {
     id: "sueno-de-jill",
     name: "El Sueño de Jill",
     lat: 42.4310,
@@ -193,8 +174,8 @@ export const places: Place[] = [
     type: "project",
     subtypes: ["rewilding", "permaculture"],
     description:
-      "Rewilding and sustainable living initiative in the Galician mountains run by a non-profit NGO. Restoring a ruined village, removing eucalyptus for native woodland regeneration, growing organic food with a vegan permaculture philosophy. Offers volunteer stays with vegan meals.",
-    address: "A Lama, Pontevedra, Galicia, Spain",
+      "Rewilding and sustainable living initiative in the Serra do Suído foothills run by a non-profit NGO, restoring the hamlet of Berducido. Removing eucalyptus for native woodland regeneration, growing organic food with a vegan permaculture philosophy. Offers volunteer stays with vegan meals (Workaway, 89 reviews).",
+    address: "Berducido, Fornelos de Montes, Serra do Suído, Pontevedra, Galicia, Spain",
     locationPrecision: "approximate",
     contact: {
       other: "via Workaway host 6771814384ae",
@@ -1308,6 +1289,26 @@ export const places: Place[] = [
     sourceUrl: "https://www.santuariocorazonverde.org",
   },
   {
+    id: "savia-ecoaldea",
+    name: "Savia Ecoaldea Vegana",
+    lat: 43.5114,
+    lng: -7.1267,
+    type: "project",
+    subtypes: ["ecovillage", "community"],
+    description:
+      "The first vegan agroecological cohousing project in Spain, in western Asturias in the Valle del Eo, on the border with Galicia. A community built on veganism, permaculture, degrowth, and mutual support. Shared housing, organic vegan gardens, and a commitment to animal liberation. Accepts residents and visitors.",
+    website: "https://www.saviaecoaldeavegana.com",
+    address: "Valle del Eo, western Asturias (Galicia border), Spain",
+    locationPrecision: "approximate",
+    contact: {
+      facebook: "https://www.facebook.com/SaviaEcoaldeaVegana",
+      other: "via saviaecoaldeavegana.com",
+    },
+    tags: ["vegan", "ecovillage", "community", "permaculture", "organic", "asturias", "galicia"],
+    source: "research",
+    sourceUrl: "https://www.saviaecoaldeavegana.com",
+  },
+  {
     id: "refugio-manada-cantabra",
     name: "Refugio Animal La Manada Cántabra",
     lat: 43.4024,
@@ -1537,6 +1538,24 @@ export const places: Place[] = [
     tags: ["vegan", "sanctuary", "canary_islands", "tenerife", "farm_animal", "rescue"],
     source: "social",
     sourceUrl: "https://www.instagram.com/santuariopetricor",
+  },
+  {
+    id: "vegan-point",
+    name: "Vegan Point — Microsantuario",
+    lat: 28.2936,
+    lng: -16.6214,
+    type: "sanctuary",
+    subtypes: ["poultry", "microsanctuary", "rescue"],
+    description:
+      "Vegan microsanctuary ('veganario') in Tenerife — a permanent home for rescued hens and roosters (13 hens, 3 roosters plus special cases in foster care). Sterilises hens with hormone implants to protect them from the diseases of constant egg-laying. Promotes veganism and supports people in their transition.",
+    address: "Tenerife, Canary Islands, Spain",
+    locationPrecision: "approximate",
+    contact: {
+      other: "via linktr.ee/Santuarioveganpoint · Teaming (€1/month) · WhatsApp",
+    },
+    tags: ["vegan", "sanctuary", "canary_islands", "tenerife", "poultry", "microsanctuary", "rescue"],
+    source: "research",
+    sourceUrl: "https://www.teaming.net/santuarioveganpoint",
   },
 
   // ============================================================
